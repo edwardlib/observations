@@ -16,6 +16,7 @@ from observations.sick import sick
 from observations.small32_imagenet import small32_imagenet
 from observations.small64_imagenet import small64_imagenet
 from observations.snli import snli
+from observations.stanford_sentiment_treebank import stanford_sentiment_treebank
 from observations.svhn import svhn
 from observations.text8 import text8
 from observations.util import maybe_download_and_extract

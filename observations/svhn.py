@@ -21,8 +21,7 @@ def svhn(path, load_extra=False):
     load_extra: bool, optional.
       Whether to load the extra images. Default is False.
 
-  Returns
-  -------
+  Returns:
     Tuple of np.ndarray's
     `(x_train, y_train), (x_test, y_test)`, and a third tuple of
     `(x_extra, y_extra)` if `load_extra` is True.
