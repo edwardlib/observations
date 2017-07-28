@@ -21,6 +21,7 @@ from observations.svhn import svhn
 from observations.text8 import text8
 from observations.util import maybe_download_and_extract
 from observations.wikitext2 import wikitext2
+from observations.yelp17 import yelp17
 
 __version__ = '0.1.0'
 VERSION = __version__

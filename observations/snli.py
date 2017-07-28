@@ -27,7 +27,7 @@ def snli(path):
     x_train['label'][k]` comprises of a sentence pair and its label.
   """
   def _yield_examples(fn):
-    for i, line in enumerate(open(fn)):
+    for line in open(fn):
       data = json.loads(line)
       label = data['gold_label']
       s1 = ' '.join(data['sentence1_binary_parse'].replace(

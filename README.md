@@ -127,7 +127,7 @@ We follow [Edward's standards for style and documentation.](http://edwardlib.org
 Each function takes as input a filepath and optional preprocessing
 arguments. All necessary packages that aren't from the Python Standard
 Library, NumPy, or six are imported inside the function's body.
-It then follows these steps:
+The functions proceed as follows:
 
 1. Check if the extracted file(s) exist in the filepath. If it does,
    skip to step 4.
