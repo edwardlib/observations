@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+from observations.abalone import abalone
 from observations.boston_housing import boston_housing
 from observations.celeba import celeba
 from observations.cifar10 import cifar10
@@ -22,6 +23,7 @@ from observations.svhn import svhn
 from observations.text8 import text8
 from observations.util import maybe_download_and_extract
 from observations.wikitext2 import wikitext2
+from observations.wine import wine
 from observations.yelp17 import yelp17
 
 __version__ = '0.1.0'
