@@ -9,8 +9,8 @@ from observations.util import maybe_download_and_extract
 
 def boston_housing(path):
   """Load the Boston Housing data set (Harrison and Rubinfeld, 1978).
-    It contains 506 examples of housing values in suburbs of Boston,
-    each with 13 continuous attributes and 1 binary attribute.
+  It contains 506 examples of housing values in suburbs of Boston,
+  each with 13 continuous attributes and 1 binary attribute.
 
   Args:
     path: str.
