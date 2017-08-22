@@ -11,6 +11,7 @@ from observations.enwik8 import enwik8
 from observations.iris import iris
 from observations.lsun import lsun
 from observations.mnist import mnist
+from observations.nips import nips
 from observations.ptb import ptb
 from observations.sick import sick
 from observations.small32_imagenet import small32_imagenet
