@@ -22,16 +22,18 @@ def nips(path, year=None):
     path: str.
       Path to directory which either stores file or otherwise file will
       be downloaded and extracted there. Filename is `NIPS_1987-2015.csv`.
-    year: int or list, optional.
-      Year or list of years to subset data. We subset to documents in
-      `year` and words appearing at least once in the document subset.
+    year: int, str, or list, optional.
+      Year or list of years. We subset to documents in `year` and
+      words appearing at least once in the subset of documents.
 
   Returns:
     Tuple of np.darray `x_train`, column headers `documents`, and row
     headers `words`.
   """
-  if isinstance(year, int):
-    year = [year]
+  if isinstance(year, int) or isinstance(year, str):
+    year = [str(year)]
+  elif isinstance(year, list):
+    year = [str(yr) for yr in year]
   path = os.path.expanduser(path)
   filename = 'NIPS_1987-2015.csv'
   if not os.path.exists(os.path.join(path, filename)):
