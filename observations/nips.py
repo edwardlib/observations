@@ -9,7 +9,7 @@ import os
 from observations.util import maybe_download_and_extract
 
 
-def nips(path, year=None):
+def nips(path):
   """Load the NIPS conference papers 1987-2015 data set (Perrone et
   al., 2016). It is in the form of a 11,463 x 5,812 matrix of word
   counts, containing 11,463 words and 5,811 NIPS conference papers
@@ -22,18 +22,11 @@ def nips(path, year=None):
     path: str.
       Path to directory which either stores file or otherwise file will
       be downloaded and extracted there. Filename is `NIPS_1987-2015.csv`.
-    year: int, str, or list, optional.
-      Year or list of years. We subset to documents in `year` and
-      words appearing at least once in the subset of documents.
 
   Returns:
-    Tuple of np.darray `x_train`, column headers `documents`, and row
-    headers `words`.
+    Tuple of np.darray `x_train` and dictionary `metadata` of column
+    headers (documents) and row headers (words).
   """
-  if isinstance(year, int) or isinstance(year, str):
-    year = [str(year)]
-  elif isinstance(year, list):
-    year = [str(yr) for yr in year]
   path = os.path.expanduser(path)
   filename = 'NIPS_1987-2015.csv'
   if not os.path.exists(os.path.join(path, filename)):
@@ -50,13 +43,5 @@ def nips(path, year=None):
       x_train.append(row[1:])
 
   x_train = np.array(x_train, dtype=np.int)
-  if year is not None:
-    doc_idx = [i for i, document in enumerate(documents)
-               if document.startswith(tuple(year))]
-    documents = [documents[doc] for doc in doc_idx]
-    x_train = x_train[:, doc_idx]
-    word_idx = np.sum(x_train, 1) != 0
-    words = [words[word] for word in word_idx]
-    x_train = x_train[word_idx, :]
-
-  return x_train, documents, words
+  metadata = {'columns': documents, 'rows': words}
+  return x_train, metadata
