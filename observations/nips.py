@@ -27,7 +27,6 @@ def nips(path, year=None):
       `year` and words appearing at least once in the document subset.
 
   Returns:
-    # TODO c.f., other returns for returning metadata
     Tuple of np.darray `x_train`, column headers `documents`, and row
     headers `words`.
   """
