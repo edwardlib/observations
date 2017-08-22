@@ -21,7 +21,8 @@ def abalone(path):
       be downloaded and extracted there. Filename is `housing.data`.
 
   Returns:
-    np.darray `x_train` with 4,177 rows and 9 columns.
+    Tuple of np.darray `x_train` with 4,177 rows and 9 columns and
+    dictionary `metadata` of column headers (feature names).
   """
   path = os.path.expanduser(path)
   filename = 'abalone.data'
@@ -37,4 +38,14 @@ def abalone(path):
       row[0] = encoder[row[0]]
       x_train.append(row)
   x_train = np.array(x_train, dtype=np.float)
-  return x_train
+  columns = ['sex',
+             'length',
+             'diameter',
+             'height',
+             'whole weight',
+             'shucked weight',
+             'viscera weight',
+             'shell weight',
+             'rings']
+  metadata = {'columns': columns}
+  return x_train, metadata

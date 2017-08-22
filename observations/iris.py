@@ -20,7 +20,8 @@ def iris(path):
       be downloaded and extracted there. Filename is `iris.data`.
 
   Returns:
-    np.darray `x_train, y_train`.
+    Tuple of np.darray `x_train`, np.ndarray `y_train`, and dictionary
+    `metadata` of column headers (feature names).
   """
   path = os.path.expanduser(path)
   filename = 'iris.data'
@@ -38,4 +39,7 @@ def iris(path):
         y_train.append(row[-1])
   x_train = np.array(x_train, dtype=np.float)
   y_train = np.array(y_train)
-  return x_train, y_train
+  columns = ['sepal length (cm)', 'sepal width (cm)',
+             'petal length (cm)', 'petal width (cm)']
+  metadata = {'columns': columns}
+  return x_train, y_train, metadata

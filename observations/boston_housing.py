@@ -18,7 +18,8 @@ def boston_housing(path):
       be downloaded and extracted there. Filename is `housing.data`.
 
   Returns:
-    np.darray `x_train`.
+    Tuple of np.darray `x_train` and dictionary `metadata` of column
+    headers (feature names).
   """
   import pandas as pd
   path = os.path.expanduser(path)
@@ -29,4 +30,19 @@ def boston_housing(path):
 
   x_train = pd.read_csv(os.path.join(path, filename),
                         header=None, delimiter=r"\s+").as_matrix()
-  return x_train
+  columns = ['CRIM',
+             'ZN',
+             'INDUS',
+             'CHAS',
+             'NOX',
+             'RM',
+             'AGE',
+             'DIS',
+             'RAD',
+             'TAX',
+             'PTRATIO',
+             'B',
+             'LSTAT',
+             'MEDV']
+  metadata = {'columns': columns}
+  return x_train, metadata

@@ -21,7 +21,8 @@ def wine(path):
       be downloaded and extracted there. Filename is `wine.data`.
 
   Returns:
-    np.darray `x_train` with 178 rows and 14 columns.
+    Tuple of np.darray `x_train` with 178 rows and 14 columns and
+    dictionary `metadata` of column headers (feature names).
   """
   path = os.path.expanduser(path)
   filename = 'wine.data'
@@ -35,4 +36,18 @@ def wine(path):
     for row in iterator:
       x_train.append(row)
   x_train = np.array(x_train, dtype=np.float)
-  return x_train
+  columns = ['alcohol',
+             'malic_acid',
+             'ash',
+             'alcalinity_of_ash',
+             'magnesium',
+             'total_phenols',
+             'flavanoids',
+             'nonflavanoid_phenols',
+             'proanthocyanins',
+             'color_intensity',
+             'hue',
+             'od280/od315_of_diluted_wines',
+             'proline']
+  metadata = {'columns': columns}
+  return x_train, metadata
