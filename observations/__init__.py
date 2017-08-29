@@ -4,6 +4,7 @@ from __future__ import print_function
 
 from observations.abalone import abalone
 from observations.boston_housing import boston_housing
+from observations.caltech101_silhouettes import caltech101_silhouettes
 from observations.celeba import celeba
 from observations.cifar10 import cifar10
 from observations.cifar100 import cifar100
