@@ -27,5 +27,5 @@ from observations.wikitext2 import wikitext2
 from observations.wine import wine
 from observations.yelp17 import yelp17
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 VERSION = __version__
