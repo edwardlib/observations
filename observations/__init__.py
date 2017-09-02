@@ -24,6 +24,7 @@ from observations.svhn import svhn
 from observations.text8 import text8
 from observations.util import maybe_download_and_extract
 from observations.wikitext2 import wikitext2
+from observations.wikitext103 import wikitext103
 from observations.wine import wine
 from observations.yelp17 import yelp17
 

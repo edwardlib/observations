@@ -7,11 +7,11 @@ import os
 from observations.util import maybe_download_and_extract
 
 
-def wikitext2(path, raw=False):
-  """Load the Wikitext-2 data set (Merity et al., 2016). The dataset
+def wikitext103(path, raw=False):
+  """Load the Wikitext-103 data set (Merity et al., 2016). The dataset
   consists of Wikipedia articles fitting the Good or Featured article
-  criteria and has a vocabulary of 33,278 words. There are 2,088,628
-  training, 217,646 validation, and 245,569 test tokens.
+  criteria and has a vocabulary of 267,735 words. There are
+  103,227,021 training, 217,646 validation, and 245,569 test tokens.
 
   Args:
     path: str.
@@ -26,12 +26,12 @@ def wikitext2(path, raw=False):
   """
   path = os.path.expanduser(path)
   if raw:
-    url = 'https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-2-raw-v1.zip'
-    directory = 'wikitext-2-raw'
+    url = 'https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-103-raw-v1.zip'
+    directory = 'wikitext-103-raw'
     extension = '.raw'
   else:
-    url = 'https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-2-v1.zip'
-    directory = 'wikitext-2'
+    url = 'https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-103-v1.zip'
+    directory = 'wikitext-103'
     extension = '.tokens'
   if not os.path.exists(os.path.join(path, directory)):
     maybe_download_and_extract(path, url)
