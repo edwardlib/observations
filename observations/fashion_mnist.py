@@ -23,7 +23,7 @@ def fashion_mnist(path):
     `(x_train, y_train), (x_test, y_test)`.
   """
   path = os.path.expanduser(path)
-  url = 'http://fashion-mnist.s3-website.eu-central-1.amazonaws.com'
+  url = 'http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/'
   train_images = 'train-images-idx3-ubyte'
   train_labels = 'train-labels-idx1-ubyte'
   test_images = 't10k-images-idx3-ubyte'
