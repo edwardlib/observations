@@ -9,7 +9,7 @@ from observations.celeba import celeba
 from observations.cifar10 import cifar10
 from observations.cifar100 import cifar100
 from observations.enwik8 import enwik8
-from observations.enwik8 import enwik8
+from observations.fashion_mnist import fashion_mnist
 from observations.iris import iris
 from observations.lsun import lsun
 from observations.mnist import mnist
