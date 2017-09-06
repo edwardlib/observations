@@ -30,10 +30,12 @@ def caltech101_silhouettes(path, resolution=28):
   from scipy.io import loadmat
   if resolution == 28:
     filename = 'caltech101_silhouettes_28_split1.mat'
-    url = 'http://people.cs.umass.edu/~marlin/data/caltech101_silhouettes_28_split1.mat'
+    url = 'http://people.cs.umass.edu/~marlin/data/' \
+          'caltech101_silhouettes_28_split1.mat'
   else:
     filename = 'caltech101_silhouettes_16_split1.mat'
-    url = 'http://people.cs.umass.edu/~marlin/data/caltech101_silhouettes_16_split1.mat'
+    url = 'http://people.cs.umass.edu/~marlin/data/' \
+          'caltech101_silhouettes_16_split1.mat'
   path = os.path.expanduser(path)
   if not os.path.exists(os.path.join(path, filename)):
     maybe_download_and_extract(path, url)

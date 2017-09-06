@@ -33,7 +33,7 @@ def lsun(path, category='bedroom'):
     maybe_download_and_extract(path, url + set_name)
     source = os.path.join(
         path, 'download.cgi?tag=latest&category={}&set={}'.format(
-        category, set_name))
+            category, set_name))
     if set_name == 'test':
       target = os.path.join(path, '{}_lmdb.zip'.format(set_name))
     else:

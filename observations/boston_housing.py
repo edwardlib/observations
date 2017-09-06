@@ -25,7 +25,8 @@ def boston_housing(path):
   path = os.path.expanduser(path)
   filename = 'housing.data'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.data'
+    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/' \
+          'housing/housing.data'
     maybe_download_and_extract(path, url)
 
   x_train = pd.read_csv(os.path.join(path, filename),

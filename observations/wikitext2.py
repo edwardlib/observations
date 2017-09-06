@@ -26,11 +26,13 @@ def wikitext2(path, raw=False):
   """
   path = os.path.expanduser(path)
   if raw:
-    url = 'https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-2-raw-v1.zip'
+    url = 'https://s3.amazonaws.com/research.metamind.io/wikitext/' \
+          'wikitext-2-raw-v1.zip'
     directory = 'wikitext-2-raw'
     extension = '.raw'
   else:
-    url = 'https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-2-v1.zip'
+    url = 'https://s3.amazonaws.com/research.metamind.io/wikitext/' \
+          'wikitext-2-v1.zip'
     directory = 'wikitext-2'
     extension = '.tokens'
   if not os.path.exists(os.path.join(path, directory)):

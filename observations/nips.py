@@ -30,7 +30,8 @@ def nips(path):
   path = os.path.expanduser(path)
   filename = 'NIPS_1987-2015.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/00371/NIPS_1987-2015.csv'
+    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/' \
+          '00371/NIPS_1987-2015.csv'
     maybe_download_and_extract(path, url)
 
   with open(os.path.join(path, filename)) as f:

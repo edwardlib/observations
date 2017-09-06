@@ -26,7 +26,8 @@ def iris(path):
   path = os.path.expanduser(path)
   filename = 'iris.data'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/' \
+          'iris/iris.data'
     maybe_download_and_extract(path, url)
 
   with open(os.path.join(path, filename)) as f:

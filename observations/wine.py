@@ -27,7 +27,8 @@ def wine(path):
   path = os.path.expanduser(path)
   filename = 'wine.data'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data'
+    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/' \
+          'wine/wine.data'
     maybe_download_and_extract(path, url)
 
   with open(os.path.join(path, filename)) as f:

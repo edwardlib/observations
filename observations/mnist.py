@@ -2,8 +2,8 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import os
 import numpy as np
+import os
 
 from observations.util import maybe_download_and_extract
 
@@ -41,13 +41,13 @@ def mnist(path):
 
   with open(os.path.join(path, train_images)) as f:
     loaded = np.fromfile(file=f, dtype='uint8')
-  x_train = loaded[16:].reshape((60000, 28*28)).astype(float)
+  x_train = loaded[16:].reshape((60000, 28 * 28)).astype(float)
   with open(os.path.join(path, train_labels)) as f:
     loaded = np.fromfile(file=f, dtype='uint8')
   y_train = loaded[8:].reshape((60000,))
   with open(os.path.join(path, test_images)) as f:
     loaded = np.fromfile(file=f, dtype='uint8')
-  x_test = loaded[16:].reshape((10000, 28*28)).astype(float)
+  x_test = loaded[16:].reshape((10000, 28 * 28)).astype(float)
   with open(os.path.join(path, test_labels)) as f:
     loaded = np.fromfile(file=f, dtype='uint8')
   y_test = loaded[8:].reshape((10000,))

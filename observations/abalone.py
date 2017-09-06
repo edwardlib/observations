@@ -27,7 +27,8 @@ def abalone(path):
   path = os.path.expanduser(path)
   filename = 'abalone.data'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/abalone/abalone.data'
+    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/' \
+          'abalone/abalone.data'
     maybe_download_and_extract(path, url)
 
   encoder = {'M': 0, 'F': 1, 'I': 2}
