@@ -39,7 +39,7 @@ def abalone(path):
       row[0] = encoder[row[0]]
       x_train.append(row)
   x_train = np.array(x_train, dtype=np.float)
-  columns = ['sex',
+  columns = ['sex (0 for M, 1 or F, 2 for I)',
              'length',
              'diameter',
              'height',
