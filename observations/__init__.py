@@ -8,6 +8,7 @@ from observations.caltech101_silhouettes import caltech101_silhouettes
 from observations.celeba import celeba
 from observations.cifar10 import cifar10
 from observations.cifar100 import cifar100
+from observations.crabs import crabs
 from observations.enwik8 import enwik8
 from observations.fashion_mnist import fashion_mnist
 from observations.iris import iris
