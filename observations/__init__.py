@@ -13,6 +13,7 @@ from observations.enwik8 import enwik8
 from observations.fashion_mnist import fashion_mnist
 from observations.insteval import insteval
 from observations.iris import iris
+from observations.karate import karate
 from observations.lsun import lsun
 from observations.mnist import mnist
 from observations.nips import nips
