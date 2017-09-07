@@ -11,6 +11,7 @@ from observations.cifar100 import cifar100
 from observations.crabs import crabs
 from observations.enwik8 import enwik8
 from observations.fashion_mnist import fashion_mnist
+from observations.insteval import insteval
 from observations.iris import iris
 from observations.lsun import lsun
 from observations.mnist import mnist
