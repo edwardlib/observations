@@ -6,6 +6,7 @@ from observations.abalone import abalone
 from observations.boston_housing import boston_housing
 from observations.caltech101_silhouettes import caltech101_silhouettes
 from observations.celeba import celeba
+from observations.celegans import celegans
 from observations.cifar10 import cifar10
 from observations.cifar100 import cifar100
 from observations.crabs import crabs
