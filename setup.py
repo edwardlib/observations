@@ -12,6 +12,11 @@ setup(
     packages=['observations'],
     install_requires=['numpy>=1.7',
                       'six>=1.10.0'],
+    extras_require={
+        'data frames': ['pandas>=0.0'],
+        'networks': ['networkx<=1.9.1'],
+        'miscellaneous': ['scipy>=0.0', 'requests>=0.0', 'tqdm'],
+        },
     url='https://github.com/edwardlib/observations',
     keywords='machine learning statistics data science deep education',
     license='Apache License 2.0',
