@@ -38,17 +38,17 @@ def wine(path):
       x_train.append(row)
   x_train = np.array(x_train, dtype=np.float)
   columns = ['alcohol',
-             'malic_acid',
+             'malic acid',
              'ash',
-             'alcalinity_of_ash',
+             'alcalinity of ash',
              'magnesium',
-             'total_phenols',
+             'total phenols',
              'flavanoids',
-             'nonflavanoid_phenols',
+             'nonflavanoid phenols',
              'proanthocyanins',
-             'color_intensity',
+             'color intensity',
              'hue',
-             'od280/od315_of_diluted_wines',
+             'OD280/OD315 of diluted wines',
              'proline']
   metadata = {'columns': columns}
   return x_train, metadata

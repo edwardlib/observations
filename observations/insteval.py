@@ -15,6 +15,19 @@ def insteval(path):
   students, 2,160 professors and lecturers, and several student,
   lecture, and lecturer attributes.
 
+  The data contains the following columns:
+
+  | Feature | Description |
+  | --- | --- |
+  | s | student |
+  | d | instructor |
+  | studage | student age by number of enrolled semesters |
+  | lectage | lecture age by # of previously rated semesters |
+  | service | 0 if held for a different department than the lecturer's
+      main one; else 1 |
+  | dept | department |
+  | y | rating from 1 for poor to 5 for very good |
+
   Args:
     path: str.
       Path to directory which either stores file or otherwise file will
