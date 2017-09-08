@@ -13,9 +13,9 @@ setup(
     install_requires=['numpy>=1.7',
                       'six>=1.10.0'],
     extras_require={
-        'data frames': ['pandas>=0.0'],
+        'data frames': ['pandas'],
         'networks': ['networkx<=1.9.1'],
-        'miscellaneous': ['scipy>=0.0', 'requests>=0.0', 'tqdm'],
+        'miscellaneous': ['scipy', 'requests', 'tqdm'],
         },
     url='https://github.com/edwardlib/observations',
     keywords='machine learning statistics data science deep education',
