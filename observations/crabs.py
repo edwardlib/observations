@@ -15,6 +15,19 @@ def crabs(path):
   50 crabs each of two colour forms and both sexes, of the species
   Leptograpsus variegatus collected at Fremantle, W. Australia.
 
+  The data contains the following columns:
+
+  | Feature | Description |
+  | --- | --- |
+  | sp | species; 0 for blue, 1 for orange |
+  | sex | 0 for male, 1 for female|
+  | index | index 1:50 within each of the four groups |
+  | FL | frontal lobe size (mm) |
+  | RW | rear width (mm) |
+  | CL | carapace length (mm) |
+  | CW | carapace width (mm) |
+  | BD | body depth (mm) |
+
   Args:
     path: str.
       Path to directory which either stores file or otherwise file will
@@ -35,7 +48,7 @@ def crabs(path):
   sex_encoder = {'M': 0, 'F': 1}
   with open(os.path.join(path, filename)) as f:
     iterator = csv.reader(f)
-    _ = next(iterator)  # header
+    columns = next(iterator)[1:]
     x_train = []
     for row in iterator:
       row = row[1:]
@@ -44,13 +57,5 @@ def crabs(path):
       x_train.append(row)
 
   x_train = np.array(x_train, dtype=np.float)
-  columns = ['species (0 for blue, 1 for orange)',
-             'sex (0 for M, 1 or F)',
-             'index within each group'
-             'frontal lobe size (mm)',
-             'rear width (mm)',
-             'carapace length (mm)',
-             'carapace width (mm)',
-             'body depth (mm)']
   metadata = {'columns': columns}
   return x_train, metadata
