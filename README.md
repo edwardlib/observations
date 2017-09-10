@@ -3,11 +3,10 @@
 [![Build Status](https://travis-ci.org/edwardlib/observations.svg?branch=master)](https://travis-ci.org/edwardlib/observations)
 [![Coverage Status](https://coveralls.io/repos/github/edwardlib/observations/badge.svg?branch=master&cacheBuster=1)](https://coveralls.io/github/edwardlib/observations?branch=master)
 
-Observations provides a minimalistic collection of Python functions
-for loading standard data sets in machine learning. It automates the
-process from downloading, extracting, loading, and preprocessing data.
-Observations helps keep the workflow reproducible and follow sensible
-standards.
+Observations provides a one line Python API for loading standard data
+sets in machine learning. It automates the process from downloading,
+extracting, loading, and preprocessing data. Observations helps keep
+the workflow reproducible and follow sensible standards.
 
 It can be used in two ways.
 
