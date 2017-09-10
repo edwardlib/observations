@@ -3,10 +3,12 @@
 [![Build Status](https://travis-ci.org/edwardlib/observations.svg?branch=master)](https://travis-ci.org/edwardlib/observations)
 [![Coverage Status](https://coveralls.io/repos/github/edwardlib/observations/badge.svg?branch=master&cacheBuster=1)](https://coveralls.io/github/edwardlib/observations?branch=master)
 
-Observations provides a one line Python API for loading standard data
-sets in machine learning. It automates the process from downloading,
-extracting, loading, and preprocessing data. Observations helps keep
-the workflow reproducible and follow sensible standards.
+Observations provides a
+[one line Python API](http://edwardlib.org/api/observations)
+for loading standard data sets in machine learning. It automates the
+process from downloading, extracting, loading, and preprocessing data.
+Observations helps keep the workflow reproducible and follow sensible
+standards.
 
 It can be used in two ways.
 
@@ -26,7 +28,8 @@ All functions take as input a filepath and optional preprocessing
 arguments. They return a tuple in the form of training data, test
 data, and validation data (if available). Each element in the tuple
 is typically a NumPy array, a tuple of NumPy arrays (e.g., features
-and labels), or a string (text). See the docstrings for details.
+and labels), or a string (text). See the
+[API](http://edwardlib.org/api/observations) for details.
 
 ## 2. As source code
 
