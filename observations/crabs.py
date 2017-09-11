@@ -10,10 +10,11 @@ from observations.util import maybe_download_and_extract
 
 
 def crabs(path):
-  """Load the Crabs data set (Campbell and Mahon, 1974). It contains
-  200 rows and 8 columns, describing 5 morphological measurements on
-  50 crabs each of two colour forms and both sexes, of the species
-  Leptograpsus variegatus collected at Fremantle, W. Australia.
+  """Load the Crabs data set [@campbell1974multivariate].
+  It contains 200 rows and 8 columns, describing 5 morphological
+  measurements on 50 crabs each of two colour forms and both sexes, of
+  the species Leptograpsus variegatus collected at Fremantle, W.
+  Australia.
 
   The data contains the following columns:
 

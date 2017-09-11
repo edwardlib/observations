@@ -9,7 +9,7 @@ from observations.util import maybe_download_and_extract
 
 def svhn(path, load_extra=False):
   """Load the Street View House Numbers data set in cropped digits
-  format (Netzer et al., 2011). It consists of 32x32 RGB images in 10
+  format [@netzer2011reading]. It consists of 32x32 RGB images in 10
   classes. There are 73257 training images, 26032 test images, and
   531131 extra images.
 

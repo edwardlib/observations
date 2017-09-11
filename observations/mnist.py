@@ -9,7 +9,7 @@ from observations.util import maybe_download_and_extract
 
 
 def mnist(path):
-  """Load the MNIST data set (LeCun et al., 1998).
+  """Load the MNIST data set [@lecun1998gradient].
 
   Args:
     path: str.

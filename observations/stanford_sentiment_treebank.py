@@ -10,12 +10,12 @@ from observations.util import maybe_download_and_extract
 
 
 def stanford_sentiment_treebank(path):
-  """Load the Stanford Sentiment Treebank data set (Socher et al.,
-  2013). It consists of 8,544 training sentences, 2,210 test
-  sentences, and 1,101 validation sentences extracted from Rotten
-  Tomatoes movie reviews. Each sentence is encoded as a parse tree
-  with a sentiment label 0-4 (negative to positive) for each node.
-  Here we load the raw sentence and its overall sentiment label.
+  """Load the Stanford Sentiment Treebank data set [@socher2013recursive].
+  It consists of 8,544 training sentences, 2,210 test sentences, and
+  1,101 validation sentences extracted from Rotten Tomatoes movie
+  reviews. Each sentence is encoded as a parse tree with a sentiment
+  label 0-4 (negative to positive) for each node.  Here we load the
+  raw sentence and its overall sentiment label.
 
   Args:
     path: str.

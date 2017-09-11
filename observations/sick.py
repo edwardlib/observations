@@ -11,7 +11,7 @@ from observations.util import maybe_download_and_extract
 
 def sick(path):
   """Load the Sentences Involving Compositional Knowledge (SICK) data
-  set (Marelli et al., 2014). It consists of ~10,000 English sentence
+  set [@marelli2014sick]. It consists of ~10,000 English sentence
   pairs, where each pair is annotated for relatedness and entailment.
   There are 923 pairs within the [1,2) range, 1373 pairs within the
   [2,3) range, 3872 pairs within the [3,4) range, and 3672 pairs

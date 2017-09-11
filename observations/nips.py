@@ -10,13 +10,13 @@ from observations.util import maybe_download_and_extract
 
 
 def nips(path):
-  """Load the NIPS conference papers 1987-2015 data set (Perrone et
-  al., 2016). It is in the form of a 11,463 x 5,812 matrix of word
-  counts, containing 11,463 words and 5,811 NIPS conference papers
-  (the first column contains the list of words). Each column contains
-  the number of times each word appears in the corresponding document.
-  The names of the columns give information about each document and
-  its timestamp in the following format: `year_paperID`.
+  """Load the NIPS conference papers 1987-2015 data set [@perrone2016poisson].
+  It is in the form of a 11,463 x 5,812 matrix of word counts,
+  containing 11,463 words and 5,811 NIPS conference papers (the first
+  column contains the list of words). Each column contains the number
+  of times each word appears in the corresponding document.  The names
+  of the columns give information about each document and its
+  timestamp in the following format: `year_paperID`.
 
   Args:
     path: str.

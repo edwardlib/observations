@@ -10,10 +10,10 @@ from observations.util import maybe_download_and_extract
 
 
 def insteval(path):
-  """Load the InstEval data set. It contains 73,421 university lecture
-  evaluations by students at ETH Zurich with a total of 2,972
-  students, 2,160 professors and lecturers, and several student,
-  lecture, and lecturer attributes.
+  """Load the InstEval data set [@bates2014lme4].
+  It contains 73,421 university lecture evaluations by students at ETH
+  Zurich with a total of 2,972 students, 2,160 professors and
+  lecturers, and several student, lecture, and lecturer attributes.
 
   The data contains the following columns:
 

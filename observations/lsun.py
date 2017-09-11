@@ -10,7 +10,7 @@ from observations.util import maybe_download_and_extract
 
 def lsun(path, category='bedroom'):
   """Load data set(s) from the Large-Scale Understanding Challenge
-  (LSUN) (Yu et al., 2015). It consists of images in 10 different
+  (LSUN) [@yu2015lsun]. It consists of images in 10 different
   categories, each with a variable amount of training images (~100,000
   to ~3 million) and 300 validation images. There is a fixed set of
   10,000 test images.
