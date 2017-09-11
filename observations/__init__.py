@@ -60,7 +60,8 @@ def remove_undocumented(module_name, allowed_exception_list=None):
   target_module = _sys.modules[module_name]
   for extra_symbol in extra_symbols:
     # Skip over __file__, etc. Also preserves internal symbols.
-    if extra_symbol.startswith('_'): continue
+    if extra_symbol.startswith('_'):
+      continue
     fully_qualified_name = module_name + '.' + extra_symbol
     delattr(target_module, extra_symbol)
 
