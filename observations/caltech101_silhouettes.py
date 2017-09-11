@@ -8,7 +8,7 @@ from observations.util import maybe_download_and_extract
 
 
 def caltech101_silhouettes(path, resolution=28):
-  """Load the Caltech 101 Silhouettes data set (Marlin et al., 2010).
+  """Load the Caltech 101 Silhouettes data set [@marlin2010inductive].
   It contains binarized 28x28 (or 14x14) pixel images of objects
   belonging to 101 categories. There are 4,100 examples in the
   training set, 2,264 examples in the validation set and 2,307

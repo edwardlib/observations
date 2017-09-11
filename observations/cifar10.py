@@ -11,9 +11,9 @@ from six.moves import cPickle
 
 
 def cifar10(path):
-  """Load the CIFAR-10 data set (Krizhevsky, 2009). It consists of
-  32x32 RGB images in 10 classes, with 6000 images per class. There
-  are 50000 training images and 10000 test images.
+  """Load the CIFAR-10 data set [@krizhevsky2009learning].
+  It consists of 32x32 RGB images in 10 classes, with 6000 images per
+  class. There are 50000 training images and 10000 test images.
 
   Args:
     path: str.

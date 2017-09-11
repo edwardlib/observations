@@ -11,7 +11,7 @@ from observations.util import maybe_download_and_extract
 
 def snli(path):
   """Load the Stanford Natural Language Inference (SNLI) corpus
-  (Bowman et al., 2015). It is a collection of 570,000 human-written
+  [@bowman2015large]. It is a collection of 570,000 human-written
   English sentence pairs manually labeled for balanced classification
   with the labels entailment, contradiction, and neutral.
 

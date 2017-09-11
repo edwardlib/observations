@@ -9,10 +9,10 @@ from observations.util import maybe_download_and_extract
 
 
 def celegans(path):
-  """Load the neural network of the worm C. Elegans (Watts and
-  Strogatz, 1986). The neural network consists of around 300 neurons.
-  Each connection between neurons is associated with a weight
-  (positive integer) capturing the strength of the connection.
+  """Load the neural network of the worm C. Elegans [@watts1998collective].
+  The neural network consists of around 300 neurons. Each connection
+  between neurons is associated with a weight (positive integer)
+  capturing the strength of the connection.
 
   Args:
     path: str.

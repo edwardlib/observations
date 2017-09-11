@@ -8,8 +8,8 @@ from observations.util import maybe_download_and_extract
 
 
 def enwik8(path):
-  """Load enwik8 from the Hutter Prize (Hutter, 2012). The
-  dataset is preprocessed and has a vocabulary of 205 characters.
+  """Load enwik8 from the Hutter Prize [@hutter2012human].
+  The dataset is preprocessed and has a vocabulary of 205 characters.
   There are 100 million characters.
 
   Args:

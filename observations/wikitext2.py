@@ -8,10 +8,11 @@ from observations.util import maybe_download_and_extract
 
 
 def wikitext2(path, raw=False):
-  """Load the Wikitext-2 data set (Merity et al., 2016). The dataset
-  consists of Wikipedia articles fitting the Good or Featured article
-  criteria and has a vocabulary of 33,278 words. There are 2,088,628
-  training, 217,646 validation, and 245,569 test tokens.
+  """Load the Wikitext-2 data set [@merity2016pointer].
+  The dataset consists of Wikipedia articles fitting the Good or
+  Featured article criteria and has a vocabulary of 33,278 words.
+  There are 2,088,628 training, 217,646 validation, and 245,569 test
+  tokens.
 
   Args:
     path: str.

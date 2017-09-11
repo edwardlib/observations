@@ -8,10 +8,10 @@ import zipfile
 
 
 def celeba(path):
-  """Load the Large-scale CelebFaces Attributes (CelebA) data set (Liu
-  et al., 2015). It consists of ~200,000 178x218 RGB images, each with
-  40 annotated attributes, and with a total of ~10,000 identities.
-  Here we load only the images.
+  """Load the Large-scale CelebFaces Attributes (CelebA) data set
+  [@liu2015faceattributes]. It consists of ~200,000 178x218 RGB
+  images, each with 40 annotated attributes, and with a total of
+  ~10,000 identities. Here we load only the images.
 
   Args:
     path: str.

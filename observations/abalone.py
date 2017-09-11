@@ -10,10 +10,11 @@ from observations.util import maybe_download_and_extract
 
 
 def abalone(path):
-  """Load the Abalone data set (Nash et al., 1994). It contains 4,177
-  examples of abalones with nine measured attributes such as sex,
-  length, diameter, and whole weight. The first column (sex) is
-  encoded as 0 for M (male), 1 for F (female), 2 for I (infant).
+  """Load the Abalone data set [@nash1994population].
+  It contains 4,177 examples of abalones with nine measured attributes
+  such as sex, length, diameter, and whole weight. The first column
+  (sex) is encoded as 0 for M (male), 1 for F (female), 2 for I
+  (infant).
 
   Args:
     path: str.

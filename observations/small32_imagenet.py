@@ -9,8 +9,8 @@ from observations.util import maybe_download_and_extract
 
 
 def small32_imagenet(path):
-  """Load the small 32x32 ImageNet data set (van den Oord et al.,
-  2016). It consists of millions of 32x32 RGB images.
+  """Load the small 32x32 ImageNet data set [@vandenoord2016pixel].
+  It consists of millions of 32x32 RGB images.
 
   Args:
     path: str.

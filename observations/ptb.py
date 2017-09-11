@@ -9,8 +9,8 @@ from observations.util import maybe_download_and_extract
 
 
 def ptb(path):
-  """Load the Penn Treebank data set (Marcus et al., 1993). The
-  dataset is preprocessed and has a vocabulary of 10,000 words,
+  """Load the Penn Treebank data set [@marcus1993building].
+  The dataset is preprocessed and has a vocabulary of 10,000 words,
   including the end-of-sentence marker and a special symbol (<unk>)
   for rare words. There are 929,589 training words, 73,760 validation
   words, and 82,430 test words.

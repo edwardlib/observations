@@ -8,8 +8,8 @@ from observations.util import maybe_download_and_extract
 
 
 def text8(path):
-  """Load the text8 data set (Mahoney, 2006). The
-  dataset is preprocessed and has a vocabulary of 27 characters.
+  """Load the text8 data set [@mahoney2006large].
+  The dataset is preprocessed and has a vocabulary of 27 characters.
   There are 100 million characters.
 
   Args:

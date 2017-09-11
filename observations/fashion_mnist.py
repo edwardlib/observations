@@ -9,7 +9,7 @@ from observations.util import maybe_download_and_extract
 
 
 def fashion_mnist(path):
-  """Load the Fashion MNIST data set (Xiao et al., 2017).
+  """Load the Fashion MNIST data set [@xiao2017fashion].
 
   Args:
     path: str.

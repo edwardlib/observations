@@ -10,9 +10,9 @@ from observations.util import maybe_download_and_extract
 
 
 def iris(path):
-  """Load the Iris Plants data set (Fisher, 1936). It contains 150
-  examples of iris plants, each with 4 real-valued attributes and its
-  class.
+  """Load the Iris Plants data set [@fisher1936use].
+  It contains 150 examples of iris plants, each with 4 real-valued
+  attributes and its class.
 
   Args:
     path: str.

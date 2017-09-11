@@ -10,10 +10,11 @@ from observations.util import maybe_download_and_extract
 
 
 def wine(path):
-  """Load the wine data set. It contains 178 examples of wines grown
-  in the same region in Italy but derived from three different
-  cultivars (first column). Each example has 13 integer-valued and
-  continuous attributes such as alcohol, malic acid, and ash.
+  """Load the wine data set [@forina1991extendible].
+  It contains 178 examples of wines grown in the same region in Italy
+  but derived from three different cultivars (first column). Each
+  example has 13 integer-valued and continuous attributes such as
+  alcohol, malic acid, and ash.
 
   Args:
     path: str.

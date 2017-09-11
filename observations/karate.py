@@ -9,12 +9,12 @@ from observations.util import maybe_download_and_extract
 
 
 def karate(path):
-  """Load Zachary's Karate Club (Zachary, 1977). It is a social
-  network of friendships between 34 members of a karate club at a US
-  university from 1970 to 1972. During the study a conflict between
-  instructor 'Mr. Hi' and administrator 'Officer' led the club to
-  split into two. Half of the members formed a new club around 'Mr.
-  Hi'; other members found a new instructor or quit karate.
+  """Load Zachary's Karate Club [@zachary1977information].
+  It is a social network of friendships between 34 members of a karate
+  club at a US university from 1970 to 1972. During the study a
+  conflict between instructor 'Mr. Hi' and administrator 'Officer' led
+  the club to split into two. Half of the members formed a new club
+  around 'Mr.  Hi'; other members found a new instructor or quit karate.
 
   Args:
     path: str.
