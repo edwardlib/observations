@@ -1,7 +1,7 @@
 from setuptools import setup
 
 # import ``__version__`` from code base
-exec(open('observations/__init__.py').read())
+exec(open('observations/version.py').read())
 
 setup(
     name='observations',
