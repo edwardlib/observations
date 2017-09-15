@@ -43,7 +43,7 @@ def crabs(path):
   if not os.path.exists(os.path.join(path, filename)):
     url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv/' \
           'MASS/crabs.csv'
-    maybe_download_and_extract(path, url)
+    maybe_download_and_extract(path, url, resume=False)
 
   species_encoder = {'B': 0, 'O': 1}
   sex_encoder = {'M': 0, 'F': 1}

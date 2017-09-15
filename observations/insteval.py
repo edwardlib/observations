@@ -42,7 +42,7 @@ def insteval(path):
   if not os.path.exists(os.path.join(path, filename)):
     url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv/' \
           'lme4/InstEval.csv'
-    maybe_download_and_extract(path, url)
+    maybe_download_and_extract(path, url, resume=False)
 
   with open(os.path.join(path, filename)) as f:
     iterator = csv.reader(f)
