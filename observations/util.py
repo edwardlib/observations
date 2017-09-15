@@ -64,7 +64,7 @@ def maybe_download_and_extract(directory, url, extract=True):
       with gzip.open(filepath, 'rb') as f:
         s = f.read()
       extracted_filepath = os.path.splitext(filepath)[0]
-      with open(extracted_filepath, 'w') as f:
+      with open(extracted_filepath, 'wb') as f:
         f.write(s)
     elif zipfile.is_zipfile(filepath):
       with zipfile.ZipFile(filepath) as f:

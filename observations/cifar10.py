@@ -4,6 +4,7 @@ from __future__ import print_function
 
 import numpy as np
 import os
+import six
 import sys
 
 from observations.util import maybe_download_and_extract
