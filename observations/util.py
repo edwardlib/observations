@@ -104,7 +104,7 @@ def check_capabilities(url, start=120, num_bytes=300, user_agent=None,
     dict of remote server capabilities, required prior to full
     download.
   """
-  supports_range = False
+  supports_resume = False
   supports_file_size = False
   user_agent_default = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:32.0' \
                        ') Gecko/20100101 Firefox/32.0'
@@ -120,11 +120,11 @@ def check_capabilities(url, start=120, num_bytes=300, user_agent=None,
   try:
     num_bytes_in_range = int(response.headers.get('content-length'))
     if num_bytes_in_range == num_bytes + 1:
-      supports_range = True
+      supports_resume = True
     else:
-      supports_range = False
+      supports_resume = False
   except TypeError:
-    supports_range = False
+    supports_resume = False
   try:
     file_size = int(response.headers.get('content-range').split('/')[1])
     supports_file_size = True
@@ -132,7 +132,7 @@ def check_capabilities(url, start=120, num_bytes=300, user_agent=None,
     file_size = 0
     supports_file_size = False
   capabilities_dict = {'content_type': content_type,
-                       'supports_resume': supports_range,
+                       'supports_resume': supports_resume,
                        'supports_file_size': supports_file_size,
                        'file_size': file_size,
                        'addnl_params': params,
