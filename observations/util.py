@@ -599,9 +599,6 @@ def maybe_download_and_extract(path, url, extract=True,
     print('{} already exists'.format(filepath))
   else:
     download_file(url, filepath, hash_true, resume)
-    print()
-    statinfo = os.stat(filepath)
-    print('Successfully downloaded', filepath, statinfo.st_size, 'bytes.')
 
   if extract:
     if tarfile.is_tarfile(filepath):
