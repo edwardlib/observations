@@ -30,17 +30,13 @@ def lsun(path, category='bedroom'):
     str. It is a message advising to load data manually.
   """
   def _maybe_download_and_extract(set_name):
-    maybe_download_and_extract(path, url + set_name)
-    source = os.path.join(
-        path, 'download.cgi?tag=latest&category={}&set={}'.format(
-            category, set_name))
     if set_name == 'test':
-      target = os.path.join(path, '{}_lmdb.zip'.format(set_name))
+      target = '{}_lmdb.zip'.format(set_name)
     else:
-      target = os.path.join(path, '{}_{}_lmdb.zip'.format(category, set_name))
-    os.rename(source, target)
-    with zipfile.ZipFile(target) as f:
-      f.extractall(path)
+      target = '{}_{}_lmdb.zip'.format(category, set_name)
+    maybe_download_and_extract(path, url + set_name,
+                               save_file_name=target)
+
   path = os.path.expanduser(path)
   url = 'http://lsun.cs.princeton.edu/htbin/download.cgi?tag=latest' \
         '&category={}&set='.format(category)
