@@ -553,20 +553,21 @@ def download_file(url, file_path, hash_true=None, resume=True,
       return True
 
 
-def maybe_download_and_extract(directory, url, extract=True,
+def maybe_download_and_extract(path, url, extract=True,
                                hash_true=None, resume=True,
                                save_file_name=None):
   """Download file from url unless it already exists in specified directory.
   Extract the file if `extract` is True.
 
-  The file at `url` is downloaded to the directory `directory`
+  The file at `url` is downloaded to the directory `path`
   with its original filename. For example, with url
-  `http://example.org/example.txt` and directory `~/data`, the
+  `http://example.org/example.txt` and path `~/data`, the
   downloaded file is located at `~/data/example.txt`.
 
   Args:
-    directory: str.
-      Path to directory containing the file or where file will be downloaded.
+    path: str.
+      Path to directory which either stores file or otherwise file will
+      be downloaded and extracted there.
     url: str.
       URL to download from if file doesn't exist.
     extract: bool, optional.
@@ -582,14 +583,14 @@ def maybe_download_and_extract(directory, url, extract=True,
   Returns:
     str. Path to downloaded or already existing file.
   """
-  directory = os.path.expanduser(directory)
-  if not os.path.exists(directory):
-    os.makedirs(directory)
+  path = os.path.expanduser(path)
+  if not os.path.exists(path):
+    os.makedirs(path)
   if save_file_name is None:
     filename = url.split('/')[-1]
   else:
     filename = save_file_name
-  filepath = os.path.join(directory, filename)
+  filepath = os.path.join(path, filename)
   if os.path.exists(filepath):
     print('{} already exists'.format(filepath))
   else:
@@ -601,7 +602,7 @@ def maybe_download_and_extract(directory, url, extract=True,
   if extract:
     if tarfile.is_tarfile(filepath):
       with tarfile.open(filepath) as f:
-        f.extractall(directory)
+        f.extractall(path)
     elif filename.endswith('.gz'):
       with gzip.open(filepath, 'rb') as f:
         s = f.read()
@@ -610,6 +611,6 @@ def maybe_download_and_extract(directory, url, extract=True,
         f.write(s)
     elif zipfile.is_zipfile(filepath):
       with zipfile.ZipFile(filepath) as f:
-        f.extractall(directory)
+        f.extractall(path)
 
   return filepath
