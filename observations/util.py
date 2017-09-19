@@ -384,7 +384,7 @@ def _print_progress(file_path, dl_bytes, file_size, block_size, count,
     sys.stdout.flush()
 
 
-def normal_download(url, file_path, session, params={}, headers={},
+def normal_download(url, file_path, session, params=None, headers=None,
                     hash_true=None, timeout=10, block_size=1024 * 1024):
   """Start download of a file. No pause/resume capability.
 
@@ -409,6 +409,10 @@ def normal_download(url, file_path, session, params={}, headers={},
   Returns:
     bool. True if file is successfully downloaded.
   """
+  if params is None:
+    params = {}
+  if headers is None:
+    headers = {}
   file_size = get_file_size(url, timeout)
   if check_file_downloaded(file_path, file_size):
     print('File [{}] with same size already downloaded & '
