@@ -3,6 +3,7 @@ from __future__ import division
 from __future__ import print_function
 
 import collections
+import io
 import os
 
 from observations.util import maybe_download_and_extract
@@ -29,10 +30,13 @@ def ptb(path):
     maybe_download_and_extract(path, url)
 
   path = os.path.join(path, 'simple-examples/data')
-  with open(os.path.join(path, 'ptb.train.txt')) as f:
-    x_train = f.read().decode("utf-8").replace("\n", "<eos>")
-  with open(os.path.join(path, 'ptb.test.txt')) as f:
-    x_test = f.read().decode("utf-8").replace("\n", "<eos>")
-  with open(os.path.join(path, 'ptb.valid.txt')) as f:
-    x_valid = f.read().decode("utf-8").replace("\n", "<eos>")
+  with io.open(os.path.join(path, 'ptb.train.txt'),
+               encoding='utf-8') as f:
+    x_train = f.read().replace("\n", "<eos>")
+  with io.open(os.path.join(path, 'ptb.test.txt'),
+               encoding='utf-8') as f:
+    x_test = f.read().replace("\n", "<eos>")
+  with io.open(os.path.join(path, 'ptb.valid.txt'),
+               encoding='utf-8') as f:
+    x_valid = f.read().replace("\n", "<eos>")
   return x_train, x_test, x_valid

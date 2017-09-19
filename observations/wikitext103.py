@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import io
 import os
 
 from observations.util import maybe_download_and_extract
@@ -40,12 +41,15 @@ def wikitext103(path, raw=False):
     maybe_download_and_extract(path, url)
 
   path = os.path.join(path, directory)
-  with open(os.path.join(path, 'wiki.train' + extension)) as f:
-    x_train = f.read().decode("utf-8")
-  with open(os.path.join(path, 'wiki.test' + extension)) as f:
-    x_test = f.read().decode("utf-8")
-  with open(os.path.join(path, 'wiki.valid' + extension)) as f:
-    x_valid = f.read().decode("utf-8")
+  with io.open(os.path.join(path, 'wiki.train' + extension),
+               encoding='utf-8') as f:
+    x_train = f.read()
+  with io.open(os.path.join(path, 'wiki.test' + extension),
+               encoding='utf-8') as f:
+    x_test = f.read()
+  with io.open(os.path.join(path, 'wiki.valid' + extension),
+               encoding='utf-8') as f:
+    x_valid = f.read()
   if not raw:
     x_train = x_train.replace("\n", "<eos>")
     x_test = x_test.replace("\n", "<eos>")
