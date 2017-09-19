@@ -17,7 +17,7 @@ from six.moves import urllib
 
 
 def _get_google_confirm_id_token(url, session):
-  """Helper function to get confirmation token for google drive
+  """Helper function to get confirmation token for Google Drive.
 
   Args:
     url: str.
@@ -41,7 +41,7 @@ def _get_google_confirm_id_token(url, session):
 
 
 def _gdrive_params(url, session):
-  """Helper function reurn google drive specific parameters
+  """Helper function returning Google Drive specific parameters.
 
     Args:
       url: str.
@@ -50,8 +50,8 @@ def _gdrive_params(url, session):
         Session to get the cookie token.
 
     Returns:
-      dict. dictionary of id & confirmation token parameters required for GET
-            request to google drive resource.
+      dict of id & confirmation token parameters required for GET
+      request to Google Drive resource.
     """
   params = {}
   file_id, token = _get_google_confirm_id_token(url, session)
@@ -63,14 +63,11 @@ def _gdrive_params(url, session):
 
 
 def _print_capabilities(cap_dict):
-  """ Helper function to print capabilities of a given URL.
+  """Helper function to print capabilities of a given URL.
 
-    Args:
-      cap_dict: dict.
-        Capabilities dictionary object.
-
-    Returns:
-      None.
+  Args:
+    cap_dict: dict.
+      Capabilities dictionary object.
   """
   print("Content Type:         [{}] ".format(cap_dict['content_type']))
   print("Supports Resume:      [{}] ".format('Y'
@@ -85,10 +82,10 @@ def _print_capabilities(cap_dict):
 
 def check_capabilities(url, start=120, num_bytes=300, user_agent=None,
                        _print=True):
-  """ Check capabilities of a specified URL. This function queries the URL
-  to get a response on the remote server capabilities.Requests for num_bytes
-  bytes of data to check total_file_size, range support, google drive specific
-  params
+  """Check capabilities of a specified URL. This function queries the URL
+  to get a response on the remote server capabilities. Requests for `num_bytes`
+  bytes of data to check `total_file_size`, range support, Google
+  Drive specific params.
 
   Args:
     url: str.
@@ -101,11 +98,11 @@ def check_capabilities(url, start=120, num_bytes=300, user_agent=None,
       User agent which is sometimes required to query some domains for proper
       download.
     _print: bool, optional.
-       Print the remote server capabilities.
+     Print the remote server capabilities.
 
   Returns
-    dict: Dictionary of remote server capabilities, required prior to full
-          download.
+    dict of remote server capabilities, required prior to full
+    download.
   """
   supports_range = False
   supports_file_size = False
@@ -149,7 +146,6 @@ def check_capabilities(url, start=120, num_bytes=300, user_agent=None,
 
 def humanize_size(n):
   """Convert file size in bytes to a friendly human readable form.
-  E.g humanize_size(1024) - '1 KB'.
 
   Args:
     n: int.
@@ -157,6 +153,13 @@ def humanize_size(n):
 
   Returns:
     str. Human-friendly size.
+
+  #### Examples
+
+  ```python
+  humanize_size(1024)
+  ## '1 KB'
+  ```
   """
   exp = 0
   b = 1024
@@ -170,18 +173,26 @@ def humanize_size(n):
 
 def humanize_time(duration, fmt_short=True):
   """Convert duration in seconds to a friendly human readable form.
-    E.g humanize_time(3662) - 1h 1m 2s.
-        humanize_time(3662, fmt_short=False) - '1 hour, 1 minute, 2 seconds'.
 
-    Args:
-      duration: int.
-        Duration in seconds.
-      fmt_short: bool, optional.
-        Display output in short/long format.
+  Args:
+    duration: int.
+      Duration in seconds.
+    fmt_short: bool, optional.
+      Display output in short/long format.
 
-    Returns:
-      str. Human-friendly durations.
-    """
+  Returns:
+    str. Human-friendly durations.
+
+  #### Examples
+
+  ```python
+  humanize_time(3662)
+  ## '1h 1m 2s'
+
+  humanize_time(3662, fmt_short=False)
+  ## '1 hour, 1 minute, 2 seconds'
+  ```
+  """
   duration = int(duration)
   if duration == 0:
     return "0s" if fmt_short else "0 seconds"
@@ -213,16 +224,22 @@ def humanize_time(duration, fmt_short=True):
 
 def get_file_size(url, params, timeout=10):
   """Get file size from a given URL in bytes.
-    E.g get_file_size(url) - 178904.
 
-    Args:
-      url: str.
-        URL string.
-      timeout: int, optional.
-        Timeout in seconds
+  Args:
+    url: str.
+      URL string.
+    timeout: int, optional.
+      Timeout in seconds.
 
-    Returns:
-      int. File size in bytes.
+  Returns:
+    int. File size in bytes.
+
+  #### Examples
+
+  ```python
+  get_file_size(url)
+  ## 178904
+  ```
   """
   try:
     response = requests.get(url, params={}, stream=True)
@@ -238,18 +255,24 @@ def get_file_size(url, params, timeout=10):
 
 
 def get_file_hash(path, algorithm='md5'):
-  """Get file hash from a given file (specified by path) and hashing algorithm.
-    E.g get_file_hash('train.gz') - '5503d900f6902c61682e6b6f408202cb'.
+  """Get hash from a given file and hashing algorithm.
 
-    Args:
-      path: str.
-        Full path to a file.
-      algorithm: str, optional.
-        Name of hashing algorithm. See hashlib.algorithms_available for list
-        of available hashing algorithms in python.
+  Args:
+    path: str.
+      Full path to a file.
+    algorithm: str, optional.
+      Name of hashing algorithm. See `hashlib.algorithms_available`
+      for list of available hashing algorithms in python.
 
-    Returns:
-      str. File hash computed from the file using the specified algorithm.
+  Returns:
+    str. File hash computed from the file using the specified algorithm.
+
+  #### Examples
+
+  ```python
+  get_file_hash('train.gz')
+  ## '5503d900f6902c61682e6b6f408202cb'
+  ```
   """
   hash_alg = hashlib.new(algorithm)
   with open(path, 'rb') as f:
@@ -262,21 +285,27 @@ def get_file_hash(path, algorithm='md5'):
 
 
 def hashes_match(path, hash_true, algorithm='md5'):
-  """Check whether the computed hash from the file (specified by path) matches
-     the specified hash string.
-    E.g hashes_match('train.gz', '5503d900f6902c61682e6b6f408202cb') - True.
+  """Check whether the computed hash from the file matches the
+  specified hash string.
 
-    Args:
-      path: str.
-        Full path to a file.
-      hash_true: str.
-        True hash of the file.
-      algorithm: str, optional.
-        Name of hashing algorithm. See hashlib.algorithms_available for list
-        of available hashing algorithms in python.
+  Args:
+    path: str.
+      Full path to a file.
+    hash_true: str.
+      True hash of the file.
+    algorithm: str, optional.
+      Name of hashing algorithm. See `hashlib.algorithms_available`
+      for list of available hashing algorithms in python.
 
-    Returns:
-      bool. True if the hashes match, else False.
+  Returns:
+    bool. True if the hashes match, else False.
+
+  #### Examples
+
+  ```python
+  hashes_match('train.gz', '5503d900f6902c61682e6b6f408202cb')
+  ## True
+  ```
   """
   if os.path.exists(path):
     return get_file_hash(path, algorithm) == hash_true
@@ -287,14 +316,14 @@ def hashes_match(path, hash_true, algorithm='md5'):
 def check_file_downloaded(file_path, file_size):
   """Check whether a file of specified size exists.
 
-    Args:
-      file_path: str.
-        Full path of the file.
-      file_size: int.
-        Size of the file in bytes.
+  Args:
+    file_path: str.
+      Full path of the file.
+    file_size: int.
+      Size of the file in bytes.
 
-    Returns:
-      bool. True if file with specified size exists.
+  Returns:
+    bool. True if file with specified size exists.
   """
   file_exists = os.path.exists(file_path)
   local_file_size = os.path.getsize(file_path) if file_exists else -1
@@ -306,23 +335,24 @@ def check_file_downloaded(file_path, file_size):
 
 def _print_progress(file_path, dl_bytes, file_size, block_size, count,
                     _start_time):
-  """ Helper function that is called to print progress of download.
+  """Helper function that is called to print progress of download.
 
-    Args:
-      file_path: str.
-        Full path of the file.
-      dl_bytes: int.
-        Bytes already downloaded in bytes.
-      file_size. int.
-        Total file size in bytes.
-      block_size: int.
-        Block size of bytes requested per iteration.
-      count: int.
-        Iteration count.
-      _start_time: object.
-        Time object to indicate when download started.
-    Returns:
-      None.
+  Args:
+    file_path: str.
+      Full path of the file.
+    dl_bytes: int.
+      Bytes already downloaded in bytes.
+    file_size. int.
+      Total file size in bytes.
+    block_size: int.
+      Block size of bytes requested per iteration.
+    count: int.
+      Iteration count.
+    _start_time: object.
+      Time object to indicate when download started.
+
+  Returns:
+    None.
   """
   if file_size > 0:
     percent = math.floor(dl_bytes / file_size * 100)
@@ -356,26 +386,28 @@ def _print_progress(file_path, dl_bytes, file_size, block_size, count,
 
 def normal_download(url, file_path, session, params={}, headers={},
                     hash_true=None, timeout=10, block_size=1024 * 1024):
-  """start download of a file. No pause/resume capability.
-    Args:
-      url: str.
-        URL string to the file.
-      file_path: str.
-        Full path to filename to be saved locally.
-      session: object.
-        The current session in use.
-      params: dict, optional.
-        Additional params that are passed to session.
-      headers: dict, optional.
-        Header information passed to session.
-      hash_true: str, optional.
-        True hash_string of the requested file
-      timeout: int, optional.
-        Timeout in secs.
-      block_size: int, optional.
-        Block size in bytes to be read.
-    Returns:
-      bool. True if file is successfully downloaded.
+  """Start download of a file. No pause/resume capability.
+
+  Args:
+    url: str.
+      URL string to the file.
+    file_path: str.
+      Full path to filename to be saved locally.
+    session: object.
+      The current session in use.
+    params: dict, optional.
+      Additional params that are passed to session.
+    headers: dict, optional.
+      Header information passed to session.
+    hash_true: str, optional.
+      True hash string of the requested file.
+    timeout: int, optional.
+      Timeout in secs.
+    block_size: int, optional.
+      Block size in bytes to be read.
+
+  Returns:
+    bool. True if file is successfully downloaded.
   """
   file_size = get_file_size(url, timeout)
   if check_file_downloaded(file_path, file_size):
@@ -420,22 +452,22 @@ def download_file(url, file_path, hash_true=None, resume=True,
                   block_size=1024 * 1024):
   """Start or resume partially downloaded file from specified URL.
 
-    Args:
-      url: str.
-        URL string to the file.
-      file_path: str.
-        Full path to filename to be saved locally.
-      hash_true: str, optional.
-        True hash_string of the requested file.
-      resume: bool, optional.
-        Resumes a file from current partially saved state [filename.part].
-      block_size: int, optional.
-        Number of bytes requested per range request. Setting this seems to be
-        an art. The defaults work for many cases.
+  Args:
+    url: str.
+      URL string to the file.
+    file_path: str.
+      Full path to filename to be saved locally.
+    hash_true: str, optional.
+      True hash string of the requested file.
+    resume: bool, optional.
+      Resumes a file from current partially saved state [filename.part].
+    block_size: int, optional.
+      Number of bytes requested per range request. Setting this seems to be
+      an art. The defaults work for many cases.
 
-    Returns:
-      bool. True if file is successfully downloaded.
-    """
+  Returns:
+    bool. True if file is successfully downloaded.
+  """
   response_check = check_capabilities(url, _print=False)
   file_size = response_check['file_size']
   params = response_check['addnl_params']
