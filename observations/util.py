@@ -139,7 +139,7 @@ def check_capabilities(url, start=120, num_bytes=300, user_agent=None,
                        'user_agent': user_agent,
                        'session': session
                        }
-  if _print is True:
+  if _print:
     _print_capabilities(capabilities_dict)
   return capabilities_dict
 
@@ -474,7 +474,7 @@ def download_file(url, file_path, hash_true=None, resume=True,
   content_length_file_size = get_file_size(url, params)
   user_agent = response_check['user_agent']
   session = response_check['session']
-  if resume is True:
+  if resume:
     supports_resume = response_check['supports_resume']
     # If file size mismatch occurs, something is wrong
     # Server sends content-size that is misleading
@@ -488,7 +488,7 @@ def download_file(url, file_path, hash_true=None, resume=True,
   # does not want resume capability revert to normal download
   # NOTE: Always set resume=False for Github raw urls that
   # serves csv/notebooks.
-  if supports_resume is False:
+  if not supports_resume:
     return normal_download(url, file_path, session,
                            params=params,
                            headers={'User-Agent': user_agent},
@@ -500,7 +500,7 @@ def download_file(url, file_path, hash_true=None, resume=True,
     print('File [{}] with same size already downloaded & '
           'exists in the provided path'.format(file_path))
     return True
-  if supports_resume is True:
+  if supports_resume:
     tmp_file_path = file_path + '.part'
     tmp_file_exists = os.path.exists(tmp_file_path)
     start_byte = os.path.getsize(tmp_file_path) if tmp_file_exists else 0
