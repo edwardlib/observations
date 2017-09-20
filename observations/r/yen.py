@@ -1,0 +1,70 @@
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
+import csv
+import numpy as np
+import os
+import sys
+
+from observations.util import maybe_download_and_extract
+
+
+def yen(path):
+  """Yen-dollar Exchange Rate
+
+  weekly observations from 1975 to 1989
+
+  *number of observations* : 778
+
+  *observation* : country
+
+  *country* : Japan
+
+  A dataframe containing :
+
+  date
+      the date of the observation (19850104 is January, 4, 1985)
+
+  s
+      the ask price of the dollar in units of Yen in the spot market on
+      friday of the current week
+
+  f
+      the ask price of the dollar in units of Yen in the 30-day forward
+      market on friday of the current week
+
+  s30
+      the bid price of the dollar in units of Yen in the spot market on
+      the delivery date on a current forward contract
+
+  Bekaert, G. and R. Hodrick (1993) “On biases in the measurement of
+  foreign exchange risk premiums”, *Journal of International Money and
+  Finance*, **12**, 115-138.
+
+  Args:
+
+    path: str.
+      Path to directory which either stores file or otherwise file will
+      be downloaded and extracted there.
+      Filename is `yen.csv`.
+
+  Returns:
+
+    Tuple of np.ndarray `x_train` with 778 rows and 4 columns and
+    dictionary `metadata` of column headers (feature names).
+  """
+  import pandas as pd
+  path = os.path.expanduser(path)
+  filename = 'yen.csv'
+  if not os.path.exists(os.path.join(path, filename)):
+    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
+          '/Ecdat/Yen.csv'
+    maybe_download_and_extract(path, url,
+                               save_file_name='yen.csv',
+                               resume=False)
+
+  data = pd.read_csv(os.path.join(path, filename), index_col=0)
+  x_train = data.values
+  metadata = {'columns': data.columns}
+  return x_train, metadata
