@@ -82,7 +82,8 @@ def us_tax_words(path):
                                save_file_name='us_tax_words.csv',
                                resume=False)
 
-  data = pd.read_csv(os.path.join(path, filename), index_col=0)
+  data = pd.read_csv(os.path.join(path, filename), index_col=0,
+                     parse_dates=True)
   x_train = data.values
   metadata = {'columns': data.columns}
   return x_train, metadata

@@ -66,7 +66,8 @@ def high_peaks(path):
                                save_file_name='high_peaks.csv',
                                resume=False)
 
-  data = pd.read_csv(os.path.join(path, filename), index_col=0)
+  data = pd.read_csv(os.path.join(path, filename), index_col=0,
+                     parse_dates=True)
   x_train = data.values
   metadata = {'columns': data.columns}
   return x_train, metadata

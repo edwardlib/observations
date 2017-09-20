@@ -65,7 +65,8 @@ abbreviations" <http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations
                                save_file_name='us_state_abbrev.csv',
                                resume=False)
 
-  data = pd.read_csv(os.path.join(path, filename), index_col=0)
+  data = pd.read_csv(os.path.join(path, filename), index_col=0,
+                     parse_dates=True)
   x_train = data.values
   metadata = {'columns': data.columns}
   return x_train, metadata

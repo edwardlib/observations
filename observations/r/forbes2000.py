@@ -66,7 +66,8 @@ def forbes2000(path):
                                save_file_name='forbes2000.csv',
                                resume=False)
 
-  data = pd.read_csv(os.path.join(path, filename), index_col=0)
+  data = pd.read_csv(os.path.join(path, filename), index_col=0,
+                     parse_dates=True)
   x_train = data.values
   metadata = {'columns': data.columns}
   return x_train, metadata

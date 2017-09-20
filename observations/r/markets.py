@@ -64,7 +64,8 @@ http://markets.cbsnews.com/cbsnews/quote/historical?Month=11&Symbol=310%3A998
                                save_file_name='markets.csv',
                                resume=False)
 
-  data = pd.read_csv(os.path.join(path, filename), index_col=0)
+  data = pd.read_csv(os.path.join(path, filename), index_col=0,
+                     parse_dates=True)
   x_train = data.values
   metadata = {'columns': data.columns}
   return x_train, metadata
