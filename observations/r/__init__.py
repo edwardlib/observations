@@ -1,7 +1,7 @@
 """[Observations.r](https://github.com/edwardlib/observations/r) submodule
 provides a one line Python API for loading popular R data sets.
-This module is collection of 1100+ datasets that were originally 
-distributed alongside the statistical software environment R and 
+This module is collection of 1100+ datasets that were originally
+distributed alongside the statistical software environment R and
 its add-on packages.
 """
 from __future__ import absolute_import
