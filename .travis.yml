@@ -24,7 +24,7 @@ install:
   # Useful for debugging any issues with conda
   - conda info -a
 
-  - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION numpy scipy pytest
+  - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION numpy scipy pytest pandas
   - source activate test-environment
   - pip install pep8 pytest-pep8 pytest-xdist
   - pip install python-coveralls pytest-cov
