@@ -222,7 +222,7 @@ def humanize_time(duration, fmt_short=True):
   return ", ".join(["%s %s" % x for x in result])
 
 
-def get_file_size(url, params, timeout=10):
+def get_file_size(url, timeout=10):
   """Get file size from a given URL in bytes.
 
   Args:
@@ -475,7 +475,7 @@ def download_file(url, file_path, hash_true=None, resume=True,
   response_check = check_capabilities(url, _print=False)
   file_size = response_check['file_size']
   params = response_check['addnl_params']
-  content_length_file_size = get_file_size(url, params)
+  content_length_file_size = get_file_size(url)
   user_agent = response_check['user_agent']
   session = response_check['session']
   if resume:
