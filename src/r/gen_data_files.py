@@ -149,7 +149,7 @@ def extract_rst(extract_dict):
             output += indent + line
       if extract_dict['format_start'] > 0:
         if (i >= extract_dict['format_start']) and \
-          (i < extract_dict['format_end']):
+           (i < extract_dict['format_end']):
           if line == '\n':
             output += line
           else:
@@ -206,8 +206,8 @@ def gen_context(row):
     cols = ''
   url = row['remote_base_url'] + row['remote_file_name']
   if len(url) > URL_WRAP_LEN:
-    url = url[:URL_WRAP_LEN] + "' \\\n" + \
-          " " * WRAP_INDENT + "'" + url[URL_WRAP_LEN:]
+    url = url[:URL_WRAP_LEN] + "' \\\n"
+    url = url + " " * WRAP_INDENT + "'" + url[URL_WRAP_LEN:]
   save_filename = row['local_file_name']  # local file name
   try:
     desc = extract_rst(parse_rst(rst_loc))
@@ -240,9 +240,9 @@ def render(tpl_path, context):
 
   """
   path, filename = os.path.split(tpl_path)
-  return jinja2.Environment(
-    loader=jinja2.FileSystemLoader(path or './')
-  ).get_template(filename).render(context)
+  jinja_loader = jinja2.FileSystemLoader(path or './')
+  jinja_env = jinja2.Environment(loader=jinja_loader)
+  return jinja_env.get_template(filename).render(context)
 
 
 def gen_data_test_files(row, source_file_template='./template.tpl',
@@ -307,10 +307,10 @@ def gen_init_file(dataset, init_file_template='./init_template.tpl',
   def allowed_modules(x):
     return "    '" + x + "'"
 
-  function_imports = '\n'.join(
-    dataset.function_name.sort_values().map(import_names))
-  allowed_symbols = ',\n'.join(
-    dataset.function_name.sort_values().map(allowed_modules))
+  function_imports = '\n'.join(dataset.function_name.sort_values().
+                               map(import_names))
+  allowed_symbols = ',\n'.join(dataset.function_name.sort_values().
+                               map(allowed_modules))
   init_file_str = render(init_file_template,
                          {'function_imports': function_imports,
                           'allowed_symbols': allowed_symbols})
@@ -374,61 +374,57 @@ if __name__ == "__main__":
 
   parser = argparse.ArgumentParser()
 
-  parser.add_argument(
-    '--csv_master',
-    type=str,
-    default='./datasets.csv',
-    help='Master CSV file required to generate observations python files'
-  )
+  parser.add_argument('--csv_master',
+                      type=str,
+                      default='./datasets.csv',
+                      help='Master CSV file required to generate observations '
+                           'python files'
+                      )
 
-  parser.add_argument(
-    '--src_template',
-    type=str,
-    default='./templates/template.tpl',
-    help='Path to jinja template file for generating python source files'
-  )
+  parser.add_argument('--src_template',
+                      type=str,
+                      default='./templates/template.tpl',
+                      help='Path to jinja template file for generating '
+                           'python source files'
+                      )
 
-  parser.add_argument(
-    '--src_path',
-    type=str,
-    default='./observations/r/',
-    help='Path to generated python source files'
-  )
+  parser.add_argument('--src_path',
+                      type=str,
+                      default='./observations/r/',
+                      help='Path to generated python source files'
+                      )
 
-  parser.add_argument(
-    '--test_template',
-    type=str,
-    default='./templates/test_template.tpl',
-    help='Path to jinja template file for generating python test files'
-  )
+  parser.add_argument('--test_template',
+                      type=str,
+                      default='./templates/test_template.tpl',
+                      help='Path to jinja template file for generating '
+                           'python test files'
+                      )
 
-  parser.add_argument(
-    '--test_path',
-    type=str,
-    default='./tests/r',
-    help='Path to generated python test files'
-  )
+  parser.add_argument('--test_path',
+                      type=str,
+                      default='./tests/r',
+                      help='Path to generated python test files'
+                      )
 
-  parser.add_argument(
-    '--init_template',
-    type=str,
-    default='./templates/init_template.tpl',
-    help='Path to jinja template file for generating __init__.py file'
-  )
+  parser.add_argument('--init_template',
+                      type=str,
+                      default='./templates/init_template.tpl',
+                      help='Path to jinja template file for generating '
+                           '__init__.py file'
+                      )
 
-  parser.add_argument(
-    '--init_path',
-    type=str,
-    default='./observations/r/',
-    help='Path to generated __init__.py file'
-  )
+  parser.add_argument('--init_path',
+                      type=str,
+                      default='./observations/r/',
+                      help='Path to generated __init__.py file'
+                      )
 
-  parser.add_argument(
-    '--import_prefix',
-    type=str,
-    default='observations.r',
-    help='import prefix in generated __init__.py file'
-  )
+  parser.add_argument('--import_prefix',
+                      type=str,
+                      default='observations.r',
+                      help='import prefix in generated __init__.py file'
+                      )
 
   results = parser.parse_args()
   gen_observations_sources_from_csv(csv_master_file=results.csv_master,
