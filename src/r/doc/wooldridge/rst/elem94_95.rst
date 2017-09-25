@@ -1,0 +1,63 @@
++--------------+-------------------+
+| elem94\_95   | R Documentation   |
++--------------+-------------------+
+
+elem94\_95
+----------
+
+Description
+~~~~~~~~~~~
+
+Data loads lazily. Type data(elem94\_95) into the console.
+
+Usage
+~~~~~
+
+::
+
+    data(elem94_95)
+
+Format
+~~~~~~
+
+A data.frame with 1848 rows and 14 variables:
+
+-  distid. district identifier
+
+-  schid. school identifier
+
+-  lunch. percent eligible, free lunch
+
+-  enrol. enrollment
+
+-  staff. staff per 1000 students
+
+-  exppp. expenditures per pupil
+
+-  avgsal. average teacher salary, $
+
+-  avgben. average teacher non-salary benefits, $
+
+-  math4. percent passing 4th grade math test
+
+-  story4. percent passing 4th grade reading test
+
+-  bs. avgben/avgsal
+
+-  lavgsal. log(avgsal)
+
+-  lenrol. log(enrol)
+
+-  lstaff. log(staff)
+
+Source
+~~~~~~
+
+https://www.cengage.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&product_isbn_issn=9781111531041
+
+Examples
+~~~~~~~~
+
+::
+
+     str(elem94_95)

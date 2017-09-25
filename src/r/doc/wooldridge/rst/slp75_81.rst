@@ -1,0 +1,75 @@
++-------------+-------------------+
+| slp75\_81   | R Documentation   |
++-------------+-------------------+
+
+slp75\_81
+---------
+
+Description
+~~~~~~~~~~~
+
+Data loads lazily. Type data(slp75\_81) into the console.
+
+Usage
+~~~~~
+
+::
+
+    data(slp75_81)
+
+Format
+~~~~~~
+
+A data.frame with 239 rows and 20 variables:
+
+-  age75. age in 1975
+
+-  educ75. years educ in '75
+
+-  educ81. years educ in '81
+
+-  gdhlth75. = 1 if good hlth in '75
+
+-  gdhlth81. =1 if good hlth in '81
+
+-  male. =1 if male
+
+-  marr75. = 1 if married in '75
+
+-  marr81. =1 if married in '81
+
+-  slpnap75. mins slp wk, inc naps, '75
+
+-  slpnap81. mins slp wk, inc naps, '81
+
+-  totwrk75. minutes worked per week, '75
+
+-  totwrk81. minutes worked per week, '81
+
+-  yngkid75. = 1 if child < 3, '75
+
+-  yngkid81. =1 if child < 3, '81
+
+-  ceduc. change in educ
+
+-  cgdhlth. change in gdhlth
+
+-  cmarr. change in marr
+
+-  cslpnap. change in slpnap
+
+-  ctotwrk. change in totwrk
+
+-  cyngkid. change in yngkid
+
+Source
+~~~~~~
+
+https://www.cengage.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&product_isbn_issn=9781111531041
+
+Examples
+~~~~~~~~
+
+::
+
+     str(slp75_81)

@@ -1,0 +1,53 @@
++--------------+-------------------+
+| meap00\_01   | R Documentation   |
++--------------+-------------------+
+
+meap00\_01
+----------
+
+Description
+~~~~~~~~~~~
+
+Data loads lazily. Type data(meap00\_01) into the console.
+
+Usage
+~~~~~
+
+::
+
+    data(meap00_01)
+
+Format
+~~~~~~
+
+A data.frame with 1692 rows and 9 variables:
+
+-  dcode. district code
+
+-  bcode. building code
+
+-  math4. percent students satisfactory, 4th grade math
+
+-  read4. percent students satisfactory, 4th grade reading
+
+-  lunch. percent students eligible for free or reduced lunch
+
+-  enroll. school enrollment
+
+-  exppp. expenditures per pupil: expend/enroll
+
+-  lenroll. log(enroll)
+
+-  lexppp. log(exppp)
+
+Source
+~~~~~~
+
+https://www.cengage.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&product_isbn_issn=9781111531041
+
+Examples
+~~~~~~~~
+
+::
+
+     str(meap00_01)
