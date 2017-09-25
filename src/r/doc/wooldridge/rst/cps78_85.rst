@@ -1,0 +1,65 @@
++-------------+-------------------+
+| cps78\_85   | R Documentation   |
++-------------+-------------------+
+
+cps78\_85
+---------
+
+Description
+~~~~~~~~~~~
+
+Data loads lazily. Type data(cps78\_85) into the console.
+
+Usage
+~~~~~
+
+::
+
+    data(cps78_85)
+
+Format
+~~~~~~
+
+A data.frame with 1084 rows and 15 variables:
+
+-  educ. years of schooling
+
+-  south. =1 if live in south
+
+-  nonwhite. =1 if nonwhite
+
+-  female. =1 if female
+
+-  married. =1 if married
+
+-  exper. age - educ - 6
+
+-  expersq. exper^2
+
+-  union. =1 if belong to union
+
+-  lwage. log hourly wage
+
+-  age. in years
+
+-  year. 78 or 85
+
+-  y85. =1 if year == 85
+
+-  y85fem. y85\*female
+
+-  y85educ. y85\*educ
+
+-  y85union. y85\*union
+
+Source
+~~~~~~
+
+https://www.cengage.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&product_isbn_issn=9781111531041
+
+Examples
+~~~~~~~~
+
+::
+
+     str(cps78_85)
