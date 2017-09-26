@@ -313,7 +313,7 @@ def hashes_match(path, hash_true, algorithm='md5'):
     return False
 
 
-def check_file_downloaded(file_path, file_size):
+def check_file_downloaded(file_path, file_size, greater_equal=True):
   """Check whether a file of specified size exists.
 
   Args:
@@ -321,13 +321,17 @@ def check_file_downloaded(file_path, file_size):
       Full path of the file.
     file_size: int.
       Size of the file in bytes.
+    greater_equal: bool, optional.
+      Whether to check if file has greater or equal file size as
+      `file_size`; else checks equal. This is useful for
 
   Returns:
     bool. True if file with specified size exists.
   """
   file_exists = os.path.exists(file_path)
   local_file_size = os.path.getsize(file_path) if file_exists else -1
-  if file_size == local_file_size:
+  if ((greater_equal and file_size >= local_file_size) or
+          file_size == local_file_size):
     return True
   else:
     return False
@@ -418,38 +422,42 @@ def normal_download(url, file_path, session, params=None, headers=None,
     print('File [{}] with same size already downloaded & '
           'exists in the provided path'.format(file_path))
     return True
-  else:
-    try:
-      print('>> Downloading {}' . format(file_path))
-      response = session.get(url,
-                             params=params,
-                             headers=headers,
-                             stream=True)
-      with open(file_path, 'wb') as f:
-        start_time = time.time()
-        count = 1
-        for chunk in response.iter_content(block_size):
-          if chunk:
-            f.write(chunk)
-            f.flush()
-            _print_progress(file_path, count * block_size, file_size,
-                            block_size, count, start_time)
-            count = count + 1
-      if file_size == os.path.getsize(file_path):
-        if hash_true is not None and not hashes_match(file_path,
-                                                      hash_true):
-          raise Exception('Error validating the file '
-                          'against its MD5 hash')
-        if hash_true is None:
-          print("\nURL {} downloaded to {} ".format(url, file_path))
-        else:
-          print("\nURL {} downloaded to {} and hash verified "
-                "succesfully".format(url, file_path))
-        return True
-    except:
-      if os.path.exists(file_path):
-        os.remove(file_path)
-      raise
+  try:
+    print('>> Downloading {}' . format(file_path))
+    response = session.get(url,
+                           params=params,
+                           headers=headers,
+                           stream=True)
+    with open(file_path, 'wb') as f:
+      start_time = time.time()
+      count = 1
+      for chunk in response.iter_content(block_size):
+        if chunk:
+          f.write(chunk)
+          f.flush()
+          _print_progress(file_path, count * block_size, file_size,
+                          block_size, count, start_time)
+          count = count + 1
+    # TODO
+    # + why do we need get_file_size?
+    # if check_file_downloaded(file_path, file_size):
+    if os.path.getsize(file_path) >= file_size:  # it's > if query is compressed
+      if hash_true is not None and not hashes_match(file_path,
+                                                    hash_true):
+        raise Exception('Error validating the file '
+                        'against its MD5 hash')
+      if hash_true is None:
+        print("\nURL {} downloaded to {} ".format(url, file_path))
+      else:
+        print("\nURL {} downloaded to {} and hash verified "
+              "succesfully".format(url, file_path))
+      return True
+    else:
+      return False
+  except:
+    if os.path.exists(file_path):
+      os.remove(file_path)
+    raise Exception('Error during download')
 
 
 def download_file(url, file_path, hash_true=None, resume=True,
@@ -543,7 +551,7 @@ def download_file(url, file_path, hash_true=None, resume=True,
     raise
   finally:
     # rename the temp download file to the correct name if fully downloaded
-    if file_size == os.path.getsize(tmp_file_path):
+    if check_file_downloaded(tmp_file_path, file_size):
       if hash_true is not None and not \
               hashes_match(tmp_file_path, hash_true):
         raise Exception('Error validating the file '
@@ -555,6 +563,8 @@ def download_file(url, file_path, hash_true=None, resume=True,
         print("\nURL {} downloaded to {} and hash verified "
               "succesfully".format(url, file_path))
       return True
+    else:
+      return False
 
 
 def maybe_download_and_extract(path, url, extract=True,
