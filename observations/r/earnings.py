@@ -50,8 +50,7 @@ def earnings(path):
   path = os.path.expanduser(path)
   filename = 'earnings.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Earnings.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Earnings.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='earnings.csv',
                                resume=False)

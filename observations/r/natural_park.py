@@ -64,8 +64,7 @@ def natural_park(path):
   path = os.path.expanduser(path)
   filename = 'natural_park.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/NaturalPark.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/NaturalPark.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='natural_park.csv',
                                resume=False)

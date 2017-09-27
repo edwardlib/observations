@@ -40,8 +40,7 @@ def nile(path):
   path = os.path.expanduser(path)
   filename = 'nile.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/Nile.csv'
+    url = 'http://dustintran.com/data/r/datasets/Nile.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nile.csv',
                                resume=False)

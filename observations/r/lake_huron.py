@@ -39,8 +39,7 @@ def lake_huron(path):
   path = os.path.expanduser(path)
   filename = 'lake_huron.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/LakeHuron.csv'
+    url = 'http://dustintran.com/data/r/datasets/LakeHuron.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='lake_huron.csv',
                                resume=False)

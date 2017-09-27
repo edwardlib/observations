@@ -101,8 +101,7 @@ def patents_hgh(path):
   path = os.path.expanduser(path)
   filename = 'patents_hgh.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/PatentsHGH.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/PatentsHGH.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='patents_hgh.csv',
                                resume=False)

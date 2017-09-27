@@ -72,8 +72,7 @@ def loomis(path):
   path = os.path.expanduser(path)
   filename = 'loomis.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/COUNT/loomis.csv'
+    url = 'http://dustintran.com/data/r/COUNT/loomis.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='loomis.csv',
                                resume=False)

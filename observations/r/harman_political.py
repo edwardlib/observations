@@ -44,8 +44,7 @@ def harman_political(path):
   path = os.path.expanduser(path)
   filename = 'harman_political.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/Harman.political.csv'
+    url = 'http://dustintran.com/data/r/psych/Harman.political.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='harman_political.csv',
                                resume=False)

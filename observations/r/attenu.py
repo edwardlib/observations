@@ -54,8 +54,7 @@ def attenu(path):
   path = os.path.expanduser(path)
   filename = 'attenu.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/attenu.csv'
+    url = 'http://dustintran.com/data/r/datasets/attenu.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='attenu.csv',
                                resume=False)

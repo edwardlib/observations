@@ -47,8 +47,7 @@ def uk_soccer(path):
   path = os.path.expanduser(path)
   filename = 'uk_soccer.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/UKSoccer.csv'
+    url = 'http://dustintran.com/data/r/vcd/UKSoccer.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='uk_soccer.csv',
                                resume=False)

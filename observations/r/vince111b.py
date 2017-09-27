@@ -63,8 +63,7 @@ def vince111b(path):
   path = os.path.expanduser(path)
   filename = 'vince111b.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/vince111b.csv'
+    url = 'http://dustintran.com/data/r/DAAG/vince111b.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='vince111b.csv',
                                resume=False)

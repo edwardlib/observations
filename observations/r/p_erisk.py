@@ -80,8 +80,7 @@ def p_erisk(path):
   path = os.path.expanduser(path)
   filename = 'p_erisk.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/PErisk.csv'
+    url = 'http://dustintran.com/data/r/Zelig/PErisk.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='p_erisk.csv',
                                resume=False)

@@ -130,8 +130,7 @@ def kakadu(path):
   path = os.path.expanduser(path)
   filename = 'kakadu.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Kakadu.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Kakadu.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='kakadu.csv',
                                resume=False)

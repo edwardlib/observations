@@ -48,8 +48,7 @@ def ironslag(path):
   path = os.path.expanduser(path)
   filename = 'ironslag.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/ironslag.csv'
+    url = 'http://dustintran.com/data/r/DAAG/ironslag.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ironslag.csv',
                                resume=False)

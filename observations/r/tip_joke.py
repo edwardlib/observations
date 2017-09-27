@@ -57,8 +57,7 @@ def tip_joke(path):
   path = os.path.expanduser(path)
   filename = 'tip_joke.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/TipJoke.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/TipJoke.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='tip_joke.csv',
                                resume=False)

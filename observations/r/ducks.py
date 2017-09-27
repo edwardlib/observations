@@ -56,8 +56,7 @@ def ducks(path):
   path = os.path.expanduser(path)
   filename = 'ducks.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/ducks.csv'
+    url = 'http://dustintran.com/data/r/boot/ducks.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ducks.csv',
                                resume=False)

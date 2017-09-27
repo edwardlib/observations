@@ -57,8 +57,7 @@ def grocery(path):
   path = os.path.expanduser(path)
   filename = 'grocery.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Grocery.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Grocery.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='grocery.csv',
                                resume=False)

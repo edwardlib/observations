@@ -33,8 +33,7 @@ def cerealsugar(path):
   path = os.path.expanduser(path)
   filename = 'cerealsugar.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/cerealsugar.csv'
+    url = 'http://dustintran.com/data/r/DAAG/cerealsugar.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cerealsugar.csv',
                                resume=False)

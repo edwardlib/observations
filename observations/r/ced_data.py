@@ -61,8 +61,7 @@ def ced_data(path):
   path = os.path.expanduser(path)
   filename = 'ced_data.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mediation/CEDdata.csv'
+    url = 'http://dustintran.com/data/r/mediation/CEDdata.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ced_data.csv',
                                resume=False)

@@ -96,8 +96,7 @@ def ome_children(path):
   path = os.path.expanduser(path)
   filename = 'ome_children.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/OME.csv'
+    url = 'http://dustintran.com/data/r/MASS/OME.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ome_children.csv',
                                resume=False)

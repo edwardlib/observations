@@ -71,8 +71,7 @@ def film(path):
   path = os.path.expanduser(path)
   filename = 'film.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Film.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Film.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='film.csv',
                                resume=False)

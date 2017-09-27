@@ -89,8 +89,7 @@ def minard_troops(path):
   path = os.path.expanduser(path)
   filename = 'minard_troops.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Minard.troops.csv'
+    url = 'http://dustintran.com/data/r/HistData/Minard.troops.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='minard_troops.csv',
                                resume=False)

@@ -103,8 +103,7 @@ def doctor_aus(path):
   path = os.path.expanduser(path)
   filename = 'doctor_aus.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/DoctorAUS.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/DoctorAUS.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='doctor_aus.csv',
                                resume=False)

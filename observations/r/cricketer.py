@@ -65,8 +65,7 @@ def cricketer(path):
   path = os.path.expanduser(path)
   filename = 'cricketer.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/cricketer.csv'
+    url = 'http://dustintran.com/data/r/DAAG/cricketer.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cricketer.csv',
                                resume=False)

@@ -65,8 +65,7 @@ def cps_85(path):
   path = os.path.expanduser(path)
   filename = 'cps_85.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mosaicData/CPS85.csv'
+    url = 'http://dustintran.com/data/r/mosaicData/CPS85.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cps_85.csv',
                                resume=False)

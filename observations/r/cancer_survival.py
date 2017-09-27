@@ -47,8 +47,7 @@ def cancer_survival(path):
   path = os.path.expanduser(path)
   filename = 'cancer_survival.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/CancerSurvival.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/CancerSurvival.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cancer_survival.csv',
                                resume=False)

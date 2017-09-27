@@ -61,8 +61,7 @@ def forbes2000(path):
   path = os.path.expanduser(path)
   filename = 'forbes2000.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/Forbes2000.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/Forbes2000.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='forbes2000.csv',
                                resume=False)

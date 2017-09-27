@@ -81,8 +81,7 @@ def workinghours(path):
   path = os.path.expanduser(path)
   filename = 'workinghours.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Workinghours.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Workinghours.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='workinghours.csv',
                                resume=False)

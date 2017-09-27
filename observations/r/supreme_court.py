@@ -45,8 +45,7 @@ def supreme_court(path):
   path = os.path.expanduser(path)
   filename = 'supreme_court.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/SupremeCourt.csv'
+    url = 'http://dustintran.com/data/r/Zelig/SupremeCourt.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='supreme_court.csv',
                                resume=False)

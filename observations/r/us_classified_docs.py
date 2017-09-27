@@ -69,8 +69,7 @@ def us_classified_docs(path):
   path = os.path.expanduser(path)
   filename = 'us_classified_docs.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/USclassifiedDocuments.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/USclassifiedDocuments.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='us_classified_docs.csv',
                                resume=False)

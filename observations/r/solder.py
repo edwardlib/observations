@@ -61,8 +61,7 @@ def solder(path):
   path = os.path.expanduser(path)
   filename = 'solder.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/rpart/solder.csv'
+    url = 'http://dustintran.com/data/r/rpart/solder.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='solder.csv',
                                resume=False)

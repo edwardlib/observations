@@ -52,8 +52,7 @@ def intersalt(path):
   path = os.path.expanduser(path)
   filename = 'intersalt.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/intersalt.csv'
+    url = 'http://dustintran.com/data/r/DAAG/intersalt.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='intersalt.csv',
                                resume=False)

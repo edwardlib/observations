@@ -58,8 +58,7 @@ def sandwich_ants(path):
   path = os.path.expanduser(path)
   filename = 'sandwich_ants.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/SandwichAnts.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/SandwichAnts.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='sandwich_ants.csv',
                                resume=False)

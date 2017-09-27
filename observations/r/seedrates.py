@@ -44,8 +44,7 @@ def seedrates(path):
   path = os.path.expanduser(path)
   filename = 'seedrates.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/seedrates.csv'
+    url = 'http://dustintran.com/data/r/DAAG/seedrates.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='seedrates.csv',
                                resume=False)

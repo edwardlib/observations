@@ -55,8 +55,7 @@ def ovary_cancer(path):
   path = os.path.expanduser(path)
   filename = 'ovary_cancer.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/OvaryCancer.csv'
+    url = 'http://dustintran.com/data/r/vcd/OvaryCancer.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ovary_cancer.csv',
                                resume=False)

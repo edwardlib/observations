@@ -50,8 +50,7 @@ def peas(path):
   path = os.path.expanduser(path)
   filename = 'peas.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/peas.csv'
+    url = 'http://dustintran.com/data/r/psych/peas.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='peas.csv',
                                resume=False)

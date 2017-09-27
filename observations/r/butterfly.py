@@ -50,8 +50,7 @@ def butterfly(path):
   path = os.path.expanduser(path)
   filename = 'butterfly.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/Butterfly.csv'
+    url = 'http://dustintran.com/data/r/vcd/Butterfly.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='butterfly.csv',
                                resume=False)

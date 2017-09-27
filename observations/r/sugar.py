@@ -46,8 +46,7 @@ def sugar(path):
   path = os.path.expanduser(path)
   filename = 'sugar.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/sugar.csv'
+    url = 'http://dustintran.com/data/r/DAAG/sugar.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='sugar.csv',
                                resume=False)

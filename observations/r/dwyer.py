@@ -40,8 +40,7 @@ def dwyer(path):
   path = os.path.expanduser(path)
   filename = 'dwyer.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/Dwyer.csv'
+    url = 'http://dustintran.com/data/r/psych/Dwyer.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='dwyer.csv',
                                resume=False)

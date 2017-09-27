@@ -48,8 +48,7 @@ def phosphor(path):
   path = os.path.expanduser(path)
   filename = 'phosphor.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/phosphor.csv'
+    url = 'http://dustintran.com/data/r/robustbase/phosphor.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='phosphor.csv',
                                resume=False)

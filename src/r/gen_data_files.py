@@ -6,12 +6,14 @@ import argparse
 import os
 import sys
 
+from six.moves import urllib
+
 if sys.version_info < (3, 0):
   reload(sys)
   sys.setdefaultencoding('utf8')
 
 
-def parse_rst(filename):
+def parse_rst(rst_url, tmp_rst_file_path='tmp/rst'):
   """Parse R-specific RST files as part of CRAN specs.
   This is a very naive parser for reading RST files specific to R docs.
   The RST file has a Title, followed by Description, Usage, Format, Details,
@@ -19,13 +21,25 @@ def parse_rst(filename):
   works for these specific files and may fail for others.
 
   Args:
-    filename: str.
-      Path to rst file
+    rst_url: str.
+      URL to rst file
+    tmp_rst_file_path: str, optional.
+      Path to temporarily save the rst files for docstring generation.
 
   Returns:
     Dictionary of start and end positions of extracted sections from the
     rst file.
   """
+  if not os.path.exists(tmp_rst_file_path):
+      os.makedirs(tmp_rst_file_path)
+  filename = rst_url.split('/')[-1]
+  filename = os.path.join(tmp_rst_file_path, filename)
+  try:
+    urllib.request.urlretrieve(rst_url, filename)
+  except urllib.error.HTTPError as err:
+    print(err.code)
+    raise
+
   with open(filename) as f:
     title_start = 0
     desc_line_start = 0
@@ -97,7 +111,7 @@ def parse_rst(filename):
                   }
   for k, v in extract_dict.items():
     if k in ['title', 'desc_start', 'desc_end'] and v == 0:
-      print(filename)
+      print(rst_url)
       print(k)
       raise Exception
 
@@ -190,7 +204,7 @@ def gen_context(row):
     Dictionary. The context dictionary required by jinja template to
     populate generated python file with docstring and source code.
   """
-  URL_WRAP_LEN = 62  # Wrap long urls
+  URL_WRAP_LEN = 63  # Wrap long urls
   WRAP_INDENT = 10   # Indent required after wrap for PEP8 compliance
   function = row['function_name']  # function name in python file
   rst_loc = row['rst_files']  # read docstring for python file from rst file

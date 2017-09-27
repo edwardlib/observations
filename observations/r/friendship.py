@@ -44,8 +44,7 @@ def friendship(path):
   path = os.path.expanduser(path)
   filename = 'friendship.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/friendship.csv'
+    url = 'http://dustintran.com/data/r/Zelig/friendship.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='friendship.csv',
                                resume=False)

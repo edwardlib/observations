@@ -46,8 +46,7 @@ def wool(path):
   path = os.path.expanduser(path)
   filename = 'wool.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/wool.csv'
+    url = 'http://dustintran.com/data/r/boot/wool.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='wool.csv',
                                resume=False)

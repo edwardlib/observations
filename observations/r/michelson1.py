@@ -52,8 +52,7 @@ def michelson1(path):
   path = os.path.expanduser(path)
   filename = 'michelson1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/michelson.csv'
+    url = 'http://dustintran.com/data/r/MASS/michelson.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='michelson1.csv',
                                resume=False)

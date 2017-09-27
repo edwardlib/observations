@@ -98,8 +98,7 @@ def o_brien_kaiser(path):
   path = os.path.expanduser(path)
   filename = 'o_brien_kaiser.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/OBrienKaiser.csv'
+    url = 'http://dustintran.com/data/r/car/OBrienKaiser.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='o_brien_kaiser.csv',
                                resume=False)

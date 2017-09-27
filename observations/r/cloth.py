@@ -45,8 +45,7 @@ def cloth(path):
   path = os.path.expanduser(path)
   filename = 'cloth.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/cloth.csv'
+    url = 'http://dustintran.com/data/r/boot/cloth.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cloth.csv',
                                resume=False)

@@ -108,8 +108,7 @@ def bmt(path):
   path = os.path.expanduser(path)
   filename = 'bmt.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/KMsurv/bmt.csv'
+    url = 'http://dustintran.com/data/r/KMsurv/bmt.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bmt.csv',
                                resume=False)

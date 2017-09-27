@@ -45,8 +45,7 @@ def frostedflakes(path):
   path = os.path.expanduser(path)
   filename = 'frostedflakes.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/frostedflakes.csv'
+    url = 'http://dustintran.com/data/r/DAAG/frostedflakes.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='frostedflakes.csv',
                                resume=False)

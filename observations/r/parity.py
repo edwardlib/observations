@@ -71,8 +71,7 @@ def parity(path):
   path = os.path.expanduser(path)
   filename = 'parity.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/plm/Parity.csv'
+    url = 'http://dustintran.com/data/r/plm/Parity.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='parity.csv',
                                resume=False)

@@ -63,8 +63,7 @@ def retinopathy(path):
   path = os.path.expanduser(path)
   filename = 'retinopathy.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/retinopathy.csv'
+    url = 'http://dustintran.com/data/r/survival/retinopathy.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='retinopathy.csv',
                                resume=False)

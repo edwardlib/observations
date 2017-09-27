@@ -71,8 +71,7 @@ def lanza(path):
   path = os.path.expanduser(path)
   filename = 'lanza.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/Lanza.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/Lanza.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='lanza.csv',
                                resume=False)

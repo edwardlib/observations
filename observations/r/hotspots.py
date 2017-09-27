@@ -57,8 +57,7 @@ def hotspots(path):
   path = os.path.expanduser(path)
   filename = 'hotspots.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/hotspots.csv'
+    url = 'http://dustintran.com/data/r/DAAG/hotspots.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='hotspots.csv',
                                resume=False)

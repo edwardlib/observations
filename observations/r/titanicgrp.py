@@ -52,8 +52,7 @@ def titanicgrp(path):
   path = os.path.expanduser(path)
   filename = 'titanicgrp.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/COUNT/titanicgrp.csv'
+    url = 'http://dustintran.com/data/r/COUNT/titanicgrp.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='titanicgrp.csv',
                                resume=False)

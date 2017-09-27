@@ -63,8 +63,7 @@ def shuttle(path):
   path = os.path.expanduser(path)
   filename = 'shuttle.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/shuttle.csv'
+    url = 'http://dustintran.com/data/r/MASS/shuttle.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='shuttle.csv',
                                resume=False)

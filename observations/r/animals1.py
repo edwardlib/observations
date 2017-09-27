@@ -41,8 +41,7 @@ def animals1(path):
   path = os.path.expanduser(path)
   filename = 'animals1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/Animals.csv'
+    url = 'http://dustintran.com/data/r/MASS/Animals.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='animals1.csv',
                                resume=False)

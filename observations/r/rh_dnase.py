@@ -59,8 +59,7 @@ def rh_dnase(path):
   path = os.path.expanduser(path)
   filename = 'rh_dnase.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/rhDNase.csv'
+    url = 'http://dustintran.com/data/r/survival/rhDNase.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rh_dnase.csv',
                                resume=False)

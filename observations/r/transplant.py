@@ -54,8 +54,7 @@ def transplant(path):
   path = os.path.expanduser(path)
   filename = 'transplant.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/transplant.csv'
+    url = 'http://dustintran.com/data/r/survival/transplant.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='transplant.csv',
                                resume=False)

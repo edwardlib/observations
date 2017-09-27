@@ -131,8 +131,7 @@ def schooling(path):
   path = os.path.expanduser(path)
   filename = 'schooling.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Schooling.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Schooling.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='schooling.csv',
                                resume=False)

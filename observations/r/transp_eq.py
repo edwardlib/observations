@@ -58,8 +58,7 @@ def transp_eq(path):
   path = os.path.expanduser(path)
   filename = 'transp_eq.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/TranspEq.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/TranspEq.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='transp_eq.csv',
                                resume=False)

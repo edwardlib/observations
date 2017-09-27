@@ -50,8 +50,7 @@ def darwin(path):
   path = os.path.expanduser(path)
   filename = 'darwin.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/darwin.csv'
+    url = 'http://dustintran.com/data/r/boot/darwin.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='darwin.csv',
                                resume=False)

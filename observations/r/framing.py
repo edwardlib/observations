@@ -94,8 +94,7 @@ def framing(path):
   path = os.path.expanduser(path)
   filename = 'framing.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mediation/framing.csv'
+    url = 'http://dustintran.com/data/r/mediation/framing.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='framing.csv',
                                resume=False)

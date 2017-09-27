@@ -1960,8 +1960,7 @@ def rock_art(path):
   path = os.path.expanduser(path)
   filename = 'rock_art.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/rockArt.csv'
+    url = 'http://dustintran.com/data/r/DAAG/rockArt.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rock_art.csv',
                                resume=False)

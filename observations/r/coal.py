@@ -48,8 +48,7 @@ def coal(path):
   path = os.path.expanduser(path)
   filename = 'coal.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/coal.csv'
+    url = 'http://dustintran.com/data/r/boot/coal.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='coal.csv',
                                resume=False)

@@ -39,8 +39,7 @@ def orallesions(path):
   path = os.path.expanduser(path)
   filename = 'orallesions.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/orallesions.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/orallesions.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='orallesions.csv',
                                resume=False)

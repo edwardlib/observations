@@ -60,8 +60,7 @@ def hbk(path):
   path = os.path.expanduser(path)
   filename = 'hbk.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/hbk.csv'
+    url = 'http://dustintran.com/data/r/robustbase/hbk.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='hbk.csv',
                                resume=False)

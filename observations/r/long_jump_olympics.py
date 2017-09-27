@@ -44,8 +44,7 @@ def long_jump_olympics(path):
   path = os.path.expanduser(path)
   filename = 'long_jump_olympics.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/LongJumpOlympics.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/LongJumpOlympics.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='long_jump_olympics.csv',
                                resume=False)

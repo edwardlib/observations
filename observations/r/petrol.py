@@ -64,8 +64,7 @@ def petrol(path):
   path = os.path.expanduser(path)
   filename = 'petrol.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/petrol.csv'
+    url = 'http://dustintran.com/data/r/MASS/petrol.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='petrol.csv',
                                resume=False)

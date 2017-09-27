@@ -98,8 +98,7 @@ def cholera(path):
   path = os.path.expanduser(path)
   filename = 'cholera.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Cholera.csv'
+    url = 'http://dustintran.com/data/r/HistData/Cholera.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cholera.csv',
                                resume=False)

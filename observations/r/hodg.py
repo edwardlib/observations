@@ -56,8 +56,7 @@ def hodg(path):
   path = os.path.expanduser(path)
   filename = 'hodg.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/KMsurv/hodg.csv'
+    url = 'http://dustintran.com/data/r/KMsurv/hodg.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='hodg.csv',
                                resume=False)

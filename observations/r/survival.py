@@ -49,8 +49,7 @@ def survival(path):
   path = os.path.expanduser(path)
   filename = 'survival.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/survival.csv'
+    url = 'http://dustintran.com/data/r/boot/survival.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='survival.csv',
                                resume=False)

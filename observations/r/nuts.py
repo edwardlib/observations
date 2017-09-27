@@ -69,8 +69,7 @@ def nuts(path):
   path = os.path.expanduser(path)
   filename = 'nuts.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/COUNT/nuts.csv'
+    url = 'http://dustintran.com/data/r/COUNT/nuts.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nuts.csv',
                                resume=False)

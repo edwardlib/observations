@@ -38,8 +38,7 @@ def uk_gas(path):
   path = os.path.expanduser(path)
   filename = 'uk_gas.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/UKgas.csv'
+    url = 'http://dustintran.com/data/r/datasets/UKgas.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='uk_gas.csv',
                                resume=False)

@@ -122,8 +122,7 @@ def cars93(path):
   path = os.path.expanduser(path)
   filename = 'cars93.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/Cars93.csv'
+    url = 'http://dustintran.com/data/r/MASS/Cars93.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cars93.csv',
                                resume=False)

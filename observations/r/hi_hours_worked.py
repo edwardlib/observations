@@ -85,8 +85,7 @@ def hi_hours_worked(path):
   path = os.path.expanduser(path)
   filename = 'hi_hours_worked.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/HI.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/HI.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='hi_hours_worked.csv',
                                resume=False)

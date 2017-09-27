@@ -63,8 +63,7 @@ def baseball_times(path):
   path = os.path.expanduser(path)
   filename = 'baseball_times.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/BaseballTimes.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/BaseballTimes.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='baseball_times.csv',
                                resume=False)

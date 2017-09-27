@@ -72,8 +72,7 @@ def nswpsid1(path):
   path = os.path.expanduser(path)
   filename = 'nswpsid1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/nswpsid1.csv'
+    url = 'http://dustintran.com/data/r/DAAG/nswpsid1.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nswpsid1.csv',
                                resume=False)

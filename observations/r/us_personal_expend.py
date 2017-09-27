@@ -39,8 +39,7 @@ def us_personal_expend(path):
   path = os.path.expanduser(path)
   filename = 'us_personal_expend.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/USPersonalExpenditure.csv'
+    url = 'http://dustintran.com/data/r/datasets/USPersonalExpenditure.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='us_personal_expend.csv',
                                resume=False)

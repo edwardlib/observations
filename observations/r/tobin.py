@@ -47,8 +47,7 @@ def tobin(path):
   path = os.path.expanduser(path)
   filename = 'tobin.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/tobin.csv'
+    url = 'http://dustintran.com/data/r/survival/tobin.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='tobin.csv',
                                resume=False)

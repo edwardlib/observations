@@ -55,8 +55,7 @@ def gehan(path):
   path = os.path.expanduser(path)
   filename = 'gehan.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/gehan.csv'
+    url = 'http://dustintran.com/data/r/MASS/gehan.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='gehan.csv',
                                resume=False)

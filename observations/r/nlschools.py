@@ -61,8 +61,7 @@ def nlschools(path):
   path = os.path.expanduser(path)
   filename = 'nlschools.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/nlschools.csv'
+    url = 'http://dustintran.com/data/r/MASS/nlschools.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nlschools.csv',
                                resume=False)

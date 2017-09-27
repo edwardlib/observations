@@ -56,8 +56,7 @@ def rep_vict(path):
   path = os.path.expanduser(path)
   filename = 'rep_vict.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/RepVict.csv'
+    url = 'http://dustintran.com/data/r/vcd/RepVict.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rep_vict.csv',
                                resume=False)

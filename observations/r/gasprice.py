@@ -32,8 +32,7 @@ def gasprice(path):
   path = os.path.expanduser(path)
   filename = 'gasprice.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/quantreg/gasprice.csv'
+    url = 'http://dustintran.com/data/r/quantreg/gasprice.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='gasprice.csv',
                                resume=False)

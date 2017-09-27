@@ -68,8 +68,7 @@ def klein1(path):
   path = os.path.expanduser(path)
   filename = 'klein1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/sem/Klein.csv'
+    url = 'http://dustintran.com/data/r/sem/Klein.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='klein1.csv',
                                resume=False)

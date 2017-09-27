@@ -38,8 +38,7 @@ def sna_ex(path):
   path = os.path.expanduser(path)
   filename = 'sna_ex.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/sna.ex.csv'
+    url = 'http://dustintran.com/data/r/Zelig/sna.ex.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='sna_ex.csv',
                                resume=False)

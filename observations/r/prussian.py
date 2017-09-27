@@ -46,8 +46,7 @@ def prussian(path):
   path = os.path.expanduser(path)
   filename = 'prussian.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/pscl/prussian.csv'
+    url = 'http://dustintran.com/data/r/pscl/prussian.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='prussian.csv',
                                resume=False)

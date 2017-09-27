@@ -79,8 +79,7 @@ def ais(path):
   path = os.path.expanduser(path)
   filename = 'ais.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/ais.csv'
+    url = 'http://dustintran.com/data/r/DAAG/ais.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ais.csv',
                                resume=False)

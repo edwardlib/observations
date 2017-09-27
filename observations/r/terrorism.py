@@ -213,8 +213,7 @@ Terrorism <https://en.wikipedia.org/wiki/National_Consortium_for_the_Study_of
   path = os.path.expanduser(path)
   filename = 'terrorism.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/terrorism.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/terrorism.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='terrorism.csv',
                                resume=False)

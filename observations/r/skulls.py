@@ -54,8 +54,7 @@ def skulls(path):
   path = os.path.expanduser(path)
   filename = 'skulls.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/skulls.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/skulls.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='skulls.csv',
                                resume=False)

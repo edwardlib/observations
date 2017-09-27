@@ -62,8 +62,7 @@ def minn38(path):
   path = os.path.expanduser(path)
   filename = 'minn38.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/minn38.csv'
+    url = 'http://dustintran.com/data/r/MASS/minn38.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='minn38.csv',
                                resume=False)

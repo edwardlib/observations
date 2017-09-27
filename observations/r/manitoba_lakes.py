@@ -51,8 +51,7 @@ def manitoba_lakes(path):
   path = os.path.expanduser(path)
   filename = 'manitoba_lakes.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/Manitoba.lakes.csv'
+    url = 'http://dustintran.com/data/r/DAAG/Manitoba.lakes.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='manitoba_lakes.csv',
                                resume=False)

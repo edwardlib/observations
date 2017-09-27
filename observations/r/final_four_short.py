@@ -52,8 +52,7 @@ def final_four_short(path):
   path = os.path.expanduser(path)
   filename = 'final_four_short.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/FinalFourShort.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/FinalFourShort.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='final_four_short.csv',
                                resume=False)

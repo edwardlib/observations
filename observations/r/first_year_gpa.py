@@ -78,8 +78,7 @@ def first_year_gpa(path):
   path = os.path.expanduser(path)
   filename = 'first_year_gpa.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/FirstYearGPA.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/FirstYearGPA.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='first_year_gpa.csv',
                                resume=False)

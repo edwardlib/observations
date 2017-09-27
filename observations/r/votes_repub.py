@@ -39,8 +39,7 @@ def votes_repub(path):
   path = os.path.expanduser(path)
   filename = 'votes_repub.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/cluster/votes.repub.csv'
+    url = 'http://dustintran.com/data/r/cluster/votes.repub.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='votes_repub.csv',
                                resume=False)

@@ -67,8 +67,7 @@ def bthe_b(path):
   path = os.path.expanduser(path)
   filename = 'bthe_b.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/BtheB.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/BtheB.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bthe_b.csv',
                                resume=False)

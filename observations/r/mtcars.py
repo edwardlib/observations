@@ -63,8 +63,7 @@ def mtcars(path):
   path = os.path.expanduser(path)
   filename = 'mtcars.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/mtcars.csv'
+    url = 'http://dustintran.com/data/r/datasets/mtcars.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='mtcars.csv',
                                resume=False)

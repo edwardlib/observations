@@ -110,8 +110,7 @@ def rice_farms(path):
   path = os.path.expanduser(path)
   filename = 'rice_farms.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/plm/RiceFarms.csv'
+    url = 'http://dustintran.com/data/r/plm/RiceFarms.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rice_farms.csv',
                                resume=False)

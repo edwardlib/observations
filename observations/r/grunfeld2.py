@@ -39,8 +39,7 @@ def grunfeld2(path):
   path = os.path.expanduser(path)
   filename = 'grunfeld2.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/grunfeld.csv'
+    url = 'http://dustintran.com/data/r/Zelig/grunfeld.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='grunfeld2.csv',
                                resume=False)

@@ -58,8 +58,7 @@ def ams_survey(path):
   path = os.path.expanduser(path)
   filename = 'ams_survey.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/AMSsurvey.csv'
+    url = 'http://dustintran.com/data/r/car/AMSsurvey.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ams_survey.csv',
                                resume=False)

@@ -43,8 +43,7 @@ def roomwidth(path):
   path = os.path.expanduser(path)
   filename = 'roomwidth.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/roomwidth.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/roomwidth.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='roomwidth.csv',
                                resume=False)

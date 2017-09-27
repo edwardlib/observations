@@ -40,8 +40,7 @@ def bushfire(path):
   path = os.path.expanduser(path)
   filename = 'bushfire.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/bushfire.csv'
+    url = 'http://dustintran.com/data/r/robustbase/bushfire.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bushfire.csv',
                                resume=False)

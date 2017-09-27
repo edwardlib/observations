@@ -56,8 +56,7 @@ def porsche_jaguar(path):
   path = os.path.expanduser(path)
   filename = 'porsche_jaguar.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/PorscheJaguar.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/PorscheJaguar.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='porsche_jaguar.csv',
                                resume=False)

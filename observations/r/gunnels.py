@@ -84,8 +84,7 @@ def gunnels(path):
   path = os.path.expanduser(path)
   filename = 'gunnels.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Gunnels.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Gunnels.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='gunnels.csv',
                                resume=False)

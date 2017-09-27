@@ -45,8 +45,7 @@ def galton1(path):
   path = os.path.expanduser(path)
   filename = 'galton1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/galton.csv'
+    url = 'http://dustintran.com/data/r/psych/galton.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='galton1.csv',
                                resume=False)

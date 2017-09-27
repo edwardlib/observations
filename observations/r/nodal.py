@@ -82,8 +82,7 @@ def nodal(path):
   path = os.path.expanduser(path)
   filename = 'nodal.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/nodal.csv'
+    url = 'http://dustintran.com/data/r/boot/nodal.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nodal.csv',
                                resume=False)

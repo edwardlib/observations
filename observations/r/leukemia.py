@@ -48,8 +48,7 @@ def leukemia(path):
   path = os.path.expanduser(path)
   filename = 'leukemia.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/leukemia.csv'
+    url = 'http://dustintran.com/data/r/survival/leukemia.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='leukemia.csv',
                                resume=False)

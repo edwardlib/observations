@@ -46,8 +46,7 @@ def goose_permits(path):
   path = os.path.expanduser(path)
   filename = 'goose_permits.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mosaicData/GoosePermits.csv'
+    url = 'http://dustintran.com/data/r/mosaicData/GoosePermits.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='goose_permits.csv',
                                resume=False)

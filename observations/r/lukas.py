@@ -36,8 +36,7 @@ def lukas(path):
   path = os.path.expanduser(path)
   filename = 'lukas.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/gap/lukas.csv'
+    url = 'http://dustintran.com/data/r/gap/lukas.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='lukas.csv',
                                resume=False)

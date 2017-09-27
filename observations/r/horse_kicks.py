@@ -53,8 +53,7 @@ def horse_kicks(path):
   path = os.path.expanduser(path)
   filename = 'horse_kicks.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/HorseKicks.csv'
+    url = 'http://dustintran.com/data/r/vcd/HorseKicks.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='horse_kicks.csv',
                                resume=False)

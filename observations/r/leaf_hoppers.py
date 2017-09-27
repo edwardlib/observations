@@ -47,8 +47,7 @@ def leaf_hoppers(path):
   path = os.path.expanduser(path)
   filename = 'leaf_hoppers.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/LeafHoppers.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/LeafHoppers.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='leaf_hoppers.csv',
                                resume=False)

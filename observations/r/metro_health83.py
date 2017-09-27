@@ -101,8 +101,7 @@ def metro_health83(path):
   path = os.path.expanduser(path)
   filename = 'metro_health83.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/MetroHealth83.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/MetroHealth83.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='metro_health83.csv',
                                resume=False)

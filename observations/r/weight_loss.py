@@ -59,8 +59,7 @@ def weight_loss(path):
   path = os.path.expanduser(path)
   filename = 'weight_loss.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/WeightLoss.csv'
+    url = 'http://dustintran.com/data/r/car/WeightLoss.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='weight_loss.csv',
                                resume=False)

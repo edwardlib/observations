@@ -40,8 +40,7 @@ def turnout(path):
   path = os.path.expanduser(path)
   filename = 'turnout.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/turnout.csv'
+    url = 'http://dustintran.com/data/r/Zelig/turnout.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='turnout.csv',
                                resume=False)

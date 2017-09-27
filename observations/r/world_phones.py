@@ -42,8 +42,7 @@ def world_phones(path):
   path = os.path.expanduser(path)
   filename = 'world_phones.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/WorldPhones.csv'
+    url = 'http://dustintran.com/data/r/datasets/WorldPhones.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='world_phones.csv',
                                resume=False)

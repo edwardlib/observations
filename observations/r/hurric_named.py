@@ -85,8 +85,7 @@ def hurric_named(path):
   path = os.path.expanduser(path)
   filename = 'hurric_named.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/hurricNamed.csv'
+    url = 'http://dustintran.com/data/r/DAAG/hurricNamed.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='hurric_named.csv',
                                resume=False)

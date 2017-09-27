@@ -48,8 +48,7 @@ def bod(path):
   path = os.path.expanduser(path)
   filename = 'bod.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/BOD.csv'
+    url = 'http://dustintran.com/data/r/datasets/BOD.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bod.csv',
                                resume=False)

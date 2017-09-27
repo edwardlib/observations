@@ -60,8 +60,7 @@ def ornstein(path):
   path = os.path.expanduser(path)
   filename = 'ornstein.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Ornstein.csv'
+    url = 'http://dustintran.com/data/r/car/Ornstein.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ornstein.csv',
                                resume=False)

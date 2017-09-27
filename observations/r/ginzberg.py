@@ -58,8 +58,7 @@ def ginzberg(path):
   path = os.path.expanduser(path)
   filename = 'ginzberg.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Ginzberg.csv'
+    url = 'http://dustintran.com/data/r/car/Ginzberg.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ginzberg.csv',
                                resume=False)

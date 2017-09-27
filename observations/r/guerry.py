@@ -154,8 +154,7 @@ def guerry(path):
   path = os.path.expanduser(path)
   filename = 'guerry.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Guerry.csv'
+    url = 'http://dustintran.com/data/r/HistData/Guerry.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='guerry.csv',
                                resume=False)

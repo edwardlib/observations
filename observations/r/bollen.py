@@ -71,8 +71,7 @@ def bollen(path):
   path = os.path.expanduser(path)
   filename = 'bollen.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/sem/Bollen.csv'
+    url = 'http://dustintran.com/data/r/sem/Bollen.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bollen.csv',
                                resume=False)

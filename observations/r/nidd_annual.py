@@ -34,8 +34,7 @@ def nidd_annual(path):
   path = os.path.expanduser(path)
   filename = 'nidd_annual.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/evir/nidd.annual.csv'
+    url = 'http://dustintran.com/data/r/evir/nidd.annual.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nidd_annual.csv',
                                resume=False)

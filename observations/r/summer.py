@@ -58,8 +58,7 @@ def summer(path):
   path = os.path.expanduser(path)
   filename = 'summer.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/texmex/summer.csv'
+    url = 'http://dustintran.com/data/r/texmex/summer.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='summer.csv',
                                resume=False)

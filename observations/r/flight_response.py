@@ -66,8 +66,7 @@ def flight_response(path):
   path = os.path.expanduser(path)
   filename = 'flight_response.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/FlightResponse.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/FlightResponse.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='flight_response.csv',
                                resume=False)

@@ -70,8 +70,7 @@ def union_density(path):
   path = os.path.expanduser(path)
   filename = 'union_density.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/pscl/unionDensity.csv'
+    url = 'http://dustintran.com/data/r/pscl/unionDensity.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='union_density.csv',
                                resume=False)

@@ -76,8 +76,7 @@ def swiss(path):
   path = os.path.expanduser(path)
   filename = 'swiss.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/swiss.csv'
+    url = 'http://dustintran.com/data/r/datasets/swiss.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='swiss.csv',
                                resume=False)

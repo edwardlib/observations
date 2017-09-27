@@ -70,8 +70,7 @@ def saratoga_houses(path):
   path = os.path.expanduser(path)
   filename = 'saratoga_houses.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mosaicData/SaratogaHouses.csv'
+    url = 'http://dustintran.com/data/r/mosaicData/SaratogaHouses.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='saratoga_houses.csv',
                                resume=False)

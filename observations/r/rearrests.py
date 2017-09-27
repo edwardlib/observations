@@ -37,8 +37,7 @@ def rearrests(path):
   path = os.path.expanduser(path)
   filename = 'rearrests.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/rearrests.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/rearrests.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rearrests.csv',
                                resume=False)

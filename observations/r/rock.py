@@ -45,8 +45,7 @@ def rock(path):
   path = os.path.expanduser(path)
   filename = 'rock.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/rock.csv'
+    url = 'http://dustintran.com/data/r/datasets/rock.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rock.csv',
                                resume=False)

@@ -122,8 +122,7 @@ def baseball1(path):
   path = os.path.expanduser(path)
   filename = 'baseball1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/Baseball.csv'
+    url = 'http://dustintran.com/data/r/vcd/Baseball.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='baseball1.csv',
                                resume=False)

@@ -43,8 +43,7 @@ def dogs(path):
   path = os.path.expanduser(path)
   filename = 'dogs.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/dogs.csv'
+    url = 'http://dustintran.com/data/r/boot/dogs.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='dogs.csv',
                                resume=False)

@@ -73,8 +73,7 @@ def fatality(path):
   path = os.path.expanduser(path)
   filename = 'fatality.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Fatality.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Fatality.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='fatality.csv',
                                resume=False)

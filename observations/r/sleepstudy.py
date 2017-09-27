@@ -47,8 +47,7 @@ def sleepstudy(path):
   path = os.path.expanduser(path)
   filename = 'sleepstudy.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/lme4/sleepstudy.csv'
+    url = 'http://dustintran.com/data/r/lme4/sleepstudy.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='sleepstudy.csv',
                                resume=False)

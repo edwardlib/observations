@@ -66,8 +66,7 @@ def chain(path):
   path = os.path.expanduser(path)
   filename = 'chain.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mi/CHAIN.csv'
+    url = 'http://dustintran.com/data/r/mi/CHAIN.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='chain.csv',
                                resume=False)

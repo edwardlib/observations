@@ -61,8 +61,7 @@ def jobs(path):
   path = os.path.expanduser(path)
   filename = 'jobs.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/jobs.csv'
+    url = 'http://dustintran.com/data/r/DAAG/jobs.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='jobs.csv',
                                resume=False)

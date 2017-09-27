@@ -52,8 +52,7 @@ def weldon_dice(path):
   path = os.path.expanduser(path)
   filename = 'weldon_dice.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/WeldonDice.csv'
+    url = 'http://dustintran.com/data/r/vcd/WeldonDice.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='weldon_dice.csv',
                                resume=False)

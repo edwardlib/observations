@@ -112,8 +112,7 @@ def langren1644(path):
   path = os.path.expanduser(path)
   filename = 'langren1644.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Langren1644.csv'
+    url = 'http://dustintran.com/data/r/HistData/Langren1644.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='langren1644.csv',
                                resume=False)

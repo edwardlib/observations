@@ -100,8 +100,7 @@ def math_placement(path):
   path = os.path.expanduser(path)
   filename = 'math_placement.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/MathPlacement.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/MathPlacement.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='math_placement.csv',
                                resume=False)

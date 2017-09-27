@@ -37,8 +37,7 @@ def rivers(path):
   path = os.path.expanduser(path)
   filename = 'rivers.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/rivers.csv'
+    url = 'http://dustintran.com/data/r/datasets/rivers.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rivers.csv',
                                resume=False)

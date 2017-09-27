@@ -43,8 +43,7 @@ def sahlins(path):
   path = os.path.expanduser(path)
   filename = 'sahlins.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Sahlins.csv'
+    url = 'http://dustintran.com/data/r/car/Sahlins.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='sahlins.csv',
                                resume=False)

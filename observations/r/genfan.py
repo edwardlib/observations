@@ -46,8 +46,7 @@ def genfan(path):
   path = os.path.expanduser(path)
   filename = 'genfan.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/genfan.csv'
+    url = 'http://dustintran.com/data/r/survival/genfan.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='genfan.csv',
                                resume=False)

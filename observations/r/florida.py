@@ -71,8 +71,7 @@ def florida(path):
   path = os.path.expanduser(path)
   filename = 'florida.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Florida.csv'
+    url = 'http://dustintran.com/data/r/car/Florida.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='florida.csv',
                                resume=False)

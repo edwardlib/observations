@@ -49,8 +49,7 @@ def aspirin(path):
   path = os.path.expanduser(path)
   filename = 'aspirin.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/aspirin.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/aspirin.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='aspirin.csv',
                                resume=False)

@@ -121,8 +121,7 @@ def mlb_2007_standings(path):
   path = os.path.expanduser(path)
   filename = 'mlb_2007_standings.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/MLB2007Standings.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/MLB2007Standings.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='mlb_2007_standings.csv',
                                resume=False)

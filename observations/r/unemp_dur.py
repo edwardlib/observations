@@ -73,8 +73,7 @@ def unemp_dur(path):
   path = os.path.expanduser(path)
   filename = 'unemp_dur.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/UnempDur.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/UnempDur.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='unemp_dur.csv',
                                resume=False)

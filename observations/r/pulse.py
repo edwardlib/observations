@@ -65,8 +65,7 @@ def pulse(path):
   path = os.path.expanduser(path)
   filename = 'pulse.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Pulse.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Pulse.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='pulse.csv',
                                resume=False)

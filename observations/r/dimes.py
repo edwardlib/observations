@@ -39,8 +39,7 @@ def dimes(path):
   path = os.path.expanduser(path)
   filename = 'dimes.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mosaicData/Dimes.csv'
+    url = 'http://dustintran.com/data/r/mosaicData/Dimes.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='dimes.csv',
                                resume=False)

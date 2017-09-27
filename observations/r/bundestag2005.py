@@ -48,8 +48,7 @@ http://www.bundeswahlleiter.de/de/bundestagswahlen/fruehere_bundestagswahlen/
   path = os.path.expanduser(path)
   filename = 'bundestag2005.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/Bundestag2005.csv'
+    url = 'http://dustintran.com/data/r/vcd/Bundestag2005.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bundestag2005.csv',
                                resume=False)

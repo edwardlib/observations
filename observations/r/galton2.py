@@ -52,8 +52,7 @@ def galton2(path):
   path = os.path.expanduser(path)
   filename = 'galton2.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mosaicData/Galton.csv'
+    url = 'http://dustintran.com/data/r/mosaicData/Galton.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='galton2.csv',
                                resume=False)

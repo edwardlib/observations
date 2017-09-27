@@ -48,8 +48,7 @@ def litters(path):
   path = os.path.expanduser(path)
   filename = 'litters.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/litters.csv'
+    url = 'http://dustintran.com/data/r/DAAG/litters.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='litters.csv',
                                resume=False)

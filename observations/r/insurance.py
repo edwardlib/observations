@@ -62,8 +62,7 @@ def insurance(path):
   path = os.path.expanduser(path)
   filename = 'insurance.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/Insurance.csv'
+    url = 'http://dustintran.com/data/r/MASS/Insurance.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='insurance.csv',
                                resume=False)

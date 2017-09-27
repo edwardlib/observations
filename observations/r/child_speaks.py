@@ -52,8 +52,7 @@ def child_speaks(path):
   path = os.path.expanduser(path)
   filename = 'child_speaks.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/ChildSpeaks.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/ChildSpeaks.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='child_speaks.csv',
                                resume=False)

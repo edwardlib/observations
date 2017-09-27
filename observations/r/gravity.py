@@ -61,8 +61,7 @@ def gravity(path):
   path = os.path.expanduser(path)
   filename = 'gravity.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/gravity.csv'
+    url = 'http://dustintran.com/data/r/boot/gravity.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='gravity.csv',
                                resume=False)

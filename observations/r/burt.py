@@ -49,8 +49,7 @@ def burt(path):
   path = os.path.expanduser(path)
   filename = 'burt.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Burt.csv'
+    url = 'http://dustintran.com/data/r/car/Burt.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='burt.csv',
                                resume=False)

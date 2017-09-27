@@ -47,8 +47,7 @@ def mode(path):
   path = os.path.expanduser(path)
   filename = 'mode.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Mode.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Mode.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='mode.csv',
                                resume=False)

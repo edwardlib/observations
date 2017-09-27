@@ -58,8 +58,7 @@ def airq(path):
   path = os.path.expanduser(path)
   filename = 'airq.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Airq.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Airq.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='airq.csv',
                                resume=False)

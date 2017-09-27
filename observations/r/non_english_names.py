@@ -50,8 +50,7 @@ def non_english_names(path):
   path = os.path.expanduser(path)
   filename = 'non_english_names.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/nonEnglishNames.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/nonEnglishNames.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='non_english_names.csv',
                                resume=False)

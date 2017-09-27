@@ -68,8 +68,7 @@ def infert(path):
   path = os.path.expanduser(path)
   filename = 'infert.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/infert.csv'
+    url = 'http://dustintran.com/data/r/datasets/infert.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='infert.csv',
                                resume=False)

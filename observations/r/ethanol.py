@@ -54,8 +54,7 @@ def ethanol(path):
   path = os.path.expanduser(path)
   filename = 'ethanol.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/lattice/ethanol.csv'
+    url = 'http://dustintran.com/data/r/lattice/ethanol.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ethanol.csv',
                                resume=False)

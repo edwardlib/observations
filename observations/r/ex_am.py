@@ -40,8 +40,7 @@ def ex_am(path):
   path = os.path.expanduser(path)
   filename = 'ex_am.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/exAM.csv'
+    url = 'http://dustintran.com/data/r/robustbase/exAM.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ex_am.csv',
                                resume=False)

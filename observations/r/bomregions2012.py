@@ -122,8 +122,7 @@ def bomregions2012(path):
   path = os.path.expanduser(path)
   filename = 'bomregions2012.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/bomregions2012.csv'
+    url = 'http://dustintran.com/data/r/DAAG/bomregions2012.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bomregions2012.csv',
                                resume=False)

@@ -69,8 +69,7 @@ def epil(path):
   path = os.path.expanduser(path)
   filename = 'epil.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/epil.csv'
+    url = 'http://dustintran.com/data/r/MASS/epil.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='epil.csv',
                                resume=False)

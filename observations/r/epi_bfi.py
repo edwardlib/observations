@@ -80,8 +80,7 @@ def epi_bfi(path):
   path = os.path.expanduser(path)
   filename = 'epi_bfi.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/epi.bfi.csv'
+    url = 'http://dustintran.com/data/r/psych/epi.bfi.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='epi_bfi.csv',
                                resume=False)

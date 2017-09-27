@@ -61,8 +61,7 @@ def seizure(path):
   path = os.path.expanduser(path)
   filename = 'seizure.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/geepack/seizure.csv'
+    url = 'http://dustintran.com/data/r/geepack/seizure.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='seizure.csv',
                                resume=False)

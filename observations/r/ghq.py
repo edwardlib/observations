@@ -49,8 +49,7 @@ def ghq(path):
   path = os.path.expanduser(path)
   filename = 'ghq.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/GHQ.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/GHQ.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ghq.csv',
                                resume=False)

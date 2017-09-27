@@ -63,8 +63,7 @@ def longley(path):
   path = os.path.expanduser(path)
   filename = 'longley.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/longley.csv'
+    url = 'http://dustintran.com/data/r/datasets/longley.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='longley.csv',
                                resume=False)

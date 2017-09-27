@@ -47,8 +47,7 @@ def planets(path):
   path = os.path.expanduser(path)
   filename = 'planets.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/planets.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/planets.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='planets.csv',
                                resume=False)

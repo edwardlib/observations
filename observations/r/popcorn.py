@@ -47,8 +47,7 @@ def popcorn(path):
   path = os.path.expanduser(path)
   filename = 'popcorn.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Popcorn.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Popcorn.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='popcorn.csv',
                                resume=False)

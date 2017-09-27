@@ -62,8 +62,7 @@ def cran_packages(path):
   path = os.path.expanduser(path)
   filename = 'cran_packages.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/CRANpackages.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/CRANpackages.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cran_packages.csv',
                                resume=False)

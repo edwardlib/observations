@@ -54,8 +54,7 @@ def manaus(path):
   path = os.path.expanduser(path)
   filename = 'manaus.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/manaus.csv'
+    url = 'http://dustintran.com/data/r/boot/manaus.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='manaus.csv',
                                resume=False)

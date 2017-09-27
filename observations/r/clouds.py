@@ -69,8 +69,7 @@ def clouds(path):
   path = os.path.expanduser(path)
   filename = 'clouds.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/clouds.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/clouds.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='clouds.csv',
                                resume=False)

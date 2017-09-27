@@ -51,8 +51,7 @@ def visual_acuity(path):
   path = os.path.expanduser(path)
   filename = 'visual_acuity.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/VisualAcuity.csv'
+    url = 'http://dustintran.com/data/r/vcd/VisualAcuity.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='visual_acuity.csv',
                                resume=False)

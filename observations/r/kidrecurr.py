@@ -69,8 +69,7 @@ def kidrecurr(path):
   path = os.path.expanduser(path)
   filename = 'kidrecurr.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/KMsurv/kidrecurr.csv'
+    url = 'http://dustintran.com/data/r/KMsurv/kidrecurr.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='kidrecurr.csv',
                                resume=False)

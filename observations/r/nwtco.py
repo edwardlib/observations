@@ -63,8 +63,7 @@ def nwtco(path):
   path = os.path.expanduser(path)
   filename = 'nwtco.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/nwtco.csv'
+    url = 'http://dustintran.com/data/r/survival/nwtco.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nwtco.csv',
                                resume=False)

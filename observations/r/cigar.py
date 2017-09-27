@@ -75,8 +75,7 @@ def cigar(path):
   path = os.path.expanduser(path)
   filename = 'cigar.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Cigar.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Cigar.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cigar.csv',
                                resume=False)

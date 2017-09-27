@@ -55,8 +55,7 @@ def prostitutes(path):
   path = os.path.expanduser(path)
   filename = 'prostitutes.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Prostitutes.csv'
+    url = 'http://dustintran.com/data/r/HistData/Prostitutes.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='prostitutes.csv',
                                resume=False)

@@ -59,8 +59,7 @@ def trucks(path):
   path = os.path.expanduser(path)
   filename = 'trucks.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/Trucks.csv'
+    url = 'http://dustintran.com/data/r/vcd/Trucks.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='trucks.csv',
                                resume=False)

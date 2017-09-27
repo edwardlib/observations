@@ -44,8 +44,7 @@ def cf(path):
   path = os.path.expanduser(path)
   filename = 'cf.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/gap/cf.csv'
+    url = 'http://dustintran.com/data/r/gap/cf.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cf.csv',
                                resume=False)

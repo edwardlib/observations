@@ -53,8 +53,7 @@ def muscle(path):
   path = os.path.expanduser(path)
   filename = 'muscle.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/muscle.csv'
+    url = 'http://dustintran.com/data/r/MASS/muscle.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='muscle.csv',
                                resume=False)

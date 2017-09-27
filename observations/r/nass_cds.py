@@ -95,8 +95,7 @@ def nass_cds(path):
   path = os.path.expanduser(path)
   filename = 'nass_cds.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/nassCDS.csv'
+    url = 'http://dustintran.com/data/r/DAAG/nassCDS.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nass_cds.csv',
                                resume=False)

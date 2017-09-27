@@ -213,8 +213,7 @@ Terrorism <https://en.wikipedia.org/wiki/National_Consortium_for_the_Study_of
   path = os.path.expanduser(path)
   filename = 'nkill_by_country_yr.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/nkill.byCountryYr.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/nkill.byCountryYr.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nkill_by_country_yr.csv',
                                resume=False)

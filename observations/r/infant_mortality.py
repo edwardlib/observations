@@ -44,8 +44,7 @@ def infant_mortality(path):
   path = os.path.expanduser(path)
   filename = 'infant_mortality.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/InfantMortality.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/InfantMortality.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='infant_mortality.csv',
                                resume=False)

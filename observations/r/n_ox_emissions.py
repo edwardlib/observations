@@ -57,8 +57,7 @@ def n_ox_emissions(path):
   path = os.path.expanduser(path)
   filename = 'n_ox_emissions.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/NOxEmissions.csv'
+    url = 'http://dustintran.com/data/r/robustbase/NOxEmissions.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='n_ox_emissions.csv',
                                resume=False)

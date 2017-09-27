@@ -62,8 +62,7 @@ def alcohol(path):
   path = os.path.expanduser(path)
   filename = 'alcohol.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/alcohol.csv'
+    url = 'http://dustintran.com/data/r/robustbase/alcohol.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='alcohol.csv',
                                resume=False)

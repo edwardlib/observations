@@ -52,8 +52,7 @@ def dyestuff(path):
   path = os.path.expanduser(path)
   filename = 'dyestuff.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/lme4/Dyestuff.csv'
+    url = 'http://dustintran.com/data/r/lme4/Dyestuff.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='dyestuff.csv',
                                resume=False)

@@ -74,8 +74,7 @@ def car_test_frame(path):
   path = os.path.expanduser(path)
   filename = 'car_test_frame.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/rpart/car.test.frame.csv'
+    url = 'http://dustintran.com/data/r/rpart/car.test.frame.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='car_test_frame.csv',
                                resume=False)

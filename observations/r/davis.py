@@ -53,8 +53,7 @@ def davis(path):
   path = os.path.expanduser(path)
   filename = 'davis.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Davis.csv'
+    url = 'http://dustintran.com/data/r/car/Davis.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='davis.csv',
                                resume=False)

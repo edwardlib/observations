@@ -39,8 +39,7 @@ def suicides(path):
   path = os.path.expanduser(path)
   filename = 'suicides.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/suicides.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/suicides.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='suicides.csv',
                                resume=False)

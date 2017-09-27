@@ -86,8 +86,7 @@ def cgd(path):
   path = os.path.expanduser(path)
   filename = 'cgd.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/cgd.csv'
+    url = 'http://dustintran.com/data/r/survival/cgd.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cgd.csv',
                                resume=False)

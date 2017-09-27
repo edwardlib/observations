@@ -51,8 +51,7 @@ def anesthetic(path):
   path = os.path.expanduser(path)
   filename = 'anesthetic.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/anesthetic.csv'
+    url = 'http://dustintran.com/data/r/DAAG/anesthetic.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='anesthetic.csv',
                                resume=False)

@@ -62,8 +62,7 @@ def arthritis1(path):
   path = os.path.expanduser(path)
   filename = 'arthritis1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/multgee/arthritis.csv'
+    url = 'http://dustintran.com/data/r/multgee/arthritis.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='arthritis1.csv',
                                resume=False)

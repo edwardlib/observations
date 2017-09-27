@@ -39,8 +39,7 @@ def kmenta2(path):
   path = os.path.expanduser(path)
   filename = 'kmenta2.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/kmenta.csv'
+    url = 'http://dustintran.com/data/r/Zelig/kmenta.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='kmenta2.csv',
                                resume=False)

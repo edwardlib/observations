@@ -53,8 +53,7 @@ def sunspot_month(path):
   path = os.path.expanduser(path)
   filename = 'sunspot_month.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/sunspot.month.csv'
+    url = 'http://dustintran.com/data/r/datasets/sunspot.month.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='sunspot_month.csv',
                                resume=False)

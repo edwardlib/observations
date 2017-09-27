@@ -41,8 +41,7 @@ def countries(path):
   path = os.path.expanduser(path)
   filename = 'countries.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mosaicData/Countries.csv'
+    url = 'http://dustintran.com/data/r/mosaicData/Countries.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='countries.csv',
                                resume=False)

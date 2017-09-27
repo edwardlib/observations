@@ -69,8 +69,7 @@ def polio_trials(path):
   path = os.path.expanduser(path)
   filename = 'polio_trials.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/PolioTrials.csv'
+    url = 'http://dustintran.com/data/r/HistData/PolioTrials.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='polio_trials.csv',
                                resume=False)

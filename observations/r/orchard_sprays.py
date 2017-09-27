@@ -48,8 +48,7 @@ def orchard_sprays(path):
   path = os.path.expanduser(path)
   filename = 'orchard_sprays.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/OrchardSprays.csv'
+    url = 'http://dustintran.com/data/r/datasets/OrchardSprays.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='orchard_sprays.csv',
                                resume=False)

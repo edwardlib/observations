@@ -43,8 +43,7 @@ def births78(path):
   path = os.path.expanduser(path)
   filename = 'births78.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mosaicData/Births78.csv'
+    url = 'http://dustintran.com/data/r/mosaicData/Births78.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='births78.csv',
                                resume=False)

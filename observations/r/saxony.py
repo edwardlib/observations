@@ -50,8 +50,7 @@ def saxony(path):
   path = os.path.expanduser(path)
   filename = 'saxony.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/Saxony.csv'
+    url = 'http://dustintran.com/data/r/vcd/Saxony.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='saxony.csv',
                                resume=False)

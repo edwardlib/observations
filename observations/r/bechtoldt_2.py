@@ -42,8 +42,7 @@ def bechtoldt_2(path):
   path = os.path.expanduser(path)
   filename = 'bechtoldt_2.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/Bechtoldt.2.csv'
+    url = 'http://dustintran.com/data/r/psych/Bechtoldt.2.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bechtoldt_2.csv',
                                resume=False)

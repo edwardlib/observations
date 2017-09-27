@@ -93,8 +93,7 @@ def aus_election_polling(path):
   path = os.path.expanduser(path)
   filename = 'aus_election_polling.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/pscl/AustralianElectionPolling.csv'
+    url = 'http://dustintran.com/data/r/pscl/AustralianElectionPolling.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='aus_election_polling.csv',
                                resume=False)

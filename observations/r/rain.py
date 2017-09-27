@@ -49,8 +49,7 @@ def rain(path):
   path = os.path.expanduser(path)
   filename = 'rain.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/texmex/rain.csv'
+    url = 'http://dustintran.com/data/r/texmex/rain.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rain.csv',
                                resume=False)

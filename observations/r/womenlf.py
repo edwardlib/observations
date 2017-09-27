@@ -53,8 +53,7 @@ def womenlf(path):
   path = os.path.expanduser(path)
   filename = 'womenlf.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Womenlf.csv'
+    url = 'http://dustintran.com/data/r/car/Womenlf.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='womenlf.csv',
                                resume=False)

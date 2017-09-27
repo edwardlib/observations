@@ -52,8 +52,7 @@ def iris(path):
   path = os.path.expanduser(path)
   filename = 'iris.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/iris.csv'
+    url = 'http://dustintran.com/data/r/datasets/iris.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='iris.csv',
                                resume=False)

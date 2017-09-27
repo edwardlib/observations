@@ -39,8 +39,7 @@ def luv_colours(path):
   path = os.path.expanduser(path)
   filename = 'luv_colours.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/ggplot2/luv_colours.csv'
+    url = 'http://dustintran.com/data/r/ggplot2/luv_colours.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='luv_colours.csv',
                                resume=False)

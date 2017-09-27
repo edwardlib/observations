@@ -37,8 +37,7 @@ def lynx(path):
   path = os.path.expanduser(path)
   filename = 'lynx.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/lynx.csv'
+    url = 'http://dustintran.com/data/r/datasets/lynx.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='lynx.csv',
                                resume=False)

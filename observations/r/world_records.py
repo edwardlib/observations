@@ -51,8 +51,7 @@ def world_records(path):
   path = os.path.expanduser(path)
   filename = 'world_records.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/worldRecords.csv'
+    url = 'http://dustintran.com/data/r/DAAG/worldRecords.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='world_records.csv',
                                resume=False)

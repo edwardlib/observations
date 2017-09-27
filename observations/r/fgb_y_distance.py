@@ -64,8 +64,7 @@ def fgb_y_distance(path):
   path = os.path.expanduser(path)
   filename = 'fgb_y_distance.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/FGByDistance.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/FGByDistance.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='fgb_y_distance.csv',
                                resume=False)

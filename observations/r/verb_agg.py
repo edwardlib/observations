@@ -71,8 +71,7 @@ def verb_agg(path):
   path = os.path.expanduser(path)
   filename = 'verb_agg.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/lme4/VerbAgg.csv'
+    url = 'http://dustintran.com/data/r/lme4/VerbAgg.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='verb_agg.csv',
                                resume=False)

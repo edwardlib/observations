@@ -66,8 +66,7 @@ def cloud_seeding(path):
   path = os.path.expanduser(path)
   filename = 'cloud_seeding.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/CloudSeeding.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/CloudSeeding.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cloud_seeding.csv',
                                resume=False)

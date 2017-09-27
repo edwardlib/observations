@@ -48,8 +48,7 @@ def hospital(path):
   path = os.path.expanduser(path)
   filename = 'hospital.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/Hospital.csv'
+    url = 'http://dustintran.com/data/r/vcd/Hospital.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='hospital.csv',
                                resume=False)

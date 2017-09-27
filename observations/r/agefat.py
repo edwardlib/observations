@@ -47,8 +47,7 @@ def agefat(path):
   path = os.path.expanduser(path)
   filename = 'agefat.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/agefat.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/agefat.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='agefat.csv',
                                resume=False)

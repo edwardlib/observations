@@ -34,8 +34,7 @@ def sp500_close(path):
   path = os.path.expanduser(path)
   filename = 'sp500_close.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/SP500close.csv'
+    url = 'http://dustintran.com/data/r/DAAG/SP500close.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='sp500_close.csv',
                                resume=False)
