@@ -46,8 +46,7 @@ def bnct(path):
   path = os.path.expanduser(path)
   filename = 'bnct.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/KMsurv/bnct.csv'
+    url = 'http://dustintran.com/data/r/KMsurv/bnct.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bnct.csv',
                                resume=False)

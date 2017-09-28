@@ -55,8 +55,7 @@ def kidtran(path):
   path = os.path.expanduser(path)
   filename = 'kidtran.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/KMsurv/kidtran.csv'
+    url = 'http://dustintran.com/data/r/KMsurv/kidtran.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='kidtran.csv',
                                resume=False)

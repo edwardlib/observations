@@ -38,8 +38,7 @@ def bivariate(path):
   path = os.path.expanduser(path)
   filename = 'bivariate.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/bivariate.csv'
+    url = 'http://dustintran.com/data/r/Zelig/bivariate.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bivariate.csv',
                                resume=False)

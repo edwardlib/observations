@@ -12,18 +12,39 @@ from observations.util import maybe_download_and_extract
 
 
 def co2(path):
-  """Mauna Loa Atmospheric CO2 Concentration
+  """Carbon Dioxide Uptake in Grass Plants
 
-  Atmospheric concentrations of CO\ *2* are expressed in parts per million
-  (ppm) and reported in the preliminary 1997 SIO manometric mole fraction
-  scale.
+  The `CO2` data frame has 84 rows and 5 columns of data from an
+  experiment on the cold tolerance of the grass species *Echinochloa
+  crus-galli*.
 
-  A time series of 468 observations; monthly from 1959 to 1997.
+  An object of class
+  `c("nfnGroupedData", "nfGroupedData", "groupedData", "data.frame")`
+  containing the following columns:
 
-  Keeling, C. D. and Whorf, T. P., Scripps Institution of Oceanography
-  (SIO), University of California, La Jolla, California USA 92093-0220.
+  Plant
+      an ordered factor with levels `Qn1` < `Qn2` < `Qn3` < ... <
+      `Mc1` giving a unique identifier for each plant.
 
-  ftp://cdiac.esd.ornl.gov/pub/maunaloa-co2/maunaloa.co2.
+  Type
+      a factor with levels `Quebec` `Mississippi` giving the origin of
+      the plant
+
+  Treatment
+      a factor with levels `nonchilled` `chilled`
+
+  conc
+      a numeric vector of ambient carbon dioxide concentrations (mL/L).
+
+  uptake
+      a numeric vector of carbon dioxide uptake rates (*umol/m^2* sec).
+
+  Potvin, C., Lechowicz, M. J. and Tardif, S. (1990) “The statistical
+  analysis of ecophysiological response curves obtained from experiments
+  involving repeated measures”, *Ecology*, **71**, 1389–1400.
+
+  Pinheiro, J. C. and Bates, D. M. (2000) *Mixed-effects Models in S and
+  S-PLUS*, Springer.
 
   Args:
 
@@ -41,8 +62,7 @@ def co2(path):
   path = os.path.expanduser(path)
   filename = 'co2.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/CO2.csv'
+    url = 'http://dustintran.com/data/r/datasets/CO2.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='co2.csv',
                                resume=False)

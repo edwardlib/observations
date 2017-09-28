@@ -42,8 +42,7 @@ def rareplants(path):
   path = os.path.expanduser(path)
   filename = 'rareplants.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/rareplants.csv'
+    url = 'http://dustintran.com/data/r/DAAG/rareplants.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rareplants.csv',
                                resume=False)

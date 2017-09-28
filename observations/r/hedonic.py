@@ -94,8 +94,7 @@ def hedonic(path):
   path = os.path.expanduser(path)
   filename = 'hedonic.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Hedonic.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Hedonic.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='hedonic.csv',
                                resume=False)

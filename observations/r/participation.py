@@ -64,8 +64,7 @@ def participation(path):
   path = os.path.expanduser(path)
   filename = 'participation.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Participation.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Participation.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='participation.csv',
                                resume=False)

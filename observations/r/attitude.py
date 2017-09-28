@@ -59,8 +59,7 @@ def attitude(path):
   path = os.path.expanduser(path)
   filename = 'attitude.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/attitude.csv'
+    url = 'http://dustintran.com/data/r/datasets/attitude.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='attitude.csv',
                                resume=False)

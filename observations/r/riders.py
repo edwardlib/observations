@@ -80,8 +80,7 @@ def riders(path):
   path = os.path.expanduser(path)
   filename = 'riders.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mosaicData/Riders.csv'
+    url = 'http://dustintran.com/data/r/mosaicData/Riders.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='riders.csv',
                                resume=False)

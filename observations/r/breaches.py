@@ -95,8 +95,7 @@ def breaches(path):
   path = os.path.expanduser(path)
   filename = 'breaches.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/breaches.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/breaches.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='breaches.csv',
                                resume=False)

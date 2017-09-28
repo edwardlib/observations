@@ -42,8 +42,7 @@ def hr1420(path):
   path = os.path.expanduser(path)
   filename = 'hr1420.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/gap/hr1420.csv'
+    url = 'http://dustintran.com/data/r/gap/hr1420.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='hr1420.csv',
                                resume=False)

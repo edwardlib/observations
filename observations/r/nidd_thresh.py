@@ -35,8 +35,7 @@ def nidd_thresh(path):
   path = os.path.expanduser(path)
   filename = 'nidd_thresh.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/evir/nidd.thresh.csv'
+    url = 'http://dustintran.com/data/r/evir/nidd.thresh.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nidd_thresh.csv',
                                resume=False)

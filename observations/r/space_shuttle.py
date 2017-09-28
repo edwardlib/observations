@@ -57,8 +57,7 @@ def space_shuttle(path):
   path = os.path.expanduser(path)
   filename = 'space_shuttle.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/SpaceShuttle.csv'
+    url = 'http://dustintran.com/data/r/vcd/SpaceShuttle.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='space_shuttle.csv',
                                resume=False)

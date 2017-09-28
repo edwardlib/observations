@@ -79,8 +79,7 @@ def macdonell(path):
   path = os.path.expanduser(path)
   filename = 'macdonell.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Macdonell.csv'
+    url = 'http://dustintran.com/data/r/HistData/Macdonell.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='macdonell.csv',
                                resume=False)

@@ -35,8 +35,7 @@ def austres(path):
   path = os.path.expanduser(path)
   filename = 'austres.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/austres.csv'
+    url = 'http://dustintran.com/data/r/datasets/austres.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='austres.csv',
                                resume=False)

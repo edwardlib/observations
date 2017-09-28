@@ -59,8 +59,7 @@ def sat_act(path):
   path = os.path.expanduser(path)
   filename = 'sat_act.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/sat.act.csv'
+    url = 'http://dustintran.com/data/r/psych/sat.act.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='sat_act.csv',
                                resume=False)

@@ -42,8 +42,7 @@ def thurstone(path):
   path = os.path.expanduser(path)
   filename = 'thurstone.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/Thurstone.csv'
+    url = 'http://dustintran.com/data/r/psych/Thurstone.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='thurstone.csv',
                                resume=False)

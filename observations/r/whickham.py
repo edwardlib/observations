@@ -47,8 +47,7 @@ def whickham(path):
   path = os.path.expanduser(path)
   filename = 'whickham.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mosaicData/Whickham.csv'
+    url = 'http://dustintran.com/data/r/mosaicData/Whickham.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='whickham.csv',
                                resume=False)

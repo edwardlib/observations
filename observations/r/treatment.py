@@ -78,8 +78,7 @@ def treatment(path):
   path = os.path.expanduser(path)
   filename = 'treatment.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Treatment.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Treatment.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='treatment.csv',
                                resume=False)

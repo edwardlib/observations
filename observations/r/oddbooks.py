@@ -50,8 +50,7 @@ def oddbooks(path):
   path = os.path.expanduser(path)
   filename = 'oddbooks.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/oddbooks.csv'
+    url = 'http://dustintran.com/data/r/DAAG/oddbooks.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='oddbooks.csv',
                                resume=False)

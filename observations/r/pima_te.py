@@ -71,8 +71,7 @@ def pima_te(path):
   path = os.path.expanduser(path)
   filename = 'pima_te.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/Pima.te.csv'
+    url = 'http://dustintran.com/data/r/MASS/Pima.te.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='pima_te.csv',
                                resume=False)

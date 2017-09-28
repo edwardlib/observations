@@ -47,8 +47,7 @@ def houses(path):
   path = os.path.expanduser(path)
   filename = 'houses.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Houses.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Houses.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='houses.csv',
                                resume=False)

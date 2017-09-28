@@ -141,8 +141,7 @@ def plant_traits(path):
   path = os.path.expanduser(path)
   filename = 'plant_traits.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/cluster/plantTraits.csv'
+    url = 'http://dustintran.com/data/r/cluster/plantTraits.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='plant_traits.csv',
                                resume=False)

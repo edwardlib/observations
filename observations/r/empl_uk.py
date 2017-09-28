@@ -64,8 +64,7 @@ def empl_uk(path):
   path = os.path.expanduser(path)
   filename = 'empl_uk.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/plm/EmplUK.csv'
+    url = 'http://dustintran.com/data/r/plm/EmplUK.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='empl_uk.csv',
                                resume=False)

@@ -146,8 +146,7 @@ def river_elements(path):
   path = os.path.expanduser(path)
   filename = 'river_elements.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/RiverElements.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/RiverElements.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='river_elements.csv',
                                resume=False)

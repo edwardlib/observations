@@ -50,8 +50,7 @@ def logan(path):
   path = os.path.expanduser(path)
   filename = 'logan.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/logan.csv'
+    url = 'http://dustintran.com/data/r/survival/logan.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='logan.csv',
                                resume=False)

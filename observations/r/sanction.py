@@ -41,8 +41,7 @@ def sanction(path):
   path = os.path.expanduser(path)
   filename = 'sanction.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/sanction.csv'
+    url = 'http://dustintran.com/data/r/Zelig/sanction.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='sanction.csv',
                                resume=False)

@@ -59,8 +59,7 @@ def dietox(path):
   path = os.path.expanduser(path)
   filename = 'dietox.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/geepack/dietox.csv'
+    url = 'http://dustintran.com/data/r/geepack/dietox.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='dietox.csv',
                                resume=False)

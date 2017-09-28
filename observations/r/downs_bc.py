@@ -62,8 +62,7 @@ def downs_bc(path):
   path = os.path.expanduser(path)
   filename = 'downs_bc.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/downs.bc.csv'
+    url = 'http://dustintran.com/data/r/boot/downs.bc.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='downs_bc.csv',
                                resume=False)

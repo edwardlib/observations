@@ -41,8 +41,7 @@ def co2_1(path):
   path = os.path.expanduser(path)
   filename = 'co2_1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/co2.csv'
+    url = 'http://dustintran.com/data/r/datasets/co2.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='co2_1.csv',
                                resume=False)

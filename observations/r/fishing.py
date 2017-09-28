@@ -66,8 +66,7 @@ def fishing(path):
   path = os.path.expanduser(path)
   filename = 'fishing.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/COUNT/fishing.csv'
+    url = 'http://dustintran.com/data/r/COUNT/fishing.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='fishing.csv',
                                resume=False)

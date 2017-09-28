@@ -100,8 +100,7 @@ def german(path):
   path = os.path.expanduser(path)
   filename = 'german.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/gamclass/german.csv'
+    url = 'http://dustintran.com/data/r/gamclass/german.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='german.csv',
                                resume=False)

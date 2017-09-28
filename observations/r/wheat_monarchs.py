@@ -80,8 +80,7 @@ def wheat_monarchs(path):
   path = os.path.expanduser(path)
   filename = 'wheat_monarchs.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Wheat.monarchs.csv'
+    url = 'http://dustintran.com/data/r/HistData/Wheat.monarchs.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='wheat_monarchs.csv',
                                resume=False)

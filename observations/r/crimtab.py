@@ -44,8 +44,7 @@ def crimtab(path):
   path = os.path.expanduser(path)
   filename = 'crimtab.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/crimtab.csv'
+    url = 'http://dustintran.com/data/r/datasets/crimtab.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='crimtab.csv',
                                resume=False)

@@ -56,8 +56,7 @@ def stars_cyg(path):
   path = os.path.expanduser(path)
   filename = 'stars_cyg.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/starsCYG.csv'
+    url = 'http://dustintran.com/data/r/robustbase/starsCYG.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='stars_cyg.csv',
                                resume=False)

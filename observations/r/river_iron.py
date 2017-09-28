@@ -54,8 +54,7 @@ def river_iron(path):
   path = os.path.expanduser(path)
   filename = 'river_iron.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/RiverIron.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/RiverIron.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='river_iron.csv',
                                resume=False)

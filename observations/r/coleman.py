@@ -67,8 +67,7 @@ def coleman(path):
   path = os.path.expanduser(path)
   filename = 'coleman.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/coleman.csv'
+    url = 'http://dustintran.com/data/r/robustbase/coleman.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='coleman.csv',
                                resume=False)

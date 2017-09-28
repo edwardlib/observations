@@ -101,8 +101,7 @@ def mroz1(path):
   path = os.path.expanduser(path)
   filename = 'mroz1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Mroz.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Mroz.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='mroz1.csv',
                                resume=False)

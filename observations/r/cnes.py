@@ -60,8 +60,7 @@ def cnes(path):
   path = os.path.expanduser(path)
   filename = 'cnes.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/sem/CNES.csv'
+    url = 'http://dustintran.com/data/r/sem/CNES.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cnes.csv',
                                resume=False)

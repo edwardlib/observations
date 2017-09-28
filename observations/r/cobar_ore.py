@@ -48,8 +48,7 @@ def cobar_ore(path):
   path = os.path.expanduser(path)
   filename = 'cobar_ore.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/quantreg/CobarOre.csv'
+    url = 'http://dustintran.com/data/r/quantreg/CobarOre.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cobar_ore.csv',
                                resume=False)

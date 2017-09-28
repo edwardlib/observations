@@ -39,8 +39,7 @@ def siemens(path):
   path = os.path.expanduser(path)
   filename = 'siemens.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/evir/siemens.csv'
+    url = 'http://dustintran.com/data/r/evir/siemens.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='siemens.csv',
                                resume=False)

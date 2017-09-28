@@ -47,8 +47,7 @@ def sunspots(path):
   path = os.path.expanduser(path)
   filename = 'sunspots.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/sunspots.csv'
+    url = 'http://dustintran.com/data/r/datasets/sunspots.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='sunspots.csv',
                                resume=False)

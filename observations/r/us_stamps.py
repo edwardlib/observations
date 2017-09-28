@@ -43,8 +43,7 @@ def us_stamps(path):
   path = os.path.expanduser(path)
   filename = 'us_stamps.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/USstamps.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/USstamps.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='us_stamps.csv',
                                resume=False)

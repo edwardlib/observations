@@ -86,8 +86,7 @@ def doctor_contacts(path):
   path = os.path.expanduser(path)
   filename = 'doctor_contacts.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/DoctorContacts.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/DoctorContacts.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='doctor_contacts.csv',
                                resume=False)

@@ -47,8 +47,7 @@ def skye(path):
   path = os.path.expanduser(path)
   filename = 'skye.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/Skye.csv'
+    url = 'http://dustintran.com/data/r/MASS/Skye.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='skye.csv',
                                resume=False)

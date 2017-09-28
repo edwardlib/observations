@@ -49,8 +49,7 @@ def portpirie(path):
   path = os.path.expanduser(path)
   filename = 'portpirie.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/texmex/portpirie.csv'
+    url = 'http://dustintran.com/data/r/texmex/portpirie.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='portpirie.csv',
                                resume=False)

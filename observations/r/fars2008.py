@@ -109,8 +109,7 @@ def fars2008(path):
   path = os.path.expanduser(path)
   filename = 'fars2008.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/gamclass/fars2008.csv'
+    url = 'http://dustintran.com/data/r/gamclass/fars2008.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='fars2008.csv',
                                resume=False)

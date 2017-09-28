@@ -41,8 +41,7 @@ def measles(path):
   path = os.path.expanduser(path)
   filename = 'measles.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/measles.csv'
+    url = 'http://dustintran.com/data/r/DAAG/measles.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='measles.csv',
                                resume=False)

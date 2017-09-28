@@ -37,8 +37,7 @@ def french_fries(path):
   path = os.path.expanduser(path)
   filename = 'french_fries.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/reshape2/french_fries.csv'
+    url = 'http://dustintran.com/data/r/reshape2/french_fries.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='french_fries.csv',
                                resume=False)

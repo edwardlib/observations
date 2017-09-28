@@ -48,8 +48,7 @@ def delivery(path):
   path = os.path.expanduser(path)
   filename = 'delivery.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/delivery.csv'
+    url = 'http://dustintran.com/data/r/robustbase/delivery.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='delivery.csv',
                                resume=False)

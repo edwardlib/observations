@@ -50,8 +50,7 @@ def progression(path):
   path = os.path.expanduser(path)
   filename = 'progression.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/progression.csv'
+    url = 'http://dustintran.com/data/r/DAAG/progression.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='progression.csv',
                                resume=False)

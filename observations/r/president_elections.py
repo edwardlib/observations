@@ -46,8 +46,7 @@ def president_elections(path):
   path = os.path.expanduser(path)
   filename = 'president_elections.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/pscl/presidentialElections.csv'
+    url = 'http://dustintran.com/data/r/pscl/presidentialElections.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='president_elections.csv',
                                resume=False)

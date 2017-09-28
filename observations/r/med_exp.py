@@ -88,8 +88,7 @@ def med_exp(path):
   path = os.path.expanduser(path)
   filename = 'med_exp.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/MedExp.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/MedExp.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='med_exp.csv',
                                resume=False)

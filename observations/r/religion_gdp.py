@@ -72,8 +72,7 @@ def religion_gdp(path):
   path = os.path.expanduser(path)
   filename = 'religion_gdp.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/ReligionGDP.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/ReligionGDP.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='religion_gdp.csv',
                                resume=False)

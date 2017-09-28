@@ -76,8 +76,7 @@ def budget_uk(path):
   path = os.path.expanduser(path)
   filename = 'budget_uk.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/BudgetUK.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/BudgetUK.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='budget_uk.csv',
                                resume=False)

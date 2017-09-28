@@ -50,8 +50,7 @@ def job_satisfaction(path):
   path = os.path.expanduser(path)
   filename = 'job_satisfaction.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/JobSatisfaction.csv'
+    url = 'http://dustintran.com/data/r/vcd/JobSatisfaction.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='job_satisfaction.csv',
                                resume=False)

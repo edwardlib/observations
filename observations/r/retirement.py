@@ -43,8 +43,7 @@ def retirement(path):
   path = os.path.expanduser(path)
   filename = 'retirement.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Retirement.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Retirement.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='retirement.csv',
                                resume=False)

@@ -73,8 +73,7 @@ def within_between(path):
   path = os.path.expanduser(path)
   filename = 'within_between.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/withinBetween.csv'
+    url = 'http://dustintran.com/data/r/psych/withinBetween.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='within_between.csv',
                                resume=False)

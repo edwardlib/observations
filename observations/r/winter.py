@@ -58,8 +58,7 @@ def winter(path):
   path = os.path.expanduser(path)
   filename = 'winter.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/texmex/winter.csv'
+    url = 'http://dustintran.com/data/r/texmex/winter.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='winter.csv',
                                resume=False)

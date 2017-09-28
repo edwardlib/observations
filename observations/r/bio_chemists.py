@@ -51,8 +51,7 @@ def bio_chemists(path):
   path = os.path.expanduser(path)
   filename = 'bio_chemists.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/pscl/bioChemists.csv'
+    url = 'http://dustintran.com/data/r/pscl/bioChemists.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bio_chemists.csv',
                                resume=False)

@@ -51,8 +51,7 @@ def quakes(path):
   path = os.path.expanduser(path)
   filename = 'quakes.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/quakes.csv'
+    url = 'http://dustintran.com/data/r/datasets/quakes.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='quakes.csv',
                                resume=False)

@@ -99,8 +99,7 @@ def benefits(path):
   path = os.path.expanduser(path)
   filename = 'benefits.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Benefits.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Benefits.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='benefits.csv',
                                resume=False)

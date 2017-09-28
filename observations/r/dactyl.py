@@ -56,8 +56,7 @@ def dactyl(path):
   path = os.path.expanduser(path)
   filename = 'dactyl.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Dactyl.csv'
+    url = 'http://dustintran.com/data/r/HistData/Dactyl.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='dactyl.csv',
                                resume=False)

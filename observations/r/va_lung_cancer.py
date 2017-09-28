@@ -61,8 +61,7 @@ def va_lung_cancer(path):
   path = os.path.expanduser(path)
   filename = 'va_lung_cancer.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/VA.csv'
+    url = 'http://dustintran.com/data/r/MASS/VA.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='va_lung_cancer.csv',
                                resume=False)

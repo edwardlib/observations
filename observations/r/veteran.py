@@ -67,8 +67,7 @@ def veteran(path):
   path = os.path.expanduser(path)
   filename = 'veteran.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/veteran.csv'
+    url = 'http://dustintran.com/data/r/survival/veteran.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='veteran.csv',
                                resume=False)

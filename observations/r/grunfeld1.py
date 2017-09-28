@@ -65,8 +65,7 @@ http://bcs.wiley.com/he-bcs/Books?action=resource&bcsId=4338&itemId=111867232
   path = os.path.expanduser(path)
   filename = 'grunfeld1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/plm/Grunfeld.csv'
+    url = 'http://dustintran.com/data/r/plm/Grunfeld.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='grunfeld1.csv',
                                resume=False)

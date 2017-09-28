@@ -43,8 +43,7 @@ def public_schools(path):
   path = os.path.expanduser(path)
   filename = 'public_schools.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/sandwich/PublicSchools.csv'
+    url = 'http://dustintran.com/data/r/sandwich/PublicSchools.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='public_schools.csv',
                                resume=False)

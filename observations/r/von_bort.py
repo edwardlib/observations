@@ -52,8 +52,7 @@ def von_bort(path):
   path = os.path.expanduser(path)
   filename = 'von_bort.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/VonBort.csv'
+    url = 'http://dustintran.com/data/r/vcd/VonBort.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='von_bort.csv',
                                resume=False)

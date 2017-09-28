@@ -80,8 +80,7 @@ def esoph(path):
   path = os.path.expanduser(path)
   filename = 'esoph.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/esoph.csv'
+    url = 'http://dustintran.com/data/r/datasets/esoph.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='esoph.csv',
                                resume=False)

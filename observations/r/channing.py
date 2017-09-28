@@ -70,8 +70,7 @@ def channing(path):
   path = os.path.expanduser(path)
   filename = 'channing.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/channing.csv'
+    url = 'http://dustintran.com/data/r/boot/channing.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='channing.csv',
                                resume=False)

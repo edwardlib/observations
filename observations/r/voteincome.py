@@ -68,8 +68,7 @@ def voteincome(path):
   path = os.path.expanduser(path)
   filename = 'voteincome.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/voteincome.csv'
+    url = 'http://dustintran.com/data/r/Zelig/voteincome.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='voteincome.csv',
                                resume=False)

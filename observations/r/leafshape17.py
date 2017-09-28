@@ -64,8 +64,7 @@ def leafshape17(path):
   path = os.path.expanduser(path)
   filename = 'leafshape17.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/leafshape17.csv'
+    url = 'http://dustintran.com/data/r/DAAG/leafshape17.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='leafshape17.csv',
                                resume=False)

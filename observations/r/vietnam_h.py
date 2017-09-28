@@ -75,8 +75,7 @@ def vietnam_h(path):
   path = os.path.expanduser(path)
   filename = 'vietnam_h.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/VietNamH.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/VietNamH.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='vietnam_h.csv',
                                resume=False)

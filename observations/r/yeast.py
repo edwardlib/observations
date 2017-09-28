@@ -67,8 +67,7 @@ def yeast(path):
   path = os.path.expanduser(path)
   filename = 'yeast.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Yeast.csv'
+    url = 'http://dustintran.com/data/r/HistData/Yeast.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='yeast.csv',
                                resume=False)

@@ -39,8 +39,7 @@ def bmw(path):
   path = os.path.expanduser(path)
   filename = 'bmw.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/evir/bmw.csv'
+    url = 'http://dustintran.com/data/r/evir/bmw.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bmw.csv',
                                resume=False)

@@ -48,8 +48,7 @@ def porsche_price(path):
   path = os.path.expanduser(path)
   filename = 'porsche_price.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/PorschePrice.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/PorschePrice.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='porsche_price.csv',
                                resume=False)

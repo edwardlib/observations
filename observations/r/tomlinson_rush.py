@@ -53,8 +53,7 @@ def tomlinson_rush(path):
   path = os.path.expanduser(path)
   filename = 'tomlinson_rush.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/TomlinsonRush.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/TomlinsonRush.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='tomlinson_rush.csv',
                                resume=False)

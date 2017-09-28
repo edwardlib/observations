@@ -49,8 +49,7 @@ def aircondit7(path):
   path = os.path.expanduser(path)
   filename = 'aircondit7.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/aircondit7.csv'
+    url = 'http://dustintran.com/data/r/boot/aircondit7.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='aircondit7.csv',
                                resume=False)

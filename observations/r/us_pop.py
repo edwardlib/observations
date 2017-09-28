@@ -45,8 +45,7 @@ def us_pop(path):
   path = os.path.expanduser(path)
   filename = 'us_pop.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/USPop.csv'
+    url = 'http://dustintran.com/data/r/car/USPop.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='us_pop.csv',
                                resume=False)

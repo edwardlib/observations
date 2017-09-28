@@ -54,8 +54,7 @@ def cane(path):
   path = os.path.expanduser(path)
   filename = 'cane.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/cane.csv'
+    url = 'http://dustintran.com/data/r/boot/cane.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cane.csv',
                                resume=False)

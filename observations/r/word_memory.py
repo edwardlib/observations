@@ -52,8 +52,7 @@ def word_memory(path):
   path = os.path.expanduser(path)
   filename = 'word_memory.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/WordMemory.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/WordMemory.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='word_memory.csv',
                                resume=False)

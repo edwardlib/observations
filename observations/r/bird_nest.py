@@ -86,8 +86,7 @@ def bird_nest(path):
   path = os.path.expanduser(path)
   filename = 'bird_nest.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/BirdNest.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/BirdNest.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bird_nest.csv',
                                resume=False)

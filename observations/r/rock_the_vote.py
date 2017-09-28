@@ -54,8 +54,7 @@ def rock_the_vote(path):
   path = os.path.expanduser(path)
   filename = 'rock_the_vote.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/pscl/RockTheVote.csv'
+    url = 'http://dustintran.com/data/r/pscl/RockTheVote.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rock_the_vote.csv',
                                resume=False)

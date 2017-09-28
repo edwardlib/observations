@@ -57,8 +57,7 @@ def farms(path):
   path = os.path.expanduser(path)
   filename = 'farms.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/farms.csv'
+    url = 'http://dustintran.com/data/r/MASS/farms.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='farms.csv',
                                resume=False)

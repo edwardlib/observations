@@ -46,8 +46,7 @@ def mandel(path):
   path = os.path.expanduser(path)
   filename = 'mandel.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Mandel.csv'
+    url = 'http://dustintran.com/data/r/car/Mandel.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='mandel.csv',
                                resume=False)

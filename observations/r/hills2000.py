@@ -50,8 +50,7 @@ def hills2000(path):
   path = os.path.expanduser(path)
   filename = 'hills2000.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/hills2000.csv'
+    url = 'http://dustintran.com/data/r/DAAG/hills2000.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='hills2000.csv',
                                resume=False)

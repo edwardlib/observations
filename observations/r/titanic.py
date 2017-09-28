@@ -61,8 +61,7 @@ def titanic(path):
   path = os.path.expanduser(path)
   filename = 'titanic.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/Titanic.csv'
+    url = 'http://dustintran.com/data/r/datasets/Titanic.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='titanic.csv',
                                resume=False)

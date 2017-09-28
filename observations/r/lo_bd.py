@@ -77,8 +77,7 @@ def lo_bd(path):
   path = os.path.expanduser(path)
   filename = 'lo_bd.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/LoBD.csv'
+    url = 'http://dustintran.com/data/r/car/LoBD.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='lo_bd.csv',
                                resume=False)

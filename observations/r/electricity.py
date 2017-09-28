@@ -68,8 +68,7 @@ def electricity(path):
   path = os.path.expanduser(path)
   filename = 'electricity.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Electricity.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Electricity.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='electricity.csv',
                                resume=False)

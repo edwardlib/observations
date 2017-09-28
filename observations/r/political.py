@@ -76,8 +76,7 @@ def political(path):
   path = os.path.expanduser(path)
   filename = 'political.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Political.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Political.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='political.csv',
                                resume=False)

@@ -71,8 +71,7 @@ def kidney(path):
   path = os.path.expanduser(path)
   filename = 'kidney.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/kidney.csv'
+    url = 'http://dustintran.com/data/r/survival/kidney.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='kidney.csv',
                                resume=False)

@@ -46,8 +46,7 @@ def topo(path):
   path = os.path.expanduser(path)
   filename = 'topo.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/topo.csv'
+    url = 'http://dustintran.com/data/r/MASS/topo.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='topo.csv',
                                resume=False)

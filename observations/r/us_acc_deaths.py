@@ -36,8 +36,7 @@ def us_acc_deaths(path):
   path = os.path.expanduser(path)
   filename = 'us_acc_deaths.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/USAccDeaths.csv'
+    url = 'http://dustintran.com/data/r/datasets/USAccDeaths.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='us_acc_deaths.csv',
                                resume=False)

@@ -68,8 +68,7 @@ def uk_driver_deaths(path):
   path = os.path.expanduser(path)
   filename = 'uk_driver_deaths.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/UKDriverDeaths.csv'
+    url = 'http://dustintran.com/data/r/datasets/UKDriverDeaths.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='uk_driver_deaths.csv',
                                resume=False)

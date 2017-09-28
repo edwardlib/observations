@@ -65,8 +65,7 @@ def azprocedure(path):
   path = os.path.expanduser(path)
   filename = 'azprocedure.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/COUNT/azprocedure.csv'
+    url = 'http://dustintran.com/data/r/COUNT/azprocedure.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='azprocedure.csv',
                                resume=False)

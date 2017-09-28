@@ -47,8 +47,7 @@ def rubber(path):
   path = os.path.expanduser(path)
   filename = 'rubber.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/Rubber.csv'
+    url = 'http://dustintran.com/data/r/MASS/Rubber.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rubber.csv',
                                resume=False)

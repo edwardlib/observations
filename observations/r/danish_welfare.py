@@ -57,8 +57,7 @@ def danish_welfare(path):
   path = os.path.expanduser(path)
   filename = 'danish_welfare.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/DanishWelfare.csv'
+    url = 'http://dustintran.com/data/r/vcd/DanishWelfare.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='danish_welfare.csv',
                                resume=False)

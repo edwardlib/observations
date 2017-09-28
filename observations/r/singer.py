@@ -53,8 +53,7 @@ def singer(path):
   path = os.path.expanduser(path)
   filename = 'singer.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/lattice/singer.csv'
+    url = 'http://dustintran.com/data/r/lattice/singer.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='singer.csv',
                                resume=False)

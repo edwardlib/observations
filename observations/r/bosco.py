@@ -44,8 +44,7 @@ def bosco(path):
   path = os.path.expanduser(path)
   filename = 'bosco.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/quantreg/Bosco.csv'
+    url = 'http://dustintran.com/data/r/quantreg/Bosco.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bosco.csv',
                                resume=False)

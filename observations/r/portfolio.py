@@ -46,8 +46,7 @@ def portfolio(path):
   path = os.path.expanduser(path)
   filename = 'portfolio.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/ISLR/Portfolio.csv'
+    url = 'http://dustintran.com/data/r/ISLR/Portfolio.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='portfolio.csv',
                                resume=False)

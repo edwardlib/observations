@@ -60,8 +60,7 @@ def diamonds2(path):
   path = os.path.expanduser(path)
   filename = 'diamonds2.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Diamonds2.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Diamonds2.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='diamonds2.csv',
                                resume=False)

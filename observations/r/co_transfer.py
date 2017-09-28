@@ -49,8 +49,7 @@ def co_transfer(path):
   path = os.path.expanduser(path)
   filename = 'co_transfer.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/co.transfer.csv'
+    url = 'http://dustintran.com/data/r/boot/co.transfer.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='co_transfer.csv',
                                resume=False)

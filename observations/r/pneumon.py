@@ -83,8 +83,7 @@ def pneumon(path):
   path = os.path.expanduser(path)
   filename = 'pneumon.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/KMsurv/pneumon.csv'
+    url = 'http://dustintran.com/data/r/KMsurv/pneumon.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='pneumon.csv',
                                resume=False)

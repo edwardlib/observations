@@ -38,8 +38,7 @@ def www_usage(path):
   path = os.path.expanduser(path)
   filename = 'www_usage.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/WWWusage.csv'
+    url = 'http://dustintran.com/data/r/datasets/WWWusage.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='www_usage.csv',
                                resume=False)

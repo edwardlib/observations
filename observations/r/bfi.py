@@ -155,8 +155,7 @@ def bfi(path):
   path = os.path.expanduser(path)
   filename = 'bfi.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/bfi.csv'
+    url = 'http://dustintran.com/data/r/psych/bfi.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bfi.csv',
                                resume=False)

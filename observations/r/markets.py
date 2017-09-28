@@ -59,8 +59,7 @@ http://markets.cbsnews.com/cbsnews/quote/historical?Month=11&Symbol=310%3A998
   path = os.path.expanduser(path)
   filename = 'markets.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Markets.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Markets.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='markets.csv',
                                resume=False)

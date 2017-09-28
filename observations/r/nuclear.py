@@ -88,8 +88,7 @@ def nuclear(path):
   path = os.path.expanduser(path)
   filename = 'nuclear.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/nuclear.csv'
+    url = 'http://dustintran.com/data/r/boot/nuclear.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nuclear.csv',
                                resume=False)

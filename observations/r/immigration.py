@@ -41,8 +41,7 @@ def immigration(path):
   path = os.path.expanduser(path)
   filename = 'immigration.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/immigration.csv'
+    url = 'http://dustintran.com/data/r/Zelig/immigration.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='immigration.csv',
                                resume=False)

@@ -45,8 +45,7 @@ def volcano(path):
   path = os.path.expanduser(path)
   filename = 'volcano.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/volcano.csv'
+    url = 'http://dustintran.com/data/r/datasets/volcano.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='volcano.csv',
                                resume=False)

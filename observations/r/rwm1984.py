@@ -81,8 +81,7 @@ def rwm1984(path):
   path = os.path.expanduser(path)
   filename = 'rwm1984.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/COUNT/rwm1984.csv'
+    url = 'http://dustintran.com/data/r/COUNT/rwm1984.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rwm1984.csv',
                                resume=False)

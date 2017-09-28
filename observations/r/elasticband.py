@@ -44,8 +44,7 @@ def elasticband(path):
   path = os.path.expanduser(path)
   filename = 'elasticband.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/elasticband.csv'
+    url = 'http://dustintran.com/data/r/DAAG/elasticband.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='elasticband.csv',
                                resume=False)

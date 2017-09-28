@@ -53,8 +53,7 @@ def faithful(path):
   path = os.path.expanduser(path)
   filename = 'faithful.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/faithful.csv'
+    url = 'http://dustintran.com/data/r/datasets/faithful.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='faithful.csv',
                                resume=False)

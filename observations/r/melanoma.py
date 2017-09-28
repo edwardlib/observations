@@ -46,8 +46,7 @@ def melanoma(path):
   path = os.path.expanduser(path)
   filename = 'melanoma.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/lattice/melanoma.csv'
+    url = 'http://dustintran.com/data/r/lattice/melanoma.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='melanoma.csv',
                                resume=False)

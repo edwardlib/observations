@@ -67,8 +67,7 @@ def austpop(path):
   path = os.path.expanduser(path)
   filename = 'austpop.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/austpop.csv'
+    url = 'http://dustintran.com/data/r/DAAG/austpop.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='austpop.csv',
                                resume=False)

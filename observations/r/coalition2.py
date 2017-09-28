@@ -43,8 +43,7 @@ def coalition2(path):
   path = os.path.expanduser(path)
   filename = 'coalition2.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/coalition2.csv'
+    url = 'http://dustintran.com/data/r/Zelig/coalition2.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='coalition2.csv',
                                resume=False)

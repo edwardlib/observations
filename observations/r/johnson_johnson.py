@@ -37,8 +37,7 @@ def johnson_johnson(path):
   path = os.path.expanduser(path)
   filename = 'johnson_johnson.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/JohnsonJohnson.csv'
+    url = 'http://dustintran.com/data/r/datasets/JohnsonJohnson.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='johnson_johnson.csv',
                                resume=False)

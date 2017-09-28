@@ -129,8 +129,7 @@ def snow_pumps(path):
   path = os.path.expanduser(path)
   filename = 'snow_pumps.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Snow.pumps.csv'
+    url = 'http://dustintran.com/data/r/HistData/Snow.pumps.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='snow_pumps.csv',
                                resume=False)

@@ -50,8 +50,7 @@ def possumsites(path):
   path = os.path.expanduser(path)
   filename = 'possumsites.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/possumsites.csv'
+    url = 'http://dustintran.com/data/r/DAAG/possumsites.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='possumsites.csv',
                                resume=False)

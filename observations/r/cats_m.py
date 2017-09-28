@@ -54,8 +54,7 @@ def cats_m(path):
   path = os.path.expanduser(path)
   filename = 'cats_m.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/catsM.csv'
+    url = 'http://dustintran.com/data/r/boot/catsM.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cats_m.csv',
                                resume=False)

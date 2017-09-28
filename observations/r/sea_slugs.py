@@ -45,8 +45,7 @@ def sea_slugs(path):
   path = os.path.expanduser(path)
   filename = 'sea_slugs.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/SeaSlugs.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/SeaSlugs.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='sea_slugs.csv',
                                resume=False)

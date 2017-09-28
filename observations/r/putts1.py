@@ -43,8 +43,7 @@ def putts1(path):
   path = os.path.expanduser(path)
   filename = 'putts1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Putts1.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Putts1.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='putts1.csv',
                                resume=False)

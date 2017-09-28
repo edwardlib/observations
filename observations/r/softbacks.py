@@ -43,8 +43,7 @@ def softbacks(path):
   path = os.path.expanduser(path)
   filename = 'softbacks.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/softbacks.csv'
+    url = 'http://dustintran.com/data/r/DAAG/softbacks.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='softbacks.csv',
                                resume=False)

@@ -92,8 +92,7 @@ def cushny_peebles_n(path):
   path = os.path.expanduser(path)
   filename = 'cushny_peebles_n.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/CushnyPeeblesN.csv'
+    url = 'http://dustintran.com/data/r/HistData/CushnyPeeblesN.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cushny_peebles_n.csv',
                                resume=False)

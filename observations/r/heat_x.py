@@ -55,8 +55,7 @@ def heat_x(path):
   path = os.path.expanduser(path)
   filename = 'heat_x.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mosaicData/HeatX.csv'
+    url = 'http://dustintran.com/data/r/mosaicData/HeatX.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='heat_x.csv',
                                resume=False)

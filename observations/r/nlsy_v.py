@@ -71,8 +71,7 @@ def nlsy_v(path):
   path = os.path.expanduser(path)
   filename = 'nlsy_v.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mi/nlsyV.csv'
+    url = 'http://dustintran.com/data/r/mi/nlsyV.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nlsy_v.csv',
                                resume=False)

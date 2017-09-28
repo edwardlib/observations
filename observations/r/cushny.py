@@ -47,8 +47,7 @@ def cushny(path):
   path = os.path.expanduser(path)
   filename = 'cushny.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/cushny.csv'
+    url = 'http://dustintran.com/data/r/robustbase/cushny.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cushny.csv',
                                resume=False)

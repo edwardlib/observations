@@ -55,8 +55,7 @@ def joint_sports(path):
   path = os.path.expanduser(path)
   filename = 'joint_sports.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/JointSports.csv'
+    url = 'http://dustintran.com/data/r/vcd/JointSports.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='joint_sports.csv',
                                resume=False)

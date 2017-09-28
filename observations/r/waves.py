@@ -44,8 +44,7 @@ def waves(path):
   path = os.path.expanduser(path)
   filename = 'waves.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/waves.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/waves.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='waves.csv',
                                resume=False)

@@ -63,8 +63,7 @@ def respiratory(path):
   path = os.path.expanduser(path)
   filename = 'respiratory.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/respiratory.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/respiratory.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='respiratory.csv',
                                resume=False)

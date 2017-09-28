@@ -57,8 +57,7 @@ def airmay(path):
   path = os.path.expanduser(path)
   filename = 'airmay.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/airmay.csv'
+    url = 'http://dustintran.com/data/r/robustbase/airmay.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='airmay.csv',
                                resume=False)

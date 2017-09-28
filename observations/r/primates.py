@@ -46,8 +46,7 @@ def primates(path):
   path = os.path.expanduser(path)
   filename = 'primates.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/primates.csv'
+    url = 'http://dustintran.com/data/r/DAAG/primates.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='primates.csv',
                                resume=False)

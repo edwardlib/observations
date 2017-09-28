@@ -76,8 +76,7 @@ def lung(path):
   path = os.path.expanduser(path)
   filename = 'lung.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/lung.csv'
+    url = 'http://dustintran.com/data/r/survival/lung.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='lung.csv',
                                resume=False)

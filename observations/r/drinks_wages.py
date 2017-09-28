@@ -79,8 +79,7 @@ def drinks_wages(path):
   path = os.path.expanduser(path)
   filename = 'drinks_wages.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/DrinksWages.csv'
+    url = 'http://dustintran.com/data/r/HistData/DrinksWages.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='drinks_wages.csv',
                                resume=False)

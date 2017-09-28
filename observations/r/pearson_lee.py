@@ -71,8 +71,7 @@ def pearson_lee(path):
   path = os.path.expanduser(path)
   filename = 'pearson_lee.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/PearsonLee.csv'
+    url = 'http://dustintran.com/data/r/HistData/PearsonLee.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='pearson_lee.csv',
                                resume=False)

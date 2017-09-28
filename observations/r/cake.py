@@ -57,8 +57,7 @@ def cake(path):
   path = os.path.expanduser(path)
   filename = 'cake.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/lme4/cake.csv'
+    url = 'http://dustintran.com/data/r/lme4/cake.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cake.csv',
                                resume=False)

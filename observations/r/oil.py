@@ -87,8 +87,7 @@ def oil(path):
   path = os.path.expanduser(path)
   filename = 'oil.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Oil.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Oil.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='oil.csv',
                                resume=False)

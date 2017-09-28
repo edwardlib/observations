@@ -45,8 +45,7 @@ def mignonette(path):
   path = os.path.expanduser(path)
   filename = 'mignonette.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/mignonette.csv'
+    url = 'http://dustintran.com/data/r/DAAG/mignonette.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='mignonette.csv',
                                resume=False)

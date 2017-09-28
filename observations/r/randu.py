@@ -39,8 +39,7 @@ def randu(path):
   path = os.path.expanduser(path)
   filename = 'randu.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/randu.csv'
+    url = 'http://dustintran.com/data/r/datasets/randu.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='randu.csv',
                                resume=False)

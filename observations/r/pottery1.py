@@ -65,8 +65,7 @@ def pottery1(path):
   path = os.path.expanduser(path)
   filename = 'pottery1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/pottery.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/pottery.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='pottery1.csv',
                                resume=False)

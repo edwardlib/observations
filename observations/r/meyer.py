@@ -51,8 +51,7 @@ def meyer(path):
   path = os.path.expanduser(path)
   filename = 'meyer.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/gap/meyer.csv'
+    url = 'http://dustintran.com/data/r/gap/meyer.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='meyer.csv',
                                resume=False)

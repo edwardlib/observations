@@ -62,8 +62,7 @@ def labor_supply(path):
   path = os.path.expanduser(path)
   filename = 'labor_supply.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/LaborSupply.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/LaborSupply.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='labor_supply.csv',
                                resume=False)

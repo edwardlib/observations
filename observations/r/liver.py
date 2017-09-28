@@ -64,8 +64,7 @@ def liver(path):
   path = os.path.expanduser(path)
   filename = 'liver.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/texmex/liver.csv'
+    url = 'http://dustintran.com/data/r/texmex/liver.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='liver.csv',
                                resume=False)

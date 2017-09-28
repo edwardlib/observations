@@ -48,8 +48,7 @@ def ohio(path):
   path = os.path.expanduser(path)
   filename = 'ohio.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/geepack/ohio.csv'
+    url = 'http://dustintran.com/data/r/geepack/ohio.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ohio.csv',
                                resume=False)

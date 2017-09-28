@@ -71,8 +71,7 @@ def arbuthnot(path):
   path = os.path.expanduser(path)
   filename = 'arbuthnot.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Arbuthnot.csv'
+    url = 'http://dustintran.com/data/r/HistData/Arbuthnot.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='arbuthnot.csv',
                                resume=False)

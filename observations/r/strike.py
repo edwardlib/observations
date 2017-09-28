@@ -47,8 +47,7 @@ def strike(path):
   path = os.path.expanduser(path)
   filename = 'strike.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Strike.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Strike.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='strike.csv',
                                resume=False)

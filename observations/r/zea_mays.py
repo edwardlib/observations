@@ -68,8 +68,7 @@ def zea_mays(path):
   path = os.path.expanduser(path)
   filename = 'zea_mays.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/ZeaMays.csv'
+    url = 'http://dustintran.com/data/r/HistData/ZeaMays.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='zea_mays.csv',
                                resume=False)

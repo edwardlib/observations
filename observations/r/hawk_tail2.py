@@ -47,8 +47,7 @@ def hawk_tail2(path):
   path = os.path.expanduser(path)
   filename = 'hawk_tail2.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/HawkTail2.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/HawkTail2.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='hawk_tail2.csv',
                                resume=False)

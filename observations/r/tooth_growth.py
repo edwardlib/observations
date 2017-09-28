@@ -48,8 +48,7 @@ def tooth_growth(path):
   path = os.path.expanduser(path)
   filename = 'tooth_growth.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/ToothGrowth.csv'
+    url = 'http://dustintran.com/data/r/datasets/ToothGrowth.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='tooth_growth.csv',
                                resume=False)

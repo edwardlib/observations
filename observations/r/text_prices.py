@@ -43,8 +43,7 @@ def text_prices(path):
   path = os.path.expanduser(path)
   filename = 'text_prices.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/TextPrices.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/TextPrices.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='text_prices.csv',
                                resume=False)

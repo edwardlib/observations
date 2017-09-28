@@ -58,8 +58,7 @@ def efron_morris(path):
   path = os.path.expanduser(path)
   filename = 'efron_morris.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/pscl/EfronMorris.csv'
+    url = 'http://dustintran.com/data/r/pscl/EfronMorris.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='efron_morris.csv',
                                resume=False)

@@ -41,8 +41,7 @@ def nep499(path):
   path = os.path.expanduser(path)
   filename = 'nep499.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/gap/nep499.csv'
+    url = 'http://dustintran.com/data/r/gap/nep499.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nep499.csv',
                                resume=False)

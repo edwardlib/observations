@@ -54,8 +54,7 @@ def accident(path):
   path = os.path.expanduser(path)
   filename = 'accident.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Accident.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Accident.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='accident.csv',
                                resume=False)

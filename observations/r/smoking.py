@@ -48,8 +48,7 @@ def smoking(path):
   path = os.path.expanduser(path)
   filename = 'smoking.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/COUNT/smoking.csv'
+    url = 'http://dustintran.com/data/r/COUNT/smoking.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='smoking.csv',
                                resume=False)

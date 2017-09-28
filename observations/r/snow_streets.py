@@ -129,8 +129,7 @@ def snow_streets(path):
   path = os.path.expanduser(path)
   filename = 'snow_streets.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/Snow.streets.csv'
+    url = 'http://dustintran.com/data/r/HistData/Snow.streets.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='snow_streets.csv',
                                resume=False)

@@ -43,8 +43,7 @@ def birthdeathrates(path):
   path = os.path.expanduser(path)
   filename = 'birthdeathrates.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/birthdeathrates.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/birthdeathrates.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='birthdeathrates.csv',
                                resume=False)

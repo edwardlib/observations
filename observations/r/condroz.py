@@ -45,8 +45,7 @@ def condroz(path):
   path = os.path.expanduser(path)
   filename = 'condroz.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/condroz.csv'
+    url = 'http://dustintran.com/data/r/robustbase/condroz.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='condroz.csv',
                                resume=False)

@@ -63,8 +63,7 @@ def youth_risk2009(path):
   path = os.path.expanduser(path)
   filename = 'youth_risk2009.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/YouthRisk2009.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/YouthRisk2009.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='youth_risk2009.csv',
                                resume=False)

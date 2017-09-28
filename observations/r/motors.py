@@ -55,8 +55,7 @@ def motors(path):
   path = os.path.expanduser(path)
   filename = 'motors.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/motors.csv'
+    url = 'http://dustintran.com/data/r/MASS/motors.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='motors.csv',
                                resume=False)

@@ -37,8 +37,7 @@ def mexico(path):
   path = os.path.expanduser(path)
   filename = 'mexico.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Zelig/mexico.csv'
+    url = 'http://dustintran.com/data/r/Zelig/mexico.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='mexico.csv',
                                resume=False)

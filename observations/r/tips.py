@@ -36,8 +36,7 @@ def tips(path):
   path = os.path.expanduser(path)
   filename = 'tips.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/reshape2/tips.csv'
+    url = 'http://dustintran.com/data/r/reshape2/tips.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='tips.csv',
                                resume=False)

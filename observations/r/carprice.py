@@ -63,8 +63,7 @@ def carprice(path):
   path = os.path.expanduser(path)
   filename = 'carprice.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/carprice.csv'
+    url = 'http://dustintran.com/data/r/DAAG/carprice.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='carprice.csv',
                                resume=False)

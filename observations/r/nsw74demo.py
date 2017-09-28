@@ -71,8 +71,7 @@ def nsw74demo(path):
   path = os.path.expanduser(path)
   filename = 'nsw74demo.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/nsw74demo.csv'
+    url = 'http://dustintran.com/data/r/DAAG/nsw74demo.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nsw74demo.csv',
                                resume=False)

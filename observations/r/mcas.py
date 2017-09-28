@@ -94,8 +94,7 @@ def mcas(path):
   path = os.path.expanduser(path)
   filename = 'mcas.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/MCAS.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/MCAS.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='mcas.csv',
                                resume=False)

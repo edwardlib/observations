@@ -64,8 +64,7 @@ def cu_summary(path):
   path = os.path.expanduser(path)
   filename = 'cu_summary.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/rpart/cu.summary.csv'
+    url = 'http://dustintran.com/data/r/rpart/cu.summary.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cu_summary.csv',
                                resume=False)

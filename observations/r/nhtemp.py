@@ -37,8 +37,7 @@ def nhtemp(path):
   path = os.path.expanduser(path)
   filename = 'nhtemp.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/nhtemp.csv'
+    url = 'http://dustintran.com/data/r/datasets/nhtemp.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='nhtemp.csv',
                                resume=False)

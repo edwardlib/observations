@@ -51,8 +51,7 @@ def synth_te(path):
   path = os.path.expanduser(path)
   filename = 'synth_te.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/synth.te.csv'
+    url = 'http://dustintran.com/data/r/MASS/synth.te.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='synth_te.csv',
                                resume=False)

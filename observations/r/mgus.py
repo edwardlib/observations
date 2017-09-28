@@ -105,8 +105,7 @@ def mgus(path):
   path = os.path.expanduser(path)
   filename = 'mgus.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/survival/mgus.csv'
+    url = 'http://dustintran.com/data/r/survival/mgus.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='mgus.csv',
                                resume=False)

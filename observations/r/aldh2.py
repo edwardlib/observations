@@ -59,8 +59,7 @@ def aldh2(path):
   path = os.path.expanduser(path)
   filename = 'aldh2.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/gap/aldh2.csv'
+    url = 'http://dustintran.com/data/r/gap/aldh2.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='aldh2.csv',
                                resume=False)

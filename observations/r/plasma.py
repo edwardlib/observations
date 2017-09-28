@@ -48,8 +48,7 @@ def plasma(path):
   path = os.path.expanduser(path)
   filename = 'plasma.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/plasma.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/plasma.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='plasma.csv',
                                resume=False)

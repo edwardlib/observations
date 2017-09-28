@@ -56,8 +56,7 @@ def whiteside(path):
   path = os.path.expanduser(path)
   filename = 'whiteside.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/whiteside.csv'
+    url = 'http://dustintran.com/data/r/MASS/whiteside.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='whiteside.csv',
                                resume=False)

@@ -56,8 +56,7 @@ def mendel_abc(path):
   path = os.path.expanduser(path)
   filename = 'mendel_abc.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/hwde/mendelABC.csv'
+    url = 'http://dustintran.com/data/r/hwde/mendelABC.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='mendel_abc.csv',
                                resume=False)

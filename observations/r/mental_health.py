@@ -49,8 +49,7 @@ def mental_health(path):
   path = os.path.expanduser(path)
   filename = 'mental_health.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/MentalHealth.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/MentalHealth.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='mental_health.csv',
                                resume=False)

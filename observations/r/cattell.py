@@ -44,8 +44,7 @@ def cattell(path):
   path = os.path.expanduser(path)
   filename = 'cattell.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/cattell.csv'
+    url = 'http://dustintran.com/data/r/psych/cattell.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cattell.csv',
                                resume=False)

@@ -71,8 +71,7 @@ def fantasy_baseball(path):
   path = os.path.expanduser(path)
   filename = 'fantasy_baseball.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/FantasyBaseball.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/FantasyBaseball.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='fantasy_baseball.csv',
                                resume=False)

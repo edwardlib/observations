@@ -113,8 +113,7 @@ def possum_div(path):
   path = os.path.expanduser(path)
   filename = 'possum_div.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/possumDiv.csv'
+    url = 'http://dustintran.com/data/r/robustbase/possumDiv.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='possum_div.csv',
                                resume=False)

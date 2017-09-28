@@ -83,8 +83,7 @@ https://www.cengage.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&product_
   path = os.path.expanduser(path)
   filename = 'athlet1.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/wooldridge/athlet1.csv'
+    url = 'http://dustintran.com/data/r/wooldridge/athlet1.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='athlet1.csv',
                                resume=False)

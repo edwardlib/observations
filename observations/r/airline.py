@@ -58,8 +58,7 @@ def airline(path):
   path = os.path.expanduser(path)
   filename = 'airline.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Airline.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Airline.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='airline.csv',
                                resume=False)

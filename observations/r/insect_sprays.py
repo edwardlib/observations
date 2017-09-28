@@ -44,8 +44,7 @@ def insect_sprays(path):
   path = os.path.expanduser(path)
   filename = 'insect_sprays.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/InsectSprays.csv'
+    url = 'http://dustintran.com/data/r/datasets/InsectSprays.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='insect_sprays.csv',
                                resume=False)

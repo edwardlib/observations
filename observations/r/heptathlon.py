@@ -61,8 +61,7 @@ def heptathlon(path):
   path = os.path.expanduser(path)
   filename = 'heptathlon.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/heptathlon.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/heptathlon.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='heptathlon.csv',
                                resume=False)

@@ -73,8 +73,7 @@ def backpack(path):
   path = os.path.expanduser(path)
   filename = 'backpack.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Backpack.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Backpack.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='backpack.csv',
                                resume=False)

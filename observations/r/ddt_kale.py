@@ -40,8 +40,7 @@ def ddt_kale(path):
   path = os.path.expanduser(path)
   filename = 'ddt_kale.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/DDT.csv'
+    url = 'http://dustintran.com/data/r/MASS/DDT.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='ddt_kale.csv',
                                resume=False)

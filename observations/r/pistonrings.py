@@ -38,8 +38,7 @@ def pistonrings(path):
   path = os.path.expanduser(path)
   filename = 'pistonrings.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/pistonrings.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/pistonrings.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='pistonrings.csv',
                                resume=False)

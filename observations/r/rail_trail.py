@@ -62,8 +62,7 @@ def rail_trail(path):
   path = os.path.expanduser(path)
   filename = 'rail_trail.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/mosaicData/RailTrail.csv'
+    url = 'http://dustintran.com/data/r/mosaicData/RailTrail.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rail_trail.csv',
                                resume=False)

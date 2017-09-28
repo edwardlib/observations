@@ -37,8 +37,7 @@ def l51(path):
   path = os.path.expanduser(path)
   filename = 'l51.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/gap/l51.csv'
+    url = 'http://dustintran.com/data/r/gap/l51.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='l51.csv',
                                resume=False)

@@ -55,8 +55,7 @@ def duncan(path):
   path = os.path.expanduser(path)
   filename = 'duncan.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Duncan.csv'
+    url = 'http://dustintran.com/data/r/car/Duncan.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='duncan.csv',
                                resume=False)

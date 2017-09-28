@@ -66,8 +66,7 @@ def smarket(path):
   path = os.path.expanduser(path)
   filename = 'smarket.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/ISLR/Smarket.csv'
+    url = 'http://dustintran.com/data/r/ISLR/Smarket.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='smarket.csv',
                                resume=False)

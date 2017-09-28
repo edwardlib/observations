@@ -45,8 +45,7 @@ def schmid(path):
   path = os.path.expanduser(path)
   filename = 'schmid.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/Schmid.csv'
+    url = 'http://dustintran.com/data/r/psych/Schmid.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='schmid.csv',
                                resume=False)

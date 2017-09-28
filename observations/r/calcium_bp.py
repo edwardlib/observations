@@ -44,8 +44,7 @@ def calcium_bp(path):
   path = os.path.expanduser(path)
   filename = 'calcium_bp.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/CalciumBP.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/CalciumBP.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='calcium_bp.csv',
                                resume=False)

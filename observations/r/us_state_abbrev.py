@@ -60,8 +60,7 @@ abbreviations" <http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations
   path = os.path.expanduser(path)
   filename = 'us_state_abbrev.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/USstateAbbreviations.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/USstateAbbreviations.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='us_state_abbrev.csv',
                                resume=False)

@@ -71,8 +71,7 @@ def galton_families(path):
   path = os.path.expanduser(path)
   filename = 'galton_families.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/GaltonFamilies.csv'
+    url = 'http://dustintran.com/data/r/HistData/GaltonFamilies.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='galton_families.csv',
                                resume=False)

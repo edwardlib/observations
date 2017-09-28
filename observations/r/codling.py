@@ -71,8 +71,7 @@ def codling(path):
   path = os.path.expanduser(path)
   filename = 'codling.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/codling.csv'
+    url = 'http://dustintran.com/data/r/DAAG/codling.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='codling.csv',
                                resume=False)

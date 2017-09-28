@@ -51,8 +51,7 @@ def orings(path):
   path = os.path.expanduser(path)
   filename = 'orings.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/orings.csv'
+    url = 'http://dustintran.com/data/r/DAAG/orings.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='orings.csv',
                                resume=False)

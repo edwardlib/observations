@@ -40,8 +40,7 @@ def shrimp(path):
   path = os.path.expanduser(path)
   filename = 'shrimp.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/shrimp.csv'
+    url = 'http://dustintran.com/data/r/MASS/shrimp.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='shrimp.csv',
                                resume=False)

@@ -39,8 +39,7 @@ def gorsuch(path):
   path = os.path.expanduser(path)
   filename = 'gorsuch.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/psych/Gorsuch.csv'
+    url = 'http://dustintran.com/data/r/psych/Gorsuch.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='gorsuch.csv',
                                resume=False)

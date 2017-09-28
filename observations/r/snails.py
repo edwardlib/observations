@@ -64,8 +64,7 @@ def snails(path):
   path = os.path.expanduser(path)
   filename = 'snails.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/MASS/snails.csv'
+    url = 'http://dustintran.com/data/r/MASS/snails.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='snails.csv',
                                resume=False)

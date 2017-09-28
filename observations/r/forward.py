@@ -65,8 +65,7 @@ def forward(path):
   path = os.path.expanduser(path)
   filename = 'forward.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Ecdat/Forward.csv'
+    url = 'http://dustintran.com/data/r/Ecdat/Forward.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='forward.csv',
                                resume=False)

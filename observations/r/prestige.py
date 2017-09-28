@@ -62,8 +62,7 @@ def prestige(path):
   path = os.path.expanduser(path)
   filename = 'prestige.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Prestige.csv'
+    url = 'http://dustintran.com/data/r/car/Prestige.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='prestige.csv',
                                resume=False)

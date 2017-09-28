@@ -125,8 +125,7 @@ https://www.cengage.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&product_
   path = os.path.expanduser(path)
   filename = 'wagepan.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/wooldridge/wagepan.csv'
+    url = 'http://dustintran.com/data/r/wooldridge/wagepan.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='wagepan.csv',
                                resume=False)

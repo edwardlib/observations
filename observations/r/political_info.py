@@ -65,8 +65,7 @@ def political_info(path):
   path = os.path.expanduser(path)
   filename = 'political_info.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/pscl/politicalInformation.csv'
+    url = 'http://dustintran.com/data/r/pscl/politicalInformation.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='political_info.csv',
                                resume=False)

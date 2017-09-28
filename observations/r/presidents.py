@@ -38,8 +38,7 @@ def presidents(path):
   path = os.path.expanduser(path)
   filename = 'presidents.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/presidents.csv'
+    url = 'http://dustintran.com/data/r/datasets/presidents.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='presidents.csv',
                                resume=False)

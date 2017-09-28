@@ -54,8 +54,7 @@ def womensrole(path):
   path = os.path.expanduser(path)
   filename = 'womensrole.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HSAUR/womensrole.csv'
+    url = 'http://dustintran.com/data/r/HSAUR/womensrole.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='womensrole.csv',
                                resume=False)

@@ -55,8 +55,7 @@ def cereal(path):
   path = os.path.expanduser(path)
   filename = 'cereal.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/Cereal.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/Cereal.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cereal.csv',
                                resume=False)

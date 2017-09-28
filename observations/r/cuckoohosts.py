@@ -76,8 +76,7 @@ def cuckoohosts(path):
   path = os.path.expanduser(path)
   filename = 'cuckoohosts.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/cuckoohosts.csv'
+    url = 'http://dustintran.com/data/r/DAAG/cuckoohosts.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='cuckoohosts.csv',
                                resume=False)

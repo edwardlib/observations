@@ -38,7 +38,6 @@
 __pycache__/
 *.py[cod]
 
-*.csv
 
 # C extensions
 *.so
@@ -100,3 +99,6 @@ docs/*.html
 # IDE related
 .idea/
 .vscode/
+
+# Observations related
+tmp/

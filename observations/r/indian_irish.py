@@ -50,8 +50,7 @@ def indian_irish(path):
   path = os.path.expanduser(path)
   filename = 'indian_irish.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/hwde/IndianIrish.csv'
+    url = 'http://dustintran.com/data/r/hwde/IndianIrish.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='indian_irish.csv',
                                resume=False)

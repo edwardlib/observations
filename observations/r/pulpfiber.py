@@ -64,8 +64,7 @@ def pulpfiber(path):
   path = os.path.expanduser(path)
   filename = 'pulpfiber.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/robustbase/pulpfiber.csv'
+    url = 'http://dustintran.com/data/r/robustbase/pulpfiber.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='pulpfiber.csv',
                                resume=False)

@@ -44,8 +44,7 @@ def chor_sub(path):
   path = os.path.expanduser(path)
   filename = 'chor_sub.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/cluster/chorSub.csv'
+    url = 'http://dustintran.com/data/r/cluster/chorSub.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='chor_sub.csv',
                                resume=False)

@@ -69,8 +69,7 @@ def psid2(path):
   path = os.path.expanduser(path)
   filename = 'psid2.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/psid2.csv'
+    url = 'http://dustintran.com/data/r/DAAG/psid2.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='psid2.csv',
                                resume=False)

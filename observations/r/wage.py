@@ -85,8 +85,7 @@ def wage(path):
   path = os.path.expanduser(path)
   filename = 'wage.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/ISLR/Wage.csv'
+    url = 'http://dustintran.com/data/r/ISLR/Wage.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='wage.csv',
                                resume=False)

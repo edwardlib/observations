@@ -37,8 +37,7 @@ def airmiles(path):
   path = os.path.expanduser(path)
   filename = 'airmiles.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/datasets/airmiles.csv'
+    url = 'http://dustintran.com/data/r/datasets/airmiles.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='airmiles.csv',
                                resume=False)

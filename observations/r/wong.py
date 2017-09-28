@@ -60,8 +60,7 @@ def wong(path):
   path = os.path.expanduser(path)
   filename = 'wong.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Wong.csv'
+    url = 'http://dustintran.com/data/r/car/Wong.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='wong.csv',
                                resume=False)

@@ -68,8 +68,7 @@ def amis(path):
   path = os.path.expanduser(path)
   filename = 'amis.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/boot/amis.csv'
+    url = 'http://dustintran.com/data/r/boot/amis.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='amis.csv',
                                resume=False)

@@ -60,8 +60,7 @@ def stagec(path):
   path = os.path.expanduser(path)
   filename = 'stagec.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/rpart/stagec.csv'
+    url = 'http://dustintran.com/data/r/rpart/stagec.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='stagec.csv',
                                resume=False)

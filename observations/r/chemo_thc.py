@@ -54,8 +54,7 @@ def chemo_thc(path):
   path = os.path.expanduser(path)
   filename = 'chemo_thc.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/Stat2Data/ChemoTHC.csv'
+    url = 'http://dustintran.com/data/r/Stat2Data/ChemoTHC.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='chemo_thc.csv',
                                resume=False)

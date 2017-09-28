@@ -47,8 +47,7 @@ def tongue(path):
   path = os.path.expanduser(path)
   filename = 'tongue.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/KMsurv/tongue.csv'
+    url = 'http://dustintran.com/data/r/KMsurv/tongue.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='tongue.csv',
                                resume=False)

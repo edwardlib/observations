@@ -44,8 +44,7 @@ def fruitohms(path):
   path = os.path.expanduser(path)
   filename = 'fruitohms.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/fruitohms.csv'
+    url = 'http://dustintran.com/data/r/DAAG/fruitohms.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='fruitohms.csv',
                                resume=False)

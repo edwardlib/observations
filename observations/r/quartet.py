@@ -55,8 +55,7 @@ def quartet(path):
   path = os.path.expanduser(path)
   filename = 'quartet.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/Quartet.csv'
+    url = 'http://dustintran.com/data/r/car/Quartet.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='quartet.csv',
                                resume=False)

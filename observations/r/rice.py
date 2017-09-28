@@ -64,8 +64,7 @@ def rice(path):
   path = os.path.expanduser(path)
   filename = 'rice.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/rice.csv'
+    url = 'http://dustintran.com/data/r/DAAG/rice.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='rice.csv',
                                resume=False)

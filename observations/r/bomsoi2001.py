@@ -90,8 +90,7 @@ def bomsoi2001(path):
   path = os.path.expanduser(path)
   filename = 'bomsoi2001.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/DAAG/bomsoi2001.csv'
+    url = 'http://dustintran.com/data/r/DAAG/bomsoi2001.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='bomsoi2001.csv',
                                resume=False)

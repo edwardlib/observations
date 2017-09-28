@@ -50,8 +50,7 @@ http://www12.statcan.ca/english/census01/products/standard/popdwell/Table-PR.
   path = os.path.expanduser(path)
   filename = 'can_pop.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/car/CanPop.csv'
+    url = 'http://dustintran.com/data/r/car/CanPop.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='can_pop.csv',
                                resume=False)

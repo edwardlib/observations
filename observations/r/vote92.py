@@ -85,8 +85,7 @@ def vote92(path):
   path = os.path.expanduser(path)
   filename = 'vote92.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/pscl/vote92.csv'
+    url = 'http://dustintran.com/data/r/pscl/vote92.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='vote92.csv',
                                resume=False)

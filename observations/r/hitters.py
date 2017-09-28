@@ -58,8 +58,7 @@ def hitters(path):
   path = os.path.expanduser(path)
   filename = 'hitters.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/vcd/Hitters.csv'
+    url = 'http://dustintran.com/data/r/vcd/Hitters.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='hitters.csv',
                                resume=False)

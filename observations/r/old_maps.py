@@ -76,8 +76,7 @@ def old_maps(path):
   path = os.path.expanduser(path)
   filename = 'old_maps.csv'
   if not os.path.exists(os.path.join(path, filename)):
-    url = 'https://raw.github.com/vincentarelbundock/Rdatasets/master/csv' \
-          '/HistData/OldMaps.csv'
+    url = 'http://dustintran.com/data/r/HistData/OldMaps.csv'
     maybe_download_and_extract(path, url,
                                save_file_name='old_maps.csv',
                                resume=False)
