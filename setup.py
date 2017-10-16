@@ -9,7 +9,7 @@ setup(
     description='Tools for loading standard data sets in machine learning',
     author='Dustin Tran',
     author_email="dustin@cs.columbia.edu",
-    packages=['observations', observations.r],
+    packages=['observations', 'observations.r'],
     install_requires=['numpy>=1.7',
                       'six>=1.10.0'],
     extras_require={
