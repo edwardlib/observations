@@ -9,13 +9,13 @@ from observations.util import maybe_download_and_extract
 
 
 def jsb_chorales(path):
-  """Load the corpus of 382 four-part harmonized cholares from J.S.
+  """Load the corpus of 382 four-part harmonized chorales from J.S.
   Bach. There are 202 chorales in major keys of which 121 were used
   for training and 81 used for testing; and 180 chorales in minor keys
-  split as 108 and 72 respectively [@allan2005harmonising]. They are
+  split as 108 and 72 respectively [@allan2005harmonising]. Chorales are
   loaded in the piano-roll representation [@boulanger2012modeling],
-  i.e., as a binary matrix specifying precisely which notes occur at
-  each time step.
+  i.e., a binary matrix specifying which notes occur at each time
+  step.
 
   Args:
     path: str.
