@@ -9,19 +9,23 @@ from observations.util import maybe_download_and_extract
 
 
 def piano_midi_de(path):
-  """Load the corpus of 382 four-part harmonized chorales from J.S.
-  Bach. classical piano MIDI archive that was split according to Poliner & Ellis (2007)
+  """Load the classical piano archive of piano-midi.de. It consists
+  of 130 pieces randomly split into 92 training, 25 testing, and 13
+  validation pieces [@poliner2007discriminative]. Data is loaded in
+  the piano-roll representation [@boulanger2012modeling], i.e., a
+  binary matrix specifying which notes occur at each time step.
 
   Args:
     path: str.
       Path to directory which either stores file or otherwise file will
       be downloaded and extracted there. Filename is
-      `JSB%20Chorales.pickle`.
+      `Piano-midi.de.pickle`.
 
   Returns:
-    list of `x_train, x_test, x_valid`, where each is a list of tuples
-    representing the notes played for each timestep. (It is the sparse
-    representation of the binary matrix.)
+    list of `x_train, x_test, x_valid`, where each is a list of
+    sequences. Each sequence is itself a list of time steps, and each
+    time step is a list of the non-zero elements in the piano-roll at
+    this instant (in MIDI note numbers, between 21 and 108 inclusive).
   """
   path = os.path.expanduser(path)
   filename = 'Piano-midi.de.pickle'

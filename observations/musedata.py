@@ -9,20 +9,22 @@ from observations.util import maybe_download_and_extract
 
 
 def musedata(path):
-  """Load the corpus of 382 four-part harmonized chorales from J.S.
-  Bach. lectronic library of orchestral and
-piano classical music from CCARH
+  """Load the MuseData library of music scores, including both
+  orchestral and piano classical music. Data is loaded in the
+  piano-roll representation [@boulanger2012modeling], i.e., a binary
+  matrix specifying which notes occur at each time step.
 
   Args:
     path: str.
       Path to directory which either stores file or otherwise file will
       be downloaded and extracted there. Filename is
-      `JSB%20Chorales.pickle`.
+      `MuseData.pickle`.
 
   Returns:
-    list of `x_train, x_test, x_valid`, where each is a list of tuples
-    representing the notes played for each timestep. (It is the sparse
-    representation of the binary matrix.)
+    list of `x_train, x_test, x_valid`, where each is a list of
+    sequences. Each sequence is itself a list of time steps, and each
+    time step is a list of the non-zero elements in the piano-roll at
+    this instant (in MIDI note numbers, between 21 and 108 inclusive).
   """
   path = os.path.expanduser(path)
   filename = 'MuseData.pickle'
