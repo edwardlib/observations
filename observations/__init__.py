@@ -28,7 +28,10 @@ from observations.karate import karate
 from observations.lsun import lsun
 from observations.mnist import mnist
 from observations.multi_mnist import multi_mnist
+from observations.musedata import musedata
+from observations.nottingham import nottingham
 from observations.nips import nips
+from observations.piano_midi_de import piano_midi_de
 from observations.ptb import ptb
 from observations.sick import sick
 from observations.small32_imagenet import small32_imagenet
@@ -87,7 +90,10 @@ _allowed_symbols = [
     'lsun',
     'mnist',
     'multi_mnist',
+    'musedata',
+    'nottingham',
     'nips',
+    'piano_midi_de',
     'ptb',
     'sick',
     'small32_imagenet',
