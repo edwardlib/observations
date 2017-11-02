@@ -25,7 +25,8 @@ def jsb_chorales(path):
 
   Returns:
     list of `x_train, x_test, x_valid`, where each is a list of tuples
-    representing the notes played for each timestep.
+    representing the notes played for each timestep. (It is the sparse
+    representation of the binary matrix.)
   """
   path = os.path.expanduser(path)
   filename = 'JSB%20Chorales.pickle'
