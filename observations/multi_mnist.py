@@ -13,8 +13,6 @@ def multi_mnist(path, max_digits=2, canvas_size=50, seed=42):
   """Load the multiple MNIST data set [@eslami2016attend]. It modifies
   the original MNIST such that each image contains a number of
   non-overlapping random MNIST digits with equal probability.
-  Each label is a vector of length 10, where the ith element is the
-  number of MNIST digits of label i in the image.
 
   Args:
     path: str.
@@ -30,9 +28,9 @@ def multi_mnist(path, max_digits=2, canvas_size=50, seed=42):
       Random seed to generate the data set from MNIST if not cached.
 
   Returns:
-    Tuple of np.ndarray's
-    `(x_train, y_train), (x_test, y_test)`, where x's have dtype uint8
-    and .
+    Tuple of (np.ndarray of dtype uint8, list)
+    `(x_train, y_train), (x_test, y_test)`. Each element in the y's is a
+    list of labels, one label for each digit in the image.
   """
   from scipy.misc import imresize
   def _sample_one(canvas_size, x_data, y_data):
@@ -71,7 +69,6 @@ def multi_mnist(path, max_digits=2, canvas_size=50, seed=42):
       x.append(canvas)
       y.append(labels)
     x = np.array(x, dtype=np.uint8)
-    # TODO y as multinomial or categorical
     return x, y
   path = os.path.expanduser(path)
   cache_filename = 'multi_mnist_{}_{}_{}.npz'.format(max_digits, canvas_size, seed)
