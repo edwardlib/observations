@@ -23,9 +23,11 @@ from observations.enwik8 import enwik8
 from observations.fashion_mnist import fashion_mnist
 from observations.insteval import insteval
 from observations.iris import iris
+from observations.jsb_chorales import jsb_chorales
 from observations.karate import karate
 from observations.lsun import lsun
 from observations.mnist import mnist
+from observations.multi_mnist import multi_mnist
 from observations.nips import nips
 from observations.ptb import ptb
 from observations.sick import sick
@@ -80,9 +82,11 @@ _allowed_symbols = [
     'fashion_mnist',
     'insteval',
     'iris',
+    'jsb_chorales',
     'karate',
     'lsun',
     'mnist',
+    'multi_mnist',
     'nips',
     'ptb',
     'sick',
