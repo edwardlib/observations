@@ -9,11 +9,11 @@ from observations.util import maybe_download_and_extract
 
 
 def piano_midi_de(path):
-  """Load the classical piano archive of piano-midi.de. It consists
-  of 130 pieces randomly split into 92 training, 25 testing, and 13
-  validation pieces [@poliner2007discriminative]. Data is loaded in
-  the piano-roll representation [@boulanger2012modeling], i.e., a
-  binary matrix specifying which notes occur at each time step.
+  """Load the classical piano archive of piano-midi.de.
+  It consists of 130 pieces randomly split into 92 training, 25
+  testing, and 13 validation pieces [@poliner2007discriminative]. Data
+  is loaded in the piano-roll representation [@boulanger2012modeling],
+  i.e., a binary matrix specifying which notes occur at each time step.
 
   Args:
     path: str.

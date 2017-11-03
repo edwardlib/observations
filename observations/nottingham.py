@@ -9,8 +9,8 @@ from observations.util import maybe_download_and_extract
 
 
 def nottingham(path):
-  """Load the Nottingham database of 1200 British and American folk
-  tunes. Data is loaded in the piano-roll representation
+  """Load the Nottingham database of 1200 British and American folk tunes.
+  Data is loaded in the piano-roll representation
   [@boulanger2012modeling], i.e., a binary matrix specifying which
   notes occur at each time step.
 

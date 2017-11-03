@@ -9,10 +9,11 @@ from observations.util import maybe_download_and_extract
 
 
 def musedata(path):
-  """Load the MuseData library of music scores, including both
-  orchestral and piano classical music. Data is loaded in the
-  piano-roll representation [@boulanger2012modeling], i.e., a binary
-  matrix specifying which notes occur at each time step.
+  """Load the MuseData library of music scores.
+  It includes both orchestral and piano classical music. Data is
+  loaded in the piano-roll representation [@boulanger2012modeling],
+  i.e., a binary matrix specifying which notes occur at each time
+  step.
 
   Args:
     path: str.
