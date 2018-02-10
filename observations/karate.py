@@ -19,7 +19,7 @@ def karate(path):
   Args:
     path: str.
       Path to directory which either stores file or otherwise file will
-      be downloaded and extracted there. Filename is `karate.gml`.
+      be downloaded and extracted there. Filename is `out.ucidata-zachary`.
 
   Returns:
     Tuple of adjacency matrix as a np.darray `x_train` with 34 rows
@@ -33,7 +33,7 @@ def karate(path):
     url = 'http://konect.uni-koblenz.de/downloads/tsv/ucidata-zachary.tar.bz2'
     maybe_download_and_extract(path, url)
 
-  node_order = [str(i) for i in range(1,35)]
+  node_order = [str(i) for i in range(1, 35)]
   x_train = nx.read_edgelist(os.path.join(path, filename), comments='%')
   x_train = nx.to_numpy_matrix(x_train, node_order).astype(int)
   labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 16, 17, 19, 21]
