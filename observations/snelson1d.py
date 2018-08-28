@@ -41,7 +41,7 @@ def snelson1d(path):
     # Clean up everything else
     rmtree(os.path.join(path, "SPGP_dist"))
     os.remove(os.path.join(path, "SPGP_dist.zip"))
-  
+
   X = np.loadtxt(os.path.join(inputs_path))[:, None]
   Y = np.loadtxt(os.path.join(outputs_path))[:, None]
 
