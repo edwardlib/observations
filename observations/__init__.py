@@ -36,6 +36,7 @@ from observations.ptb import ptb
 from observations.sick import sick
 from observations.small32_imagenet import small32_imagenet
 from observations.small64_imagenet import small64_imagenet
+from observations.snelson1d import snelson1d
 from observations.snli import snli
 from observations.stanford_sentiment_treebank import stanford_sentiment_treebank
 from observations.svhn import svhn
@@ -98,6 +99,7 @@ _allowed_symbols = [
     'sick',
     'small32_imagenet',
     'small64_imagenet',
+    'snelson1d',
     'snli',
     'stanford_sentiment_treebank',
     'svhn',
