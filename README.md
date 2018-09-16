@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/edwardlib/observations.svg?branch=master)](https://travis-ci.org/edwardlib/observations)
 [![Coverage Status](https://coveralls.io/repos/github/edwardlib/observations/badge.svg?branch=master&cacheBuster=1)](https://coveralls.io/github/edwardlib/observations?branch=master)
 
+> __Announcement (September 16, 2018)__: Observations is in the process of being replaced by [TensorFlow Datasets](https://github.com/tensorflow/datasets). Unlike Observations, TensorFlow Datasets is more performant, provides pipelining for >2GB data sets and all of [Tensor2Tensor's](https://github.com/tensorflow/tensor2tensor/tree/06862886125f5b5d262e2b0e6ffeba059dc0d57d/tensor2tensor/data_generators), and better interfaces with `tf.data`. We're working to add all features from Observations, such as its relatively simple API, supporting all of Observations' data sets, and providing a method to return NumPy arrays instead of TensorFlow Tensors.
+
 Observations provides a
 [one line Python API](http://edwardlib.org/api/observations)
 for loading standard data sets in machine learning. It automates the
