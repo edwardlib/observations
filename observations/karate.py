@@ -34,7 +34,7 @@ def karate(path):
     maybe_download_and_extract(path, url)
 
   node_order = [str(i) for i in range(1, 35)]
-  x_train = nx.read_edgelist(os.path.join(path, filename), comments='%')
+  x_train = nx.read_edgelist(os.path.join(path, filename), label='id', comments='%')
   x_train = nx.to_numpy_matrix(x_train, node_order).astype(int)
   labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 16, 17, 19, 21]
   y_train = np.array([0 if i in labels else 1
